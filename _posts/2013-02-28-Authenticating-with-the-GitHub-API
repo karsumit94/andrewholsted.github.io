@@ -1,0 +1,6 @@
+---
+layout: "post"
+title: "Authenticating with the GitHub API."
+meta-description: "How to authenticate with the GitHub API using Javascript."
+tags: "GitHub, Javascript"
+---
