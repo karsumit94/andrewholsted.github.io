@@ -4,5 +4,5 @@ safe: true
 server: true
 pygments: true
 markdown: rdiscount 
-permalink: /:title 
+permalink: /posts/:title
 
