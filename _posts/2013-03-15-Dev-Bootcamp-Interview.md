@@ -63,4 +63,4 @@ As you might surmise, my internet connection came back to life 5 minutes after w
 
 Hopefully next time things will go as planned. I'll let you know how it turns out.
 
-[1] http:// http://en.wikipedia.org/wiki/Murphy%27s_Law (Murphy's Law)
+[1]: http://en.wikipedia.org/wiki/Murphy%27s_Law "Murphy's Law"

@@ -25,4 +25,4 @@ Here's a couple issues I ran into during the course of creating it.
 
 Quick-Preview has been active in the directory for a few weeks now. There are 95 downloads as of today which isn't too bad considering I haven't told anyone about it. There's one user on the support forum who is having trouble with the plugin not showing a preview at all. I've tried my best to duplicate the problem, but everything works fine for me on multiple computers in Chrome, FireFox, and IE. If anyone reading this wants to test it out, please let me know either here or on the support forum if you have problems. I'd really like to resolve that issue.
 
-[1] http://wordpress.org/extend/plugins/ctrl-s/ "Ctrl-S WordPress Plugin"
+[1]: http://wordpress.org/extend/plugins/ctrl-s/ "Ctrl-S WordPress Plugin"

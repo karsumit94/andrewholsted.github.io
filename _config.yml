@@ -5,4 +5,4 @@ server: true
 pygments: true
 markdown: rdiscount 
 permalink: /posts/:title
-
+title: "FajitaNachos"
