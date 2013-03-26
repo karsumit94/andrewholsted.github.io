@@ -6,7 +6,7 @@ meta-description: "The Backstory: How I got into web development."
 
 My first memory of a computer was this bad boy.
 
-[![The Osbourne 1[2]][1]
+[![The Osbourne 1][2]][1]
 
 Image courtesy of [Bilby][3].
 
@@ -24,8 +24,8 @@ Once we got here, I started thinking about what I really wanted to do. Over the 
 
 This is what I want to do. I want to be a developer.
 
-[1]: http://en.wikipedia.org/wiki/Osborne_1.png "Osbourne 1"
-[2]: /img/osbourne-1
+[1]: http://en.wikipedia.org/wiki/Osborne_1 "Osbourne 1"
+[2]: /img/osbourne-1.jpg
 [3]: http://commons.wikimedia.org/wiki/User:Bilby "Bilby"
 [4]: http://www.amazon.com/Reminiscences-Stock-Operator-Investment-Classics/ "Reminiscences of a Stock Operator"
 

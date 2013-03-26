@@ -61,16 +61,86 @@ textarea {
    ========================================================================== */
 
 
+body {
+    font-family:"Droid Serif", "Georgia", serif; 
+}
+
+code {
+    font-family:"Open Sans", "Arial";
+    font-size:.8em;
+}
+
+h1,h2{
+     
+    font-family:"Open Sans", sans-serif; 
+    text-align:center;
+}
+
+h1{
+    font-size:2.25em;
+}
+
+h2{
+    font-size:1.2em;
+    margin: 1.5em 0 1em 0;  
+
+}
+
+img {
+   height: auto;
+   max-width:100%;
+}
+
+/* ============
+   Posts
+   ============ */
+
+#post-container, #post-index {
+    max-width: 48em;
+    margin: auto; 
+}
 
 
+#post-content {
+    font-size: 1.2em;
+    line-height: 1.75em;
+}
 
+#previous-post {
+    display:inline-block;
+    float:left;
+}
 
+#next-post{
+    display:inline-block;
+    float:right;
+}
 
+#post-title {
 
+}
+#post-index ul{
+    padding:0;
+}
+.post-item {
+    list-style-type:none;
+    font-size:1.25em;
+    line-height:2em;
+    font-family: "Open Sans", "Arial", sans-serif;
+}
+.post-item a {
+    text-decoration:none;
+}
 
+.post-date{
+    display:inline-block;
+    float:right;
+    font-size:.8em;
+}
 
-
-
+#page-title{
+    text-align: left;
+}
 
 
 

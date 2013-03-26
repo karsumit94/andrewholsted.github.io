@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Edit your projects using Chrome Dev Tools and GitHub -- from anywhere."
+title: "Hotfix"
 meta-description: "Hotfix is a Chrome extension that lets you save changes in 
 Chrome Dev Tools to GitHub."
 tags: "Javascript, Github, Chrome extension"
@@ -15,14 +15,14 @@ to make changes to my site using only a browser.
 
 And now I have one.
 
-[![hotfix logo][2]][1]
+[![hotfix logo][2]][1] 
 
 Hotfix is a Chrome extension that I've been working on for the last month or so. 
 It allows you to make changes in Chrome Developer Tools and push them directly to 
 GitHub. No more saving locally and then committing. You can edit the CSS and 
 Javscript of your projects from anywhere at anytime.
 
-Here's a brief demo of how the extension works.
+Here's a brief demo of how the extension works. 
 
 <http://www.youtube.com/watch?v=ASRf2XC1wtU>
 
@@ -38,11 +38,6 @@ extension by visiting the Chrome Web Store or forking the project on GitHub.
 <span class="github-link"><a href="https://github.com/FajitaNachos/hotfix">
 GitHub Repository</a></span>
 
-If you like the idea then consider following me on Twitter [@FajitaNachos][3].
-I'm still pretty new to web development, but I plan on building a lot more things. 
-
-
 
 [1]: https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi
 [2]: /img/hotfix-logo.png "hotfix"
-[3]: https://twitter.com/FajitaNachos "Follow Me"

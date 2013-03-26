@@ -52,7 +52,7 @@ take you do costs you a beer, it can get expensive.
 
 Here's the video.
 
-,http://www.youtube.com/watch?v=ps5rRrIyrcI>
+<http://www.youtube.com/watch?v=ps5rRrIyrcI>
 
 Now, my friends, we wait.
 

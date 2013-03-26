@@ -1,7 +1,7 @@
 ---
 layout: "post"
-title: "Quick Preview: A WordPress plugin."
-meta-description: "Save and preview a post using Ctrl+S (Cmd+S)"
+title: "Quick Preview"
+meta-description: "A WordPress plugin to save and preview a post using Ctrl+S (Cmd+S)"
 tags: "WordPress, PHP"
 ---
 

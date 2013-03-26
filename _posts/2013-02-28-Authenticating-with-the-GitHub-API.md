@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Authenticating with the GitHub API."
+title: "Authenticating with the GitHub API"
 meta-description: "How to authenticate with the GitHub API using Javascript."
 tags: "GitHub, Javascript"
 ---
@@ -10,21 +10,21 @@ GitHub API. It's my first time working with an API and I've enjoyed it thus far.
 Everything is written in Javascript with a little Node.js on the server. Here's 
 the process.
 
-Setup an application on GitHub.
+Setup an application on GitHub
 ----------------------------------
 
 The first thing you need to do is login to your GitHub account. Once logged in, 
 click on the wrench icon (account settings) at the top and then click on 
 Applications on the left. Click on Register New Application.
 
-[!GitHub-Setup][1]
+![GitHub-Setup][1]
 
 Now give the application a name, main URL, and callback URL. The 
 callback URL is where GitHub will redirect your users to after they successfully 
 login. It has to be on the same domain as your main URL. Also, it needs to be a 
 valid http:// URL. GitHub won't accept 'localhost', 'your mom', etc..
 
-[!New-GitHub-Application][2]
+![New-GitHub-Application][2]
 
 Seeing as how I am writing a browser extension, I REALLY didn't want to have to 
 set up a server just for the extension. However, doing the entire Oauth process 
@@ -50,8 +50,7 @@ Applications. Click on your application name and the client id will be in the
 top right. There are several other parameters you can (and should) append to the 
 URL. Here are the available parameters;
 
-**client_id**  *Required* - The client ID you received from GitHub when you 
-registered the application.
+**client_id**  *Required* - The client ID you received from GitHub when you registered the application.
 
 **redirect_uri** *Optional*  - URL in your app where users will be sent after 
 authorization.
@@ -69,7 +68,7 @@ You can add any of these parameters to the URL by adding an & between them. For 
 Once redirected to GitHub the user will be prompted to login. After they do, 
 GitHub will redirect back to the Callback URL you set up with an access code in the url.
 
-Parse the access code from the URL and exchange the access code for an auth token.
+Parse the access code from the URL and exchange the access code for an auth token
 ----------------------------------------------------------------------------------
 
 Once GitHub redirects back to your Callback URL with an access code, you need to 
