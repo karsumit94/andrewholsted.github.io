@@ -63,17 +63,20 @@ textarea {
 
 body {
     font-family:"Droid Serif", "Georgia", serif; 
+    background-image: url('/img/brillant.png');
+    color:#555;
 }
+
 
 code {
     font-family:"Open Sans", "Arial";
     font-size:.8em;
 }
 
-h1,h2{
-     
+h1,h2{   
     font-family:"Open Sans", sans-serif; 
     text-align:center;
+    color: #444;
 }
 
 h1{
@@ -83,12 +86,15 @@ h1{
 h2{
     font-size:1.2em;
     margin: 1.5em 0 1em 0;  
-
 }
 
 img {
    height: auto;
    max-width:100%;
+}
+
+#page-title{
+    text-align: left;
 }
 
 /* ============
@@ -138,11 +144,31 @@ img {
     font-size:.8em;
 }
 
-#page-title{
-    text-align: left;
+
+
+/* ============
+   Projects
+   ============ */
+
+#projects{
+    max-width:60em;
+    margin:auto;
 }
 
+.project{
+    max-width:15em;
+    float:left;
+    padding: 0 2em 0 2em;
+}
 
+.project-title{
+    text-align:left;
+    font-size:1.5em;
+}
+
+.project-description {
+    font-family:"Open Sans", "Arial", sans-serif;
+}
 
 /* ==========================================================================
    Media Queries

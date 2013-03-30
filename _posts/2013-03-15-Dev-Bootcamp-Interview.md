@@ -47,20 +47,20 @@ As our scheduled start time neared, and a solid internet connection was still no
 
 A few minutes later, the call came in. I accepted, and the Skype app instantly crashed. Wtf, really? I opened it back up and found a message from Karim.
 
-"Are you there?"  Strike 1.
+"Are you there?"
 
 I told him I was having some internet problems and I was on my phone. He replied, asking me to give him a call on his number. I tried calling his number from Skype, but I needed to have Skype credits. No time to add them and making a 15-20 minute regular long distance call to SF isn't cheap. I resorted to calling him from Google Talk. Two rings and he answered. A glimmer of hope. I finished my first sentence when he replied
 
-"Sorry, Andrew. I can barely hear you." Strike 2.
+"Sorry, Andrew. I can barely hear you." 
 
 I asked him if we could give Skype another shot. A last and desperate attempt. We got connected. I could hear him on the other end. Another glimmer of hope.
 
-"Hello? Andrew? You there?"  But he couldn't see or hear me. Strike 3. Game over.
+"Hello? Andrew? You there?"  But he couldn't see or hear me. Game over.
 
 He sent me a nice message suggesting we reschedule for another day. I apologized for wasting his time and he sent back a reassuring message that everything was ok. At that point there was nothing more I could do.
 
-As you might surmise, my internet connection came back to life 5 minutes after we decided to reschedule. Go figure. Sometimes these things just happen. I've rescheduled the interview for the first available spot, April 5th. I also purchased plenty of Skype credits to call him, should things go awry again. 
+As you might surmise, my internet connection came back to life 5 minutes after we decided to reschedule. Go figure. Sometimes these things just happen. I've rescheduled the interview for April 5th. I've also purchased plenty of Skype credits to call him, should things go haywire again. 
 
-Hopefully next time things will go as planned. I'll let you know how it turns out.
+I'll let you know how it turns out.
 
 [1]: http://en.wikipedia.org/wiki/Murphy%27s_Law "Murphy's Law"
