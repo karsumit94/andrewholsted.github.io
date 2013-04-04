@@ -15,9 +15,7 @@ to make changes to my site using only a browser.
 
 And now I have one.
 
-[![hotfix logo][2]][1] 
-
-Hotfix is a Chrome extension that I've been working on for the last month or so. 
+[Hotfix][1] is a Chrome extension that I've been working on for the last month or so. 
 It allows you to make changes in Chrome Developer Tools and push them directly to 
 GitHub. No more saving locally and then committing. You can edit the CSS and 
 Javscript of your projects from anywhere at anytime.

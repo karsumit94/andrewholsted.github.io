@@ -68,7 +68,7 @@ You can add any of these parameters to the URL by adding an & between them. For 
 Once redirected to GitHub the user will be prompted to login. After they do, 
 GitHub will redirect back to the Callback URL you set up with an access code in the url.
 
-Parse the access code from the URL and exchange the access code for an auth token
+Parse the access code from the URL and exchange it for an auth token
 ----------------------------------------------------------------------------------
 
 Once GitHub redirects back to your Callback URL with an access code, you need to 

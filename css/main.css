@@ -62,8 +62,9 @@ textarea {
 
 
 body {
-    font-family:"Droid Serif", "Georgia", serif; 
-    background-image: url('/img/brillant.png');
+    
+    font-family:"Open Sans", "Arial", sans-serif; 
+    background-image: url("/img/brillant.png");
     color:#555;
 }
 
@@ -74,18 +75,20 @@ code {
 }
 
 h1,h2{   
-    font-family:"Open Sans", sans-serif; 
+    font-family:"Merriweather","Open Sans", serif; 
     text-align:center;
     color: #444;
+    
+   
 }
 
 h1{
-    font-size:2.25em;
+    font-size:1.5em;
 }
 
 h2{
-    font-size:1.2em;
-    margin: 1.5em 0 1em 0;  
+    font-size:.9em;
+    margin: 2em 0 1em 0; 
 }
 
 img {
@@ -108,8 +111,8 @@ img {
 
 
 #post-content {
-    font-size: 1.2em;
-    line-height: 1.75em;
+    font-size: 1.1em;
+    line-height: 1.6em;
 }
 
 #previous-post {
@@ -130,7 +133,7 @@ img {
 }
 .post-item {
     list-style-type:none;
-    font-size:1.25em;
+    font-size:1.1em;
     line-height:2em;
     font-family: "Open Sans", "Arial", sans-serif;
 }
