@@ -29,7 +29,7 @@ Total time: 15 minutes.
 The second interview
 --------------------
 
-After I completed the tutorial, I received an email to schedule a second interview. I'm excited. There was an opening the following week and I jumped on it. That interview was today. Well, it was supposed to be.
+After I completed the tutorial, I received an email to schedule a second interview. There was an opening the following week and I jumped on it. That interview was today. Well, it was supposed to be.
 
 >Anything that can go wrong, will—at the worst possible moment.
 
