@@ -60,14 +60,19 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
+html, body{
+    height:100%;
+    margin:0;
+    padding:0;
+}
 body {
-    
     font-family:"Open Sans", "Arial", sans-serif;
-    color:#555;
+   
 }
 
-
+a {
+    text-decoration:none;
+}
 code {
    
     font-size:.8em;
@@ -75,9 +80,9 @@ code {
 
 h1,h2{   
     text-align:center;
-    color: #444;
     font-family:"Lora", "Georgia", serif;
     font-weight:normal;
+    font-size:2em;
   
 }
 
@@ -87,90 +92,82 @@ h1{
 }
 
 h2{
-    font-size:1em;
+
     margin: 1.75em 0 1em 0;
     
 }
 
 img {
-   height: auto;
-   max-width:90%;
-   display:block;
-   margin:auto;
+   
+}
+
+
+/* ============
+   Intro
+   ============ */
+
+#intro{
+    margin-top:3em;
+    font-size:1.1em;
+    text-align:justify;
+    line-height:1.75em;
+    height:40em;
+}
+
+#intro h2{
+    width:100%;
+}
+
+#intro p{
+    max-width:30em;
+    font-size:1.1em;
+    margin:auto;
+}
+
+#intro-image img{
+    display:block;
+    max-width:100%;
+    margin:auto;
 }
 
 /* ============
-   Home
+   About
    ============ */
 
-#home-image, #about, #intro, #posts{
-    max-width:38em;
-    margin:3em auto 0 auto;
-}
-
-#home-image{
-    display:block;
-    
-}
-
-.home-title{
-    display:block;
-    margin-top:2em;
-    text-align:center;
-    font-size:1.25em;
-    
-}
-
-.home-title h2{
-      font-weight:normal;
-      margin:0;
-      
-}
-#intro, #about{
-    line-height:1.75em;
-    
-}
-
-#intro{
-    display:block;
-    font-size:1.1em;
-}
 #about{
-    display:none; 
+    height:40em;
     font-size:1.1em;
-}
+    text-align:justify;
+    line-height:1.75em;
+    max-width:30em;
+    float:left;
+    padding-left:5em;
+}  
 
-#home-nav{
-    font-size:1.1em;
-    padding-top:1em;
-    max-width:38em;
-    margin:auto;
-    text-align:center;
-    clear:both;
-    list-style-type: none;
-}
 
-#home-nav li a{
-    text-decoration:none;
-    padding:0 1em 0 1em;
-}
+/* ============
+   Contact
+   ============ */
 
 #contact {
-    display:none;
-    max-width:38em;
-    margin:auto;
+    height:25em;
     text-align:center;
-    font-size:1.25em;
-    padding:1.5em 0 2.5em 0;
+    padding:1.5em 0 1.5em 0;
 }
 
 #contact a{
-    font-size:1em;
+    font-size:3em;
     text-decoration:none;
 }
 
+/* ============
+   Posts
+   ============ */
+
 #posts{
-    display:none;
+    height:40em;
+    max-width:40em;
+    margin:auto;
     font-size:1.1em;
 }
 
@@ -194,10 +191,6 @@ img {
     font-size:.8em;
 }
 
-/* ============
-   Post
-   ============ */
-
 #post-container {
     max-width: 48em;
     margin: auto; 
@@ -207,6 +200,21 @@ img {
 #post-content {
     font-size: 1.15em;
     line-height: 1.7em;
+}
+
+#post-content img{
+   height: auto;
+   max-width:90%;
+   display:block;
+   margin:3em auto 3em auto; 
+   border:1px solid #ccc;
+   box-shadow: 0 0 4px 2px #eee;
+   -webkit-box-shadow:0 0 4px 2px #eee;
+   -moz-box-shadow:0 0 4px 2px #eee;
+}
+
+#post-content h2{
+    font-size:1.2em;
 }
 
 #previous-post {
@@ -224,27 +232,77 @@ img {
    ============ */
 
 #projects{
+    clear:both;
+    height:40em;
     max-width:60em;
     font-size:1.1em;
     margin:3em auto 0 auto;
-    display:none;
+    text-align:center;
 }
 
 .project{
     max-width:15em;
-    float:left;
+    display:inline-block;
+    vertical-align:top;
     padding: 0 2em 0 2em;
+
 }
 
 .project-title{
-    font-size:1.3em;
+    font-size:1.2em;
+    font-family: "Open Sans", "Arial", sans-serif;
+    text-align:left;
    
 }
 
 .project-description {
     font-size:1em;
+    text-align:left;
 }
 
+.project-date{
+   padding-left:.5em;
+   font-size:.65em;
+  
+}
+
+/* ============
+   Navigation
+   ============ */ 
+
+#home-nav{
+    font-size:1.1em;
+    padding:.75em 0 1em 0;
+    text-align:center;
+    clear:both;
+    list-style-type: none;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background-color:#222;
+    color:#fff;
+}
+
+#home-nav li a{
+    text-decoration:none;
+    padding:0 1em 0em 1em;
+    color:#fff;
+}
+
+#nav-down{
+    position:fixed;
+    right:2.5em;
+    bottom:4.5em;
+    opacity:.1;
+    cursor:pointer;
+    transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+#nav-down:hover{
+    opacity:.7;
+}
 
 /* ==========================================================================
    Media Queries

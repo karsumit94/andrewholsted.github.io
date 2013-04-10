@@ -1,62 +1,56 @@
 ---
 layout: default
 ---
+  	<section id = "intro">
+  		<div id = "intro-image">
+  			<img src="/img/profile.png" />
+  		</div>
+  		<h2>Hi, I'm Andrew. </h2>
+  		<p>
+	  		I love mexican food, snowboarding, and fixing things when they break. My latest project is called hotfix. If you're looking for an honest, hard working, love-to-learn type of developer, you've found him. 
+	  	</p>
+  	</section>
 
-	<div id = "home-image">
-  		<img src="/img/profile.png" />
-  	</div>
-
- 	<div id= "about">
- 		<span class = "home-title">
- 			<h2>About Me</h2>
- 		</span>
+ 	<section id= "about">
+ 		<h2>About Me</h2>
 		<p>
 			I was a stockbroker for two years after I graduated from college. Gradually, I realized that I didn’t enjoy what I was doing. At that time, my wife and I were 25, we didn't have anything tying us down, and moving to Japan sounded pretty awesome. So we did.
 		</p>	
 		<p>
 			After a few months here and some soul searching on what I wanted to do with my life, I decided to pursue something I really enjoy, web development. Now, I’m teaching English full-time while learning as much as I can at night and on the weekends. I’m loving it.
 		</p>
-	</div>
-  	<div id = "intro">
-  		<span class = "home-title">
-  			<h2>Hi, I'm Andrew. </h2>
-  		</span>
-  		<p>
-	  		I love mexican food, snowboarding, and fixing things when they break. My latest project is called hotfix. If you're looking for an honest, hard working, love-to-learn type of developer, you've found him. 
-	  	</p>
-  	</div>
-  	<div id ="contact">
-  		<p>
-  			Talk to me, Goose.
-  		</p>
-  		<a href="mailto:andrew@fajitanachos.com">andrew@fajitanachos.com</a>
-  	</div>
-  	<div id ="projects">
-		<span class = "home-title">
-  			<h2>Projects</h2>
-  		</span>
-	    <div class = "project">
-	    	<h2 class = "project-title"> Hotfix</h2>
+	</section>
+
+  	<section id ="projects">
+  		<h2>Projects </h2>
+  		<div class = "project">
+	    	<h2 class = "project-title"> 
+	    		<a href="https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi">hotfix</a>
+	    		<span class = "project-date">March 2013</span> 
+	    	</h2>
 	    	<p class = "project-description">
 	    		A Chrome Extension to push changes from
 	    		Chrome Developer Tools directly to GitHub.
 	    	</p>
-	        
 	    </div>
+
 	    <div class = "project">
-	    	<h2 class = "project-title"> Quick Preview</h2>
+	    	<h2 class = "project-title">
+	    		<a href="http://wordpress.org/extend/plugins/quick-preview/"> Quick Preview</a>
+	    		<span class = "project-date">October 2012</span> 
+	    	</h2>
+	    	
 	    	<p class = "project-description">
 	    		A WordPress plugin to save and preview a post using
 	    		Ctrl+S (Cmd+S).
 	    	</p>
-	        
 	    </div>
+	</section>
 
-	</div>
-  	<div id ="posts">
-		<span class = "home-title">
-			<h2> Posts</h2>
-		</span>
+  	<section id ="posts">
+		
+		<h2> Posts</h2>
+		
 	    <ul>
 	    	{% for post in site.posts %}
 		    	<li class = "post-item">
@@ -65,8 +59,18 @@ layout: default
 		    	</li>
 	      	{% endfor %}
 	    </ul> 
-	</div>
- 
+	</section>
+
+	<section id ="contact">
+  		<h2>
+  			Talk to me, Goose.
+  		</h2>
+  		<a href="mailto:andrew@fajitanachos.com">andrew@fajitanachos.com</a>
+  	</section>
+
+ 	<div id = "nav-down">
+ 		<img src = "/img/down_arrow.png" />
+ 	</div>
 	<nav id ="home-nav">
 	  	<li>
 	  		<a href = "#" id= "about-link" class = "home-link">About</a>
