@@ -92,7 +92,6 @@ h1{
 }
 
 h2{
-
     margin: 1.75em 0 1em 0;
     
 }
@@ -152,11 +151,10 @@ img {
 #contact {
     height:25em;
     text-align:center;
-    padding:1.5em 0 1.5em 0;
 }
 
 #contact a{
-    font-size:3em;
+    font-size:1.25em;
     text-decoration:none;
 }
 
@@ -165,6 +163,8 @@ img {
    ============ */
 
 #posts{
+    clear:both;
+   
     height:40em;
     max-width:40em;
     margin:auto;
@@ -232,38 +232,44 @@ img {
    ============ */
 
 #projects{
-    clear:both;
-    height:40em;
-    max-width:60em;
-    font-size:1.1em;
-    margin:3em auto 0 auto;
-    text-align:center;
+    height:45em;
+    font-size:1.1em;   
 }
 
 .project{
-    max-width:15em;
     display:inline-block;
     vertical-align:top;
-    padding: 0 2em 0 2em;
+    margin-bottom:2em;
+}
+.project-details{
+    float:left;
+    width:16em;
+    padding:0 1.5em 0 2.5em;
+}
+.project-image{
+    float:right;
+}
 
+.project-image img{
+    border: 1px solid #ccc;
 }
 
 .project-title{
-    font-size:1.2em;
-    font-family: "Open Sans", "Arial", sans-serif;
     text-align:left;
-   
+    
+    font-family: "Open Sans", "Arial", sans-serif; 
 }
 
 .project-description {
-    font-size:1em;
-    text-align:left;
+    font-size:1.1em;
 }
-
+.project-title h2{
+   font-size:1.5em;
+   display:inline-block;
+}
 .project-date{
-   padding-left:.5em;
-   font-size:.65em;
-  
+    display:inline-block;
+    font-size:.5em;
 }
 
 /* ============
@@ -287,21 +293,6 @@ img {
     text-decoration:none;
     padding:0 1em 0em 1em;
     color:#fff;
-}
-
-#nav-down{
-    position:fixed;
-    right:2.5em;
-    bottom:4.5em;
-    opacity:.1;
-    cursor:pointer;
-    transition: opacity .25s ease-in-out;
-   -moz-transition: opacity .25s ease-in-out;
-   -webkit-transition: opacity .25s ease-in-out;
-}
-
-#nav-down:hover{
-    opacity:.7;
 }
 
 /* ==========================================================================
