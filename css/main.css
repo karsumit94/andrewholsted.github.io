@@ -62,6 +62,7 @@ textarea {
 
 html, body{
     height:100%;
+    width:100%;
     margin:0;
     padding:0;
 }
@@ -88,11 +89,6 @@ h1,h2{
 
 h1{
     font-size:1.65em;
-    
-}
-
-h2{
-    margin: 1.75em 0 1em 0;
     
 }
 
@@ -149,7 +145,7 @@ img {
    ============ */
 
 #contact {
-    height:25em;
+    height:40em;
     text-align:center;
 }
 
@@ -164,11 +160,11 @@ img {
 
 #posts{
     clear:both;
-   
     height:40em;
     max-width:40em;
     margin:auto;
     font-size:1.1em;
+    overflow:hidden;
 }
 
 #posts ul{
@@ -215,6 +211,7 @@ img {
 
 #post-content h2{
     font-size:1.2em;
+    margin: 1.75em 0 1em 0;
 }
 
 #previous-post {
@@ -236,18 +233,51 @@ img {
     font-size:1.1em;   
 }
 
+#projects ul{
+    padding:0;
+    list-style-type:none;
+}
+
+#slider-wrap{
+    margin: 0 auto; 
+    overflow: hidden; 
+    width: auto; 
+    position: relative;
+}
+
+#slider {
+    position: relative; 
+    left: 0; 
+    top: 0;
+}
+#slider li{
+    float: left; 
+  
+    width:auto;
+}
+
+#slider-controls{
+    margin: 0 auto; 
+    width: auto;}
+#slider-prev{
+    float: left;
+}
+#slider-next{
+    float: right;
+}
+
 .project{
-    display:inline-block;
-    vertical-align:top;
-    margin-bottom:2em;
+    width:90%;
+    margin:auto;
 }
 .project-details{
     float:left;
     width:16em;
-    padding:0 1.5em 0 2.5em;
+   
 }
 .project-image{
-    float:right;
+    float:left;
+    padding-left:6%;
 }
 
 .project-image img{
