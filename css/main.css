@@ -55,6 +55,13 @@ textarea {
     padding: 0.2em 0;
 }
 
+.serif {
+    font-family:"Lora", "Georgia", serif;
+}
+
+.sans-serif{
+    font-family:"Open Sans", "Arial", sans-serif;
+}
 
 /* ==========================================================================
    Author's custom styles
@@ -157,6 +164,20 @@ img {
 /* ============
    Posts
    ============ */
+#site-title{
+    float:left;
+    text-transform: uppercase;
+    color: #222;
+    width:25%;
+
+}
+
+#site-title h1{
+    text-align:left;
+    margin-top:4em;
+    padding-left:2em;
+    
+}
 
 #posts{
     clear:both;
@@ -188,9 +209,10 @@ img {
 }
 
 #post-container {
-    max-width: 48em;
-    margin: auto; 
-    margin-top:3em;
+    float:left;
+    max-width: 60%;
+    margin-top:2.5em;
+    
 }
 
 #post-content {
@@ -214,6 +236,12 @@ img {
     margin: 1.75em 0 1em 0;
 }
 
+#post-nav{
+    float:left;
+    width:100%;
+    padding: 1em 0 2em 0em;
+    font-size:1.4em;
+}
 #previous-post {
     display:inline-block;
     float:left;
@@ -286,8 +314,7 @@ img {
 
 .project-title{
     text-align:left;
-    
-    font-family: "Open Sans", "Arial", sans-serif; 
+
 }
 
 .project-description {
