@@ -1,10 +1,18 @@
 $(function($){
 	
+    $("#home-link").on('click', function(e){
+        e.preventDefault();
+        $(document.body).animate({
+            'scrollTop': 0
+        }, "slow");
+         
+    });
+
 	$("#about-link").on('click', function(e){
 		e.preventDefault();
 		$(document.body).animate({
     		'scrollTop':   $('#about').offset().top
-		}, 1000);
+		}, "slow");
 		
 	});
 
@@ -12,7 +20,7 @@ $(function($){
 		e.preventDefault();
 		$(document.body).animate({
     		'scrollTop':   $('#projects').offset().top
-		}, 1000);
+		}, "slow");
 	
 	});
 
@@ -20,7 +28,7 @@ $(function($){
 		e.preventDefault();
 		$(document.body).animate({
     		'scrollTop':   $('#posts').offset().top
-		}, 1000);
+		}, "slow");
 	
 	});
 	
@@ -28,7 +36,7 @@ $(function($){
 		e.preventDefault();
 		$(document.body).animate({
     		'scrollTop':   $('#contact').offset().top
-		}, 1000);
+		}, "slow");
 
 	});
  

@@ -41,9 +41,9 @@ Redirect your users to GitHub and get an Access Code
 When you are ready to authenticate a user you'll need to send them to GitHub to 
 request an access code for you application.
 
-
+{% highlight javascript %}
     window.open('https://github.com/login/oauth/authorize?client_id=your-client-id');
-
+{% endhighlight %}
 
 You can find your client ID on the in your GitHub account settings page under 
 Applications. Click on your application name and the client id will be in the 
@@ -62,8 +62,10 @@ against cross-site request forgery attacks.
 
 You can add any of these parameters to the URL by adding an & between them. For example
 
+{% highlight javascript %}
     window.open('https://github.com/login/oauth/authorize?client_id=your-client-id&
-    scopes=scopes&state=unguessable-string');[/code]
+    scopes=scopes&state=unguessable-string');
+{% endhighlight %}
 
 Once redirected to GitHub the user will be prompted to login. After they do, 
 GitHub will redirect back to the Callback URL you set up with an access code in the url.
@@ -75,7 +77,7 @@ Once GitHub redirects back to your Callback URL with an access code, you need to
 exchange it for an auth token.
 
 Get the access code from the URL
-
+    {% highlight javascript %}
 
     // Get the authorization code from the url that was returned by GitHub
     
@@ -91,10 +93,16 @@ Get the access code from the URL
         return url.match(/[&\?]code=([\w\/\-]+)/)[1];
     }
 
+    {% endhighlight %}
+
 And exchange this for an auth token by sending a POST request to
+
+    {% highlight javascript %}
 
     https://github.com/login/oauth/access_token?client_id=your-client-id&
     client_secret=your-client-secret&code=your-access-code
+
+    {% endhighlight %}
 
 Your client secret can be found in the same place as your client id from above. 
 You should never share this secret with anyone. It's called a client *secret* 
@@ -107,9 +115,11 @@ from GitHub and let me know if you have any questions. The only change I made
 was replacing a deprecated Express call and adding a few small features like 
 404 handling.
 
+    {% highlight javascript %}
+
     function authenticate(code, cb) {
         var data = qs.stringify({
-            client_id: config.oauth_client_id,   //your GitHub client_id
+            client_id: config.oauth_client_id, //your GitHub client_id
             client_secret: config.oauth_client_secret,  //and secret
            code: code   //the access code we parsed earlier
         });
@@ -136,10 +146,16 @@ was replacing a deprecated Express call and adding a few small features like
         req.on('error', function(e) { cb(e.message); });
     }
 
+    {% endhighlight %}
+
 This is just a small snippet to illustrate what is going on. Once you send the 
 POST request, GitHub will return a response that looks like this
 
+    {% highlight javascript %}
+
     access_token=e72e16c7e42f292c6912e7710c838347ae178b4a&token_type=bearer
+
+    {% endhighlight %}
 
 From here you just need to parse the auth token and save it somewhere. 
 Going forward, when you want to make an API call, you need to retrieve the 

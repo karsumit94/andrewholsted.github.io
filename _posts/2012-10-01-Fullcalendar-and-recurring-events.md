@@ -30,13 +30,15 @@ A brief explanation.
 I think everything else is pretty self explanatory. 
 
 Including fullcalendar is just like loading any other external js file.
-
-    <script type="text/javascript" src="/path_to_your_fullcalendar_folder/fullcalendar.js" </script>
+    {% highlight html %}
+    <script type="text/javascript" src="/path_to_your_fullcalendar_folder/fullcalendar.js"> </script>
+    {% endhighlight %}
 
 You have several options where you can pull your event data from. I chose to pass a URL to a php file where I fetch the events and return them (via JSON).
 
+{% highlight javascript %}
 
-    $(document).ready(function() {
+    $(document).ready(function() { 
         var date = new Date();
         var d = date.getDate();
         var m = date.getMonth();
@@ -52,7 +54,7 @@ You have several options where you can pull your event data from. I chose to pas
 
            // this is where you specify where to pull the events from.
 
-           events: "includes/json-events.php",  
+           events: "includes/json-events.php",
            editable: true,
            defaultView: 'month',
            allDayDefault: false,
@@ -60,11 +62,11 @@ You have several options where you can pull your event data from. I chose to pas
        });
     });
 
-
+{% endhighlight %}
 
 This is the json-events.php page
 
-
+{% highlight php %}
     <?php 
         require_once '../../../config/db-config.php';
 
@@ -86,12 +88,14 @@ This is the json-events.php page
 
         echo json_encode($events);
     ?>
+{% endhighlight %}
+
 
 I query the database for all the events in my events table, put them in an array, JSON encode the array, and echo it out. Fullcalendar implements "lazy fetching" where it will only pull the events that are needed for the current, previous, and next month views. The other events are loaded as needed through URL parameters. Obviously if it gets to the point where there are 10 or 20 thousand events then I'll probably need to optimize the query.
 
 Alright, let's make some bacon. And by that I mean let's add an event to the calendar. I have a div with the display set to none. I open this div as a dialog with the event select callback. Here's the div.
 
-
+{% highlight html %}
     <div id="add-event" title="Add New Event">
         <form action="" id ="add-event-form" name="add-event-form">
             <label for="title">Event Name</label>
@@ -112,14 +116,17 @@ Alright, let's make some bacon. And by that I mean let's add an event to the cal
             <label for = "repeats">repeat </label>
             <input type="checkbox" name="repeats" id="repeats" value="1"/>
             <div id = "repeat-options" >
-                 Repeat every: day <input type="radio" value = "1" name = "repeat-freq" align="bottom">
-                 week <input type="radio" value = "7" name = "repeat-freq" align="bottom">
-                 two weeks <input type="radio" value = "14" name = "repeat-freq" align="bottom">
+                 Repeat every: day <input type="radio" value="1" name="repeat-freq" align="bottom">
+                 week <input type="radio" value="7" name="repeat-freq" align="bottom">
+                 two weeks <input type="radio" value="14" name="repeat-freq" align="bottom">
             </div>
         </form>
     </div>
+{% endhighlight %}
 
 Next, the js for the dialog
+
+{% highlight javascript %}
 
     $("add-event").dialog({
         autoOpen: false,
@@ -150,8 +157,11 @@ Next, the js for the dialog
         },
     });
 
+{% endhighlight %}
+
 Finally, let's have a look at the add-event.php page
 
+    {% highlight php %}
     <?php
         require_once '../../../config/db-config.php';
         $title = $_POST['title']; $start_date = $_POST['event-date'];
@@ -246,7 +256,7 @@ Finally, let's have a look at the add-event.php page
         }
         header ("location: ../");
     ?>
-
+    {% endhighlight %}
 
 Every time I add an event to the calendar, I insert a row into the parent_events table. After I insert the row, I grab the new parent_id using lastInsertId(). Next, I run a loop and insert a row for every occurrence of the event until the end date.This allows me to do a few things. One, I can change any single event and it won't affect any of the other events. Two, I can edit all events by using their common parent id. Three, I can still delete all occurrences of an event by deleting the relevant rows from the events table using the parent_id
 
