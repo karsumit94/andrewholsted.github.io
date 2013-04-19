@@ -1,17 +1,17 @@
 ---
 layout: default
 ---
-  	<section id = "intro">
+  	<section id = "intro" class = "section">
   		<div id = "intro-image">
-  			<img src="/img/profile.png" />
+  			<img src="/img/profile.png" height="250" />
   		</div>
   		<h2>Hi, I'm Andrew. </h2>
   		<p>
-	  		I love mexican food, snowboarding, and fixing things when they break. My latest project is called hotfix. If you're looking for an honest, hard working, love-to-learn type of developer, you've found him. 
+	  		I love mexican food, snowboarding, and fixing things when they break. My latest project is called <a href ="https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi">hotfix</a>. Right now, I'm learning everything I can about building great web applications. 
 	  	</p>
   	</section>
 
- 	<section id= "about">
+ 	<section id= "about" class = "section">
  		<h2>About Me</h2>
 		<p>
 			I was a stockbroker for two years after I graduated from college. Gradually, I realized that I didn’t enjoy what I was doing. At that time, my wife and I were 25, we didn't have anything tying us down, and moving to Japan sounded pretty awesome. So we did.
@@ -21,7 +21,42 @@ layout: default
 		</p>
 	</section>
 
-	<section id ="posts">
+  	<section id ="projects" class = "section">
+  		<h2 class ="project-header">Projects </h2>
+  		<div id = "slider-wrap">
+  			<ul id = "slider">
+  				<li>
+			  		<div class = "project">
+			  			<div class = "project-details">
+					    		<a href="https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi">hotfix</a> is a Chrome Extension to save changes from
+					    		Chrome Developer Tools directly to GitHub.
+				    		
+				    	</div>
+				    	<div class = "project-image">
+				    		<img src = "/img/hotfix-screenshot.jpg" />
+				    	</div>	    
+				    </div>
+				</li>
+				<li>
+		    		<div class = "project">
+		    			<div class = "project-details">
+				    		<a href="http://wordpress.org/extend/plugins/quick-preview/"> Quick Preview</a> is a WordPress plugin to save and preview a post using
+				    		Ctrl+S (Cmd+S).
+					    </div>
+					    <div class = "project-image">
+				    		<img src = "/img/quick-preview-screenshot.png" />
+				    	</div>
+			   		</div>
+			   	</li>
+			</ul>
+		</div>
+		<div id="slider-controls">
+	    		<a href="#" id="slider-prev"><img src="img/prev.png" alt="" /></a>
+	   		 	<a href="#" id="slider-next"><img src="img/next.png" alt="" /></a>
+		</div>
+	</section>
+
+	<section id ="posts" class = "section">
 		
 		<h2> Posts</h2>
 		
@@ -35,64 +70,21 @@ layout: default
 	    </ul> 
 	</section>
 
-  	<section id ="projects">
-  		<div id = "slider-wrap">
-  			<h2>Projects </h2>
-  			<ul id = "slider">
-  				<li>
-			  		<div class = "project">
-			  			<div class = "project-details">
-			  				
-				    		<h2 class = "project-title serif"> 
-				    			<a href="https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi">hotfix</a>
-				    			<span class = "project-date">March 2013</span> 
-				    		</h2>
-				    		
-				    		<span class = "project-description">
-					    		Hotfix is a Chrome Extension to push changes from
-					    		Chrome Developer Tools directly to GitHub.
-				    		</span>
-				    	</div>
-				    	<div class = "project-image">
-				    		<img src = "/img/hotfix-screenshot.jpg" />
-				    	</div>	    
-				    </div>
-				</li>
-				<li>
-		    		<div class = "project">
-				    	<span class = "project-date">October 2012 - </span> 
-				    	<span class = "project-title">
-				    		<a href="http://wordpress.org/extend/plugins/quick-preview/"> Quick Preview</a>
-				    		
-				    	</span>
-				    	
-				    	<span class = "project-description">
-				    		is a WordPress plugin to save and preview a post using
-				    		Ctrl+S (Cmd+S).
-				    	</span>
-			   		 </div>
-			   	</li>
-			</ul>
-		</div>
-		<div id="slider-controls">
-    		<a href="#" id="slider-prev"><img src="images/prev.png" alt="" /></a>
-   		 	<a href="#" id="slider-next"><img src="images/next.png" alt="" /></a>
-		</div>
-	</section>
-
-	<section id ="contact">
-  		<h2>
-  			Talk to me, Goose.
-  		</h2>
-  		<a href="mailto:andrew@fajitanachos.com">andrew@fajitanachos.com</a>
+	<section id ="contact" class = "section">
+  		<div id="contact-wrap">
+	  		<h2>
+	  			Talk to me, Goose.
+	  		</h2>
+	  		<a href="mailto:andrew@fajitanachos.com">andrew@fajitanachos.com</a>
+  		</div>
   	</section>
 	<nav id ="home-nav">
 	  	<li>
-	  		<a href = "/" id= "home-link" class = "nav-link"><img src="/img/home-icon.png"/></a>
-	  		<a href = "#" id= "about-link" class = "nav-link">About</a>
-		  	<a href = "#" id = "posts-link" class = "nav-link">Posts</a>
-		  	<a href = "#" id = "projects-link" class = "nav-link" >Projects</a>
-		  	<a href = "#" id= "contact-link" class = "nav-link">Contact</a>
+	  		<a href = "#intro" id= "home-link" class = "nav-link"><img src="/img/home2.png" width="24px" height="24px"/></a>
+	  		<a href = "#about" id= "about-link" class = "nav-link">About</a>
+		  	<a href = "#projects" id = "projects-link" class = "nav-link" >Projects</a>
+		  	<a href = "#posts" id = "posts-link" class = "nav-link">Posts</a>
+		  	<a href = "#contact" id= "contact-link" class = "nav-link">Contact</a>
 		  	
 	  	</li>
 	</nav>
