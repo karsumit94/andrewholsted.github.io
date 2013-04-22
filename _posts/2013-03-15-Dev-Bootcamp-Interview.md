@@ -45,7 +45,11 @@ Nice.
 
 As our scheduled start time neared, and a solid internet connection was still no where to be found, I turned to plan B. My phone. I logged in to the Skype app, tried to shake the past 15 minutes off, and resolved to do my best under the circumstances.
 
-A few minutes later, the call came in. I accepted, and the Skype app instantly crashed. Wtf, really? I opened it back up and found a message from Karim.
+A few minutes later, the call came in. I accepted, and the Skype app instantly crashed.
+
+Solid.
+
+I opened it back up and found a message from Karim.
 
 "Are you there?"
 
