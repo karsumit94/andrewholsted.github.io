@@ -2,72 +2,81 @@
 layout: default
 ---
   	<section id = "intro" class = "section">
-  		<div id = "intro-image">
-  			<img src="/img/profile.png" height="250" />
-  		</div>
-  		<h2>Hi, I'm Andrew. </h2>
-  		<p>
-	  		I love mexican food, snowboarding, and fixing things when they break. My latest project is called <a href ="https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi">hotfix</a>. Right now, I'm learning everything I can about building great web applications. 
-	  	</p>
+  		<div id="intro-wrap">
+	  		<div id = "intro-image">
+	  			<img src="/img/profile.png" height="250" />
+	  		</div>
+	  		<h2>Hi, I'm Andrew. </h2>
+	  		<p>
+		  		I love mexican food, snowboarding, and fixing things when they break. My latest project is called <a href ="https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi">hotfix</a>. Right now, I'm learning everything I can about building great web applications. 
+		  	</p>
+		</div>
   	</section>
 
  	<section id= "about" class = "section">
- 		<h2>About Me</h2>
-		<p>
-			I was a stockbroker for two years after I graduated from college. Gradually, I realized that I didn’t enjoy what I was doing. At that time, my wife and I were 25, we didn't have anything tying us down, and moving to Japan sounded pretty awesome. So we did.
-		</p>	
-		<p>
-			After a few months here and a little soul searching, I decided to pursue something I really enjoy. Web development. Now, I’m teaching English full-time while learning as much as I can at night and on the weekends. I’m loving it.
-		</p>
+ 		<div id="about-wrap">
+	 		<h2>About Me</h2>
+			<p>
+				I was a stockbroker for two years after I graduated from college. Gradually, I realized that I didn’t enjoy what I was doing. At that time, my wife and I were 25, we didn't have anything tying us down, and moving to Japan sounded pretty awesome. So we did.
+			</p>	
+			<p>
+				After a few months here and a little soul searching, I decided to pursue something I really enjoy. Web development. Now, I’m teaching English full-time while learning as much as I can at night and on the weekends. I’m loving it.
+			</p>
+		</div>	
 	</section>
 
   	<section id ="projects" class = "section">
-  		<h2 class ="project-header">Projects </h2>
-  		<div id = "slider-wrap">
-  			<ul id = "slider">
-  				<li>
-			  		<div class = "project">
-			  			<div class = "project-details">
-					    		<a href="https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi">hotfix</a> is a Chrome Extension to save changes from
-					    		Chrome Developer Tools directly to GitHub.
-				    		
-				    	</div>
-				    	<div class = "project-image">
-				    		<img src = "/img/hotfix-screenshot.jpg" />
-				    	</div>	    
-				    </div>
-				</li>
-				<li>
-		    		<div class = "project">
-		    			<div class = "project-details">
-				    		<a href="http://wordpress.org/extend/plugins/quick-preview/"> Quick Preview</a> is a WordPress plugin to save and preview a post using
-				    		Ctrl+S (Cmd+S).
+  		
+  		<div id="project-wrap">
+
+	  		<div id = "slider-wrap">
+	  			<h2 class ="project-header">Projects </h2>
+	  			<ul id = "slider">
+	  				<li>
+				  		<div class = "project">
+				  			<div class = "project-details">
+						    		<a href="https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi">Hotfix</a> is a Chrome Extension to save changes from
+						    		Chrome Developer Tools directly to GitHub.
+					    		
+					    	</div>
+					    	<div class = "project-image">
+					    		<img src = "/img/hotfix-screenshot.jpg" />
+					    	</div>	    
 					    </div>
-					    <div class = "project-image">
-				    		<img src = "/img/quick-preview-screenshot.png" />
-				    	</div>
-			   		</div>
-			   	</li>
-			</ul>
-		</div>
-		<div id="slider-controls">
-	    		<a href="#" id="slider-prev"><img src="img/prev.png" alt="" /></a>
-	   		 	<a href="#" id="slider-next"><img src="img/next.png" alt="" /></a>
+					</li>
+					<li>
+			    		<div class = "project">
+			    			<div class = "project-details">
+					    		<a href="http://wordpress.org/extend/plugins/quick-preview/"> Quick Preview</a> is a WordPress plugin to save and preview a post using
+					    		Ctrl+S (Cmd+S).
+						    </div>
+						    <div class = "project-image">
+					    		<img src = "/img/quick-preview-screenshot.png" />
+					    	</div>
+				   		</div>
+				   	</li>
+				</ul>
+			</div>
+			<div id="slider-controls">
+		    		<a href="#" id="slider-prev"><img src="img/prev.png" alt="" /></a>
+		   		 	<a href="#" id="slider-next"><img src="img/next.png" alt="" /></a>
+			</div>
 		</div>
 	</section>
 
 	<section id ="posts" class = "section">
-		
-		<h2> Posts</h2>
-		
-	    <ul>
-	    	{% for post in site.posts %}
-		    	<li class = "post-item">
-		      		<a href="{{ post.url }}">{{ post.title }}</a>
-		    		<span class = "post-date">{{ post.date | date: "%B %e, %Y" }}</span> 
-		    	</li>
-	      	{% endfor %}
-	    </ul> 
+		<div id="posts-wrap">
+			<h2> Posts</h2>
+			
+		    <ul>
+		    	{% for post in site.posts %}
+			    	<li class = "post-item">
+			      		<a href="{{ post.url }}">{{ post.title }}</a>
+			    		<span class = "post-date">{{ post.date | date: "%B %e, %Y" }}</span> 
+			    	</li>
+		      	{% endfor %}
+		    </ul> 
+		</div>
 	</section>
 
 	<section id ="contact" class = "section">

@@ -76,10 +76,6 @@ a {
     text-decoration:none;
 }
 
-code {
-    font-size:.8em;
-}
-
 h1,h2{   
     font-family:"Droid Serif", "Georgia", serif;
 }
@@ -99,6 +95,7 @@ section{
 
 #content{
     overflow-x:hidden;
+    background-color:#f9f9f9;
 }
 /* ============
    Intro
@@ -141,6 +138,12 @@ section{
     padding-left:5em;
 }  
 
+#about-wrap{
+    position:relative;
+    top:10%;
+
+}
+
 /* ============
    Projects
    ============ */
@@ -150,10 +153,16 @@ section{
     position:relative;
 }
 
+#project-wrap{
+    position:relative;
+    top:5%;
+    height:100%;
+}
+
 .project-header {
     width:100%;
     text-align:center;
-    padding:1em 0em 1em 0em;
+    margin-bottom:5%;
 }
 
 #projects ul{
@@ -242,6 +251,11 @@ section{
     overflow:hidden;
 }
 
+#posts-wrap{
+    position:relative;
+    top:1%;
+}
+
 #posts ul{
     padding:0;
 }
@@ -269,7 +283,7 @@ section{
 }
 
 #post-content {
-    font-size: 1.15em;
+    font-size: 1.1em;
     line-height: 2em;
   
 }
@@ -283,23 +297,23 @@ section{
    height: auto;
    max-width:90%;
    display:block;
-   margin:2% auto 2% auto; 
+   margin:5% auto 5% auto; 
    border:1px solid #ccc;
-   box-shadow: 0 0 4px 2px #eee;
-   -webkit-box-shadow:0 0 4px 2px #eee;
-   -moz-box-shadow:0 0 4px 2px #eee;
+   box-shadow: 0 10px 45px 5px #999;
+   -webkit-box-shadow:0 10px 45px 5px #999;
+   -moz-box-shadow:0 10px 45px 5px #999;
 }
 
 #post-content h2{
     font-size:1.2em;
-    margin: 1% 0 1% 0;
+    margin: 6% 0 1% 0;
 }
 
 #post-nav{
     float:left;
     width:100%;
-    padding: 1% 0 2% 0;
-    font-size:1.4em;
+    padding: 5% 0 10% 0;
+    font-size:1em;
 }
 #previous-post {
     display:inline-block;
@@ -313,8 +327,34 @@ section{
 
 #post-title{
     text-align:center;
+    font-size:1.75em;
+    margin-bottom:6%;
+    font-weight:normal;
 }
 
+/* ============
+   Code
+   ============ */
+
+.highlight{
+    line-height:1em;
+    font-size:.75em;
+    display: block;
+    width: auto;
+    overflow-x:auto;
+    border:1px solid #ccc;
+    margin:5% 0 5% 0;
+    padding:1em 0 1em 0;
+    box-shadow: 0 10px 45px 5px #999;
+   -webkit-box-shadow:0 10px 45px 5px #999;
+   -moz-box-shadow:0 10px 45px 5px #999;
+   background-color:#f9f9f9;
+   }
+
+.highlight pre{
+    white-space:pre !important;
+    word-wrap:normal;
+}
 
 
 /* ============
@@ -324,17 +364,17 @@ section{
 #post-header{
     width:100%;
     text-align:center;
-    background-color:#222;
-    color:#fff;
+    background-color:#367bd1;
+    color:#f9f9f9;
 }
 
 
 
 #post-header h1{
     padding:1em;
-    font-size:2em;
-    font-family:"Open Sans", "Arial", sans-serif;
-    letter-spacing:2px;
+    font-family: "Arial", sans-serif;
+    letter-spacing:10px;
+    margin: 0 0 5% 0;
 }
 
 #post-header a {
