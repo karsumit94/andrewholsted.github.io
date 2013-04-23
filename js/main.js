@@ -1,7 +1,7 @@
 $(function($){
     var slidePosition = 1,
 	slideWidth;
-    document.location.href = "/";
+
 
     // set the intial height for each section and the width of the slider
     setHeight();
