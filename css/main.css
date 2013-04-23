@@ -74,10 +74,11 @@ body {
 
 a {
     text-decoration:none;
+    color:#5889CF;
 }
 
-h1,h2{   
-    font-family:"Droid Serif", "Georgia", serif;
+a:visited{
+    color:#367bd1;
 }
 
 h1{
@@ -96,32 +97,33 @@ section{
 #content{
     overflow-x:hidden;
     background-color:#f9f9f9;
+    
 }
 /* ============
    Intro
    ============ */
 
-#intro{
+#home{
     padding-top:3em;
     text-align:justify;
     line-height:1.75em;
    
 }
 
-#intro h2{
+#home h2{
     width:100%;
     text-align:center;
     padding-top:1em;
 }
 
-#intro p{
+#home p{
     max-width:45%;
     font-size:1.1em;
     padding:1em;
     margin:auto;
 }
 
-#intro-image img{
+#home-image img{
     display:block;
     max-width:100%;
     margin:auto;
@@ -132,15 +134,19 @@ section{
    ============ */
 
 #about{
-    float:left;
-    text-align:justify;
-    max-width:45%;
+    width:100%;
     padding-left:5em;
+
 }  
 
 #about-wrap{
     position:relative;
     top:10%;
+    width:100%;
+    max-width:45%;
+    float:left;
+    text-align:justify;
+
 
 }
 
@@ -173,6 +179,26 @@ section{
 .project{
     width:90%;
     margin:auto;
+}
+
+.project-title{
+    font-size:1.15em;
+    text-align:center;
+}
+
+.project-title h3{
+    margin-top:0;
+}
+
+.project-tags{
+    margin-top:20%;
+    font-size:.9em;
+}
+
+.project-tag{
+    border:1px solid #ccc;
+    padding:.2em .4em;
+    margin-right:4%;
 }
 
 #slider-wrap{
@@ -278,19 +304,17 @@ section{
 
 #post-container {
     max-width: 65%;
-    margin-top:2%;
-    margin:2% auto 0 auto;
+    margin:2% 0 0 28%;
 }
 
 #post-content {
     font-size: 1.1em;
     line-height: 2em;
-  
 }
 
 #post-content h1, #post-content h2{
     text-align:center;
-    font-weight:normal;
+ 
 }
 
 #post-content img{
@@ -299,9 +323,9 @@ section{
    display:block;
    margin:5% auto 5% auto; 
    border:1px solid #ccc;
-   box-shadow: 0 10px 45px 5px #999;
-   -webkit-box-shadow:0 10px 45px 5px #999;
-   -moz-box-shadow:0 10px 45px 5px #999;
+   box-shadow: 0 4px 10px 2px #ccc;
+   -webkit-box-shadow:0 4px 10px 2px #ccc;
+   -moz-box-shadow:0 4px 10px 2px #ccc;
 }
 
 #post-content h2{
@@ -314,7 +338,9 @@ section{
     width:100%;
     padding: 5% 0 10% 0;
     font-size:1em;
+
 }
+
 #previous-post {
     display:inline-block;
     float:left;
@@ -328,8 +354,7 @@ section{
 #post-title{
     text-align:center;
     font-size:1.75em;
-    margin-bottom:6%;
-    font-weight:normal;
+    margin:12% 0 6% 0;
 }
 
 /* ============
@@ -345,10 +370,10 @@ section{
     border:1px solid #ccc;
     margin:5% 0 5% 0;
     padding:1em 0 1em 0;
-    box-shadow: 0 10px 45px 5px #999;
-   -webkit-box-shadow:0 10px 45px 5px #999;
-   -moz-box-shadow:0 10px 45px 5px #999;
-   background-color:#f9f9f9;
+    box-shadow: 0 4px 10px 2px #ccc;
+   -webkit-box-shadow:0 4px 10px 2px #ccc;
+   -moz-box-shadow:0 4px 10px 2px #ccc;
+   background-color:#fff;
    }
 
 .highlight pre{
@@ -361,28 +386,55 @@ section{
    Sidebar
    ============ */ 
 
-#post-header{
-    width:100%;
+#post-sidebar{
+    width:auto;
     text-align:center;
-    background-color:#367bd1;
+    background-color:#2f4a70;
     color:#f9f9f9;
+    box-shadow:5px 0px 10px #777;
+    -webkit-box-shadow: 5px 0px 10px #777;
+    -moz-box-shadow:5px 0px 10px #777;
+    height:100%;
+    float:left;
+    position:fixed;
+    letter-spacing:2px;
+
 }
 
 
 
-#post-header h1{
-    padding:1em;
+#site-title{
     font-family: "Arial", sans-serif;
-    letter-spacing:10px;
-    margin: 0 0 5% 0;
+    text-shadow: 1px 1px 6px #000, 0px 0px 1px #fff;
+    padding:1em .5em 0 .5em;
+    line-height:1em;
+    color: #385682; 
 }
 
-#post-header a {
-    color:#fff;
+#site-title:hover, #page-nav li a:hover, #home-nav li a:hover{
+    color:#eee;
+    text-shadow: 1px 1px 6px #000;
+
 }
 
-#post-header a:visited{
-    color:#fff;
+#page-nav{
+    list-style-type:none;
+    
+}
+
+#page-nav ul{
+    padding:0;
+    margin:0;
+}
+
+#page-nav ul li a{
+    display:block;
+    text-shadow: 1px 1px 4px #000, 0px 0px 1px #ccc;
+    color: #3D5F8F; 
+}
+
+.active{
+    color:#eee !important;
 }
 
 /* ============
@@ -390,28 +442,46 @@ section{
    ============ */ 
 
 #home-nav{
-    height:40px;
-    line-height:40px;
+    font-size:1.25em;
+    height:3em;
     text-align:center;
     clear:both;
     list-style-type: none;
     position:fixed;
     bottom:0;
     width:100%;
-    background-color:#222;
-    color:#fff;
+    background-color:#2f4a70;
+    box-shadow:0px -5px 10px #bbb;
+    -webkit-box-shadow: 0px -5px 10px #bbb;
+    -moz-box-shadow:0px -5px 10px #bbb;
+    color:#f9f9f9;
 }
 
-#home-nav li a{
+#home-nav ul{
+    padding:0;
+    margin:0;
+    line-height:3em;
+}
+#home-nav ul li{
+    display:inline-block;
+}
+
+#home-nav ul li {
     text-decoration:none;
     padding:0 1% 0 1%;
-    color:#fff;
+}
+
+#home-nav ul li a{
+    text-shadow: 1px 1px 4px #000, 0px 0px 1px #ccc;
+    color: #3D5F8F; 
 }
 
 #home-nav img{
     display:inline-block;
     margin-top:-4px;
 }
+
+
 
 /* ============
    Contact

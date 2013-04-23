@@ -73,7 +73,7 @@ Parse the access code from the URL and exchange it for an auth token
 Once GitHub redirects back to your Callback URL with an access code, you need to exchange it for an auth token.
 
 Get the access code from the URL
-    {% highlight javascript %}
+    {% highlight javascript linenos=table %}
     // Get the authorization code from the url that was returned by GitHub
     
     var authCode = getAuthCode(window.location.href);

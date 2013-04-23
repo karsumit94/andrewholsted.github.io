@@ -1,9 +1,9 @@
 ---
 layout: default
 ---
-  	<section id = "intro" class = "section">
-  		<div id="intro-wrap">
-	  		<div id = "intro-image">
+  	<section id = "home" class = "section">
+  		<div id="home-wrap">
+	  		<div id = "home-image">
 	  			<img src="/img/profile.png" height="250" />
 	  		</div>
 	  		<h2>Hi, I'm Andrew. </h2>
@@ -34,21 +34,40 @@ layout: default
 	  			<ul id = "slider">
 	  				<li>
 				  		<div class = "project">
+
 				  			<div class = "project-details">
-						    		<a href="https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi">Hotfix</a> is a Chrome Extension to save changes from
+				  				<div class="project-title">
+				  					<h3><a href="https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi">Hotfix</a></h3>
+				  				</div>
+				  				<p>
+						    		Hotfix is a Chrome Extension to save changes from
 						    		Chrome Developer Tools directly to GitHub.
+						    	</p>
+						    	<div class= "project-tags">
+						    		<span class="project-tag">Javascript</span>
+						    		<span class="project-tag">Node.js</span>
+						    	</div>
 					    		
 					    	</div>
 					    	<div class = "project-image">
-					    		<img src = "/img/hotfix-screenshot.jpg" />
+					    		<img src = "/img/hotfix-screenshot.png" />
 					    	</div>	    
 					    </div>
 					</li>
 					<li>
 			    		<div class = "project">
 			    			<div class = "project-details">
-					    		<a href="http://wordpress.org/extend/plugins/quick-preview/"> Quick Preview</a> is a WordPress plugin to save and preview a post using
-					    		Ctrl+S (Cmd+S).
+					    		<div class="project-title">
+					    			<h3><a href="http://wordpress.org/extend/plugins/quick-preview/"> Quick Preview</a></h3>
+					    		</div>
+					    			<p>
+					    			 Quick Preview is a WordPress plugin to save and preview a post using Ctrl+S (Cmd+S).
+					    			</p>
+					    		<div class="project-tags">
+					    			<span class="project-tag">PHP</span>
+					    			<span class="project-tag">Javascript</span>
+
+					    		</div>
 						    </div>
 						    <div class = "project-image">
 					    		<img src = "/img/quick-preview-screenshot.png" />
@@ -88,12 +107,11 @@ layout: default
   		</div>
   	</section>
 	<nav id ="home-nav">
-	  	<li>
-	  		<a href = "#intro" id= "home-link" class = "nav-link"><img src="/img/home2.png" width="24px" height="24px"/></a>
-	  		<a href = "#about" id= "about-link" class = "nav-link">About</a>
-		  	<a href = "#projects" id = "projects-link" class = "nav-link" >Projects</a>
-		  	<a href = "#posts" id = "posts-link" class = "nav-link">Posts</a>
-		  	<a href = "#contact" id= "contact-link" class = "nav-link">Contact</a>
-		  	
-	  	</li>
+		<ul>
+		  	<li><a href = "#home" id= "home-link" class = "nav-link">Home</a></li>
+		  	<li><a href = "#about" id= "about-link" class = "nav-link">About</a></li>
+			<li><a href = "#projects" id = "projects-link" class = "nav-link" >Projects</a></li>
+			<li><a href = "#posts" id = "posts-link" class = "nav-link">Posts</a></li>
+			<li><a href = "#contact" id= "contact-link" class = "nav-link">Contact</a></li>
+		</ul>
 	</nav>

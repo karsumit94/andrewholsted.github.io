@@ -1,7 +1,7 @@
 $(function($){
     var slidePosition = 1,
 	slideWidth;
-
+    document.location.href = "/";
 
     // set the intial height for each section and the width of the slider
     setHeight();
@@ -11,6 +11,8 @@ $(function($){
 
     $(".nav-link").click(function(e){
         e.preventDefault();
+        $(".nav-link").removeClass('active');
+        $(this).addClass('active');
         $(document.body).animate({'scrollTop': $(this.hash).offset().top}, 1000);
     });
 
