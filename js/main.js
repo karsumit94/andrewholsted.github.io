@@ -1,11 +1,15 @@
 $(function($){
+   
+    
     var slidePosition = 1,
-	slideWidth;
-
+	slideWidth,
+    windowHeight;
 
     // set the intial height for each section and the width of the slider
     setHeight();
     setSlider();
+    $("#home-link").addClass("active");
+    $(document.body).animate({'scrollTop':0});
 
     //attach the click event to the menu links 
 
@@ -16,6 +20,7 @@ $(function($){
         $(document.body).animate({'scrollTop': $(this.hash).offset().top}, 1000);
     });
 
+
     //resize slider and section heights on window resize
  
     $(window).resize(function() {
@@ -24,10 +29,11 @@ $(function($){
 
     });
 
+
     //set section height
 
     function setHeight(){
-        var windowHeight = $(window).height();
+        windowHeight = $(window).height();
         $("section").each(function(){
             $(this).height('auto');
             if($(this).height() < windowHeight - 40){
@@ -35,6 +41,29 @@ $(function($){
             }
         });
     }
+
+    $(window).scroll(function() {    
+    // find the li with class 'active' and remove it
+    $("#home-nav ul li a.active").removeClass("active");
+    // get the amount the window has scrolled
+    var scroll = $(window).scrollTop();
+    // add the 'active' class to the correct li based on the scroll amount
+    if (scroll <= windowHeight) {
+        $("#home-link").addClass("active");
+    }
+    else if (scroll <= (windowHeight-40)*2) {
+        $("#about-link").addClass("active");
+    }
+     else if (scroll <= (windowHeight-40)*3) {
+        $("#projects-link").addClass("active");
+    }
+     else if (scroll <= (windowHeight-40)*4) {
+        $("#posts-link").addClass("active");
+    }
+    else if (scroll <= (windowHeight-40)*5) {
+        $("#contact-link").addClass("active");
+    }
+});
 
     //set slider width
 
