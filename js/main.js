@@ -8,6 +8,11 @@ $(function($){
     // set the intial height for each section and the width of the slider
     setHeight();
     setSlider();
+
+    //load Square Send here instead of on the index page because it was slowing down page load
+    loadSquareSend();
+
+
     $("#home-link").addClass("active");
     $(document.body).animate({'scrollTop':0});
 
@@ -15,8 +20,6 @@ $(function($){
 
     $(".nav-link").click(function(e){
         e.preventDefault();
-        $(".nav-link").removeClass('active');
-        $(this).addClass('active');
         $(document.body).animate({'scrollTop': $(this.hash).offset().top}, 1000);
     });
 
@@ -36,34 +39,45 @@ $(function($){
         windowHeight = $(window).height();
         $("section").each(function(){
             $(this).height('auto');
-            if($(this).height() < windowHeight - 40){
-                $(this).height(windowHeight - 40);
+            if($(this).height() < windowHeight - 65){
+                $(this).height(windowHeight - 65);
             }
         });
+
+        $("#contact").height(windowHeight);
     }
 
-    $(window).scroll(function() {    
+     $(window).scroll(function() {    
     // find the li with class 'active' and remove it
-    $("#home-nav ul li a.active").removeClass("active");
-    // get the amount the window has scrolled
-    var scroll = $(window).scrollTop();
-    // add the 'active' class to the correct li based on the scroll amount
-    if (scroll <= windowHeight) {
-        $("#home-link").addClass("active");
-    }
-    else if (scroll <= (windowHeight-40)*2) {
-        $("#about-link").addClass("active");
-    }
-     else if (scroll <= (windowHeight-40)*3) {
-        $("#projects-link").addClass("active");
-    }
-     else if (scroll <= (windowHeight-40)*4) {
-        $("#posts-link").addClass("active");
-    }
-    else if (scroll <= (windowHeight-40)*5) {
-        $("#contact-link").addClass("active");
-    }
-});
+        $("#home-nav ul li a.active").removeClass("active");
+        // get the amount the window has scrolled
+        var scroll = $(window).scrollTop(),
+            homeHeight = $("#home").height(),
+            aboutHeight = $("#about").height(),     
+            postsHeight = $("#posts").height(),
+            projectsHeight = $("#projects").height(),
+            contactHeight = $("#contact").height();
+
+        if(scroll <= homeHeight/1.25){
+            $("#home-link").addClass("active");
+        }
+        else if(scroll <= ((homeHeight + aboutHeight)/1.25)){
+            $("#about-link").addClass("active");
+        }
+        else if(scroll <= ((homeHeight+aboutHeight+projectsHeight)/1.25)){
+            $("#projects-link").addClass("active");
+        }
+        else if(scroll<=((homeHeight+aboutHeight+projectsHeight+postsHeight)/1.25)){
+            $("#posts-link").addClass("active");
+        }
+        else{
+            $("#contact-link").addClass("active");
+        }
+        // add the 'active' class to the correct li based on the scroll amount
+
+    });
+
+   
 
     //set slider width
 
@@ -120,6 +134,13 @@ $(function($){
     		$("#slider-next").show();
     	}
     }
+
+    function loadSquareSend() {
+      var squareScript = document.createElement('script');
+      squareScript.type = 'text/javascript';
+      squareScript.src = "//squaresend.com/squaresend.js";
+      document.getElementsByTagName('head')[0].appendChild(squareScript);
+    };
 
 });
 
