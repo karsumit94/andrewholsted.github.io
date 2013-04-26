@@ -9,9 +9,6 @@ $(function($){
     setHeight();
     setSlider();
 
-    //load Square Send here instead of on the index page because it was slowing down page load
-    loadSquareSend();
-
 
     $("#home-link").addClass("active");
     $(document.body).animate({'scrollTop':0});
@@ -32,14 +29,15 @@ $(function($){
 
     });
 
-
+     //load Square Send here instead of on the index page because it was slowing down page load
+    loadSquareSend();
     //set section height
 
     function setHeight(){
         windowHeight = $(window).height();
         $("section").each(function(){
             $(this).height('auto');
-            if($(this).height() < windowHeight - 65){
+            if($(this).height() <= windowHeight - 65){
                 $(this).height(windowHeight - 65);
             }
         });

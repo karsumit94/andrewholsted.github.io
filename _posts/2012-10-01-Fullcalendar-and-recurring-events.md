@@ -9,15 +9,126 @@ I'm currently using arshaw's <a href="http://arshaw.com/fullcalendar/">fullcalen
 
 First, I use two MySQL tables to store the event data. One is called 'events_parent' and the other is 'events'. Each event can have only one parent event.
 
-<!--more-->
+The events_parent table 
 
-The events_parent table
-
-need to insert table here
+<table id="fc-parent-events">
+    <tbody>
+        <tr class="fc-table-header">
+            <td>Field</td>
+            <td>Type</td>
+            <td>Key</td>
+            <td>Default</td>
+            <td>Extra</td>
+        </tr>
+        <tr class="first-row">
+            <td>parent_id</td>
+            <td>int(30)unsigned</td>
+            <td>primary</td>
+            <td>NULL</td>
+            <td>auto_increment</td>
+        </tr>
+        <tr>
+            <td>title</td>
+            <td>varchar(120)</td>
+            <td></td>
+            <td>NULL</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>weekday</td>
+            <td>int(1)</td>
+            <td></td>
+            <td>NULL</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>start_date</td>
+            <td>date</td>
+            <td></td>
+            <td>NULL</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>start_time</td>
+            <td>time</td>
+            <td></td>
+            <td>NULL</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>end_time</td>
+            <td>time</td>
+            <td></td>
+            <td>NULL</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>repeats</td>
+            <td>tinyint(1)</td>
+            <td></td>
+            <td>NULL</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>repeat_freq</td>
+            <td>tinyint(1)</td>
+            <td></td>
+            <td>NULL</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 The events table
 
-and here 
+<div class="code-wrap">
+<table id="fc-events">
+<tbody>
+<tr class="fc-table-header">
+<td>Field</td>
+<td>Type</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="first-row">
+<td>event_id</td>
+<td>int(30)unsigned</td>
+<td>primary</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>int(30)unsigned</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+</tr>
+<tr>
+<td>start</td>
+<td>datetime</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+</tr>
+<tr>
+<td>end</td>
+<td>datetime</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+</tr>
+<tr>
+<td>title</td>
+<td>varchar(120)</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 
 A brief explanation. 
 
