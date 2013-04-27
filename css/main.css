@@ -114,6 +114,10 @@ section h1{
     color:#f9f9f9 !important;
 }
 
+.clear{
+    clear:both;
+}
+
 
 /* ============
    Intro
@@ -128,8 +132,7 @@ section h1{
     float:left;
 }
 #home-wrap{
-    position:relative;
-    top:5%;
+    padding-top:2em;
 }
 
 #home h2{
@@ -165,8 +168,7 @@ section h1{
 }  
 
 #about-wrap{
-    position:relative;
-    top:8%;
+    padding-top:2em;
     max-width:45%;
 }
 
@@ -176,13 +178,13 @@ section h1{
 
 #projects{
     clear:both; 
+    width:100%;
     
 }
 
 #projects-wrap{
     position:relative;
-    top:0;
-    left:0;
+    padding-top:2em;
     height:100%;
 }
 
@@ -200,7 +202,7 @@ section h1{
 
 .project{
     width:90%;
-    margin:auto;
+    margin:0 auto 5% auto;
     
 }
 
@@ -210,7 +212,7 @@ section h1{
 }
 
 .project-title h3{
-    margin-top:0;
+    
     color:#517bb9;
 }
 
@@ -301,8 +303,7 @@ section h1{
 #posts-wrap{
     max-width:70%;
     margin:auto;
-    position:relative;
-    top:8%;
+    padding-top:2em;
 }
 
 #posts ul{
