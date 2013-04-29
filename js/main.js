@@ -6,8 +6,9 @@ $(function($){
     windowHeight;
 
     // set the intial height for each section and the width of the slider
-    setHeight();
     setSlider();
+    setHeight();
+
 
 
     $("#home-link").addClass("active");
@@ -37,8 +38,13 @@ $(function($){
         windowHeight = $(window).height();
         $("section").each(function(){
             $(this).height('auto');
+            var height = $(this).height();
+            console.log(height);
             if($(this).height() <= windowHeight - 65){
                 $(this).height(windowHeight - 65);
+            }
+            else{
+                $(this).height(height);
             }
         });
 
@@ -83,6 +89,7 @@ $(function($){
 
         // Set the width of each slide to the widow width;
         $("#slider li").width($(window).innerWidth());
+      
         // Declare variables
             slideWidth = $("#slider > li:first").width();
             var sliderLength = $("#slider > li").length;
