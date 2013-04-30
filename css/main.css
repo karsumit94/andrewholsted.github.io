@@ -159,8 +159,8 @@ section h1{
 
 #home-intro h1, #about-details h2{
     text-align:center;
-    padding-top:1em;
-    font-size:2.5em;
+    margin:0;
+    font-size:2em;
     line-height:1.5em;
 }
 
@@ -171,7 +171,6 @@ section h1{
     max-width:80%;
     margin:auto;
 }
-
 
 /* ============
    Projects
@@ -191,8 +190,6 @@ section h1{
 }
 
 .project-header {
-    width:95%;
-    margin:auto;
     text-align:center;
 }
 
@@ -273,14 +270,14 @@ section h1{
 }
 
 .project-details{
-    float: left;
+    float: right;
     width:25%; 
     padding:0 5% 0 5%;
     
 }
 
 .project-image{
-    float: left;
+    float: right;
     width:60%;
     margin-top:-10px;
 }
@@ -583,12 +580,37 @@ tr.first-row td {
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (max-width: 760px) {
+    #home-image, #home-intro, #about-image, #about-details {
+        display:block;
+        width:100%;
+        
+    }
 
+    .project-details, .project-image{
+        float:none;
+        width:100%;
+        padding:0;
+
+    }
+
+    .project-image{
+        padding-top:5%;
+    }
+
+    .project {
+        width:80%;
+        margin:0;
+    }
+
+    #home-wrap, #about-wrap, #projects-wrap{
+        width:80%;
+        margin:auto;
+    }
 }
 
 @media print,
-       (-o-min-device-pixel-ratio: 5/4),
+(-o-min-device-pixel-ratio: 5/4),
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
 

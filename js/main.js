@@ -6,9 +6,10 @@ $(function($){
     windowHeight;
 
     // set the intial height for each section and the width of the slider
-   
+   $(window).load(function(){
     setSlider();
     setHeight();
+});
 
 
     $("#home-link").addClass("active");
@@ -62,16 +63,16 @@ $(function($){
             projectsHeight = $("#projects").height(),
             contactHeight = $("#contact").height();
 
-        if(scroll <= homeHeight/1.25){
+        if(scroll <= homeHeight){
             $("#home-link").addClass("active");
         }
-        else if(scroll <= ((homeHeight + aboutHeight)/1.25)){
+        else if(scroll <= (homeHeight + aboutHeight)){
             $("#about-link").addClass("active");
         }
-        else if(scroll <= ((homeHeight+aboutHeight+projectsHeight)/1.25)){
+        else if(scroll <= (homeHeight+aboutHeight+projectsHeight)){
             $("#projects-link").addClass("active");
         }
-        else if(scroll<=((homeHeight+aboutHeight+projectsHeight+postsHeight)/1.25)){
+        else if(scroll<=(homeHeight+aboutHeight+projectsHeight+postsHeight)){
             $("#posts-link").addClass("active");
         }
         else{
