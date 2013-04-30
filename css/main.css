@@ -127,13 +127,13 @@ section h1{
 
 
 
-#home{
+#home, #about{
     text-align:justify;
     line-height:1.75em;
     width:100%;
     float:left;
 }
-#home-wrap{
+#home-wrap, #about-wrap{
     
     width:100%;
     height:100%;
@@ -141,7 +141,7 @@ section h1{
 
 }
 
-#home-intro{
+#home-intro, #about-details{
     display:inline-block;
     vertical-align:middle;
     width:40%;
@@ -149,7 +149,7 @@ section h1{
 
 }
 
-#home-image{
+#home-image, #about-image{
     display:inline-block;
     vertical-align:middle;
     width:40%;
@@ -157,7 +157,7 @@ section h1{
 }
 
 
-#home-intro h1{
+#home-intro h1, #about-details h2{
     text-align:center;
     padding-top:1em;
     font-size:2.5em;
@@ -165,51 +165,12 @@ section h1{
 }
 
 
-#home-image img{
+#home-image img, #about-image img{
     display:block;
+    vertical-align:middle;
     max-width:80%;
     margin:auto;
 }
-
-/* ============
-   About
-   ============ */
-
-#about{
-    width:100%;
-    height:100%;
-    float:left;
-    background-color:#f9f9f9; 
-}  
-
-#about-wrap{
-    width:100%;
-    height:100%;
-    padding:5%;
-}
-
-#about-details{
-    width:40%;
-    display:inline-block;
-    vertical-align:top;
-}
-
-#about-details h2{
-    text-align:center;
-}
-
-#about-image{
-    display:inline-block;
-    padding-left:10%;
-    max-width:40%;
-    vertical-align:top;
-}
-
-#about-image img{
-   width:90%; 
-   margin:auto; 
-}
-
 
 
 /* ============
