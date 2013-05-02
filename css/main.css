@@ -87,15 +87,6 @@ h1, h2{
     text-shadow: 1px 1px 8px #ddd;
 }
 
-h1{
-    font-size:2em;  
-
-}
-
-h2{
-    font-size:2.5em;
-}
-
 section{
     height:auto;
     clear:both;
@@ -126,22 +117,12 @@ section h1{
    ============ */
 
 
-
-#home, #about{
-    text-align:justify;
-    line-height:1.75em;
-    width:100%;
-    float:left;
-}
 #home-wrap, #about-wrap{
-    
-    width:100%;
-    height:100%;
     padding: 5%;
 
 }
 
-#home-intro, #about-details{
+#home-intro{
     display:inline-block;
     vertical-align:middle;
     width:40%;
@@ -149,7 +130,7 @@ section h1{
 
 }
 
-#home-image, #about-image{
+#home-image{
     display:inline-block;
     vertical-align:middle;
     width:40%;
@@ -165,15 +146,16 @@ section h1{
 }
 
 
-#home-image img, #about-image img{
+#home-image img{
     display:block;
     vertical-align:middle;
     max-width:80%;
     margin:auto;
 }
 
-#about-image img{
-    max-width:90%;
+#about-details{
+    width:80%;
+    margin:auto;
 }
 
 /* ============
@@ -190,12 +172,14 @@ section h1{
 #projects-wrap{
     position:relative;
     height:100%;
-    padding:0 2%;
+    padding:5% 2%;
 }
 
 .project-header {
     text-align:center;
-    padding-top:5%;
+    padding:0;
+    margin:0;
+    font-size:2.5em;
 }
 
 #projects ul{
@@ -592,10 +576,6 @@ tr.first-row td {
         
     }
 
-    #about-image{
-        display:none; 
-    }
-
     .project-details, .project-image{
         width:100%;
         margin:auto;
@@ -616,12 +596,8 @@ tr.first-row td {
 
     #home-wrap, #about-wrap, #projects-wrap{
         width:80%;
+        max-width:45em;
         margin:auto;
-    }
-
-    #about-image{
-        float:left;
-        width:100%;
     }
 
     .post-date{
