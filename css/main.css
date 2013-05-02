@@ -172,6 +172,10 @@ section h1{
     margin:auto;
 }
 
+#about-image img{
+    max-width:90%;
+}
+
 /* ============
    Projects
    ============ */
@@ -186,11 +190,12 @@ section h1{
 #projects-wrap{
     position:relative;
     height:100%;
-    padding:5%;
+    padding:0 2%;
 }
 
 .project-header {
     text-align:center;
+    padding-top:5%;
 }
 
 #projects ul{
@@ -230,7 +235,7 @@ section h1{
 }
 
 #slider-wrap{
-    margin-top:4em;
+    margin-top:3em;
     height:100%;
 
 }
@@ -270,14 +275,14 @@ section h1{
 }
 
 .project-details{
-    float: right;
+    float: left;
     width:25%; 
     padding:0 5% 0 5%;
     
 }
 
 .project-image{
-    float: right;
+    float: left;
     width:60%;
     margin-top:-10px;
 }
@@ -504,7 +509,6 @@ tr.first-row td {
 
 #home-nav{
     font-size:1.25em;
-    height:3em;
     text-align:center;
     clear:both;
     list-style-type: none;
@@ -517,7 +521,7 @@ tr.first-row td {
 #home-nav ul{
     padding:0;
     margin:0;
-    line-height:3em;
+   
 }
 #home-nav ul li{
     display:inline-block;
@@ -525,7 +529,7 @@ tr.first-row td {
 
 #home-nav ul li {
     text-decoration:none;
-    padding:0 1% 0 1%;
+    padding:.5em;
 }
 
 #home-nav ul li a{
@@ -566,6 +570,7 @@ tr.first-row td {
     clear:both;
     float:left;
     width:100%;
+
 }
 
 #contact a{
@@ -581,21 +586,27 @@ tr.first-row td {
    ========================================================================== */
 
 @media only screen and (max-width: 760px) {
-    #home-image, #home-intro, #about-image, #about-details {
+    #home-image, #home-intro, #about-details {
         display:block;
         width:100%;
         
     }
 
+    #about-image{
+        display:none; 
+    }
+
     .project-details, .project-image{
-        float:none;
         width:100%;
+        margin:auto;
         padding:0;
+        float:none;
 
     }
 
-    .project-image{
-        padding-top:5%;
+    .project-details{
+        width:90%;
+        margin:auto;
     }
 
     .project {
@@ -606,6 +617,18 @@ tr.first-row td {
     #home-wrap, #about-wrap, #projects-wrap{
         width:80%;
         margin:auto;
+    }
+
+    #about-image{
+        float:left;
+        width:100%;
+    }
+
+    .post-date{
+        display:none;
+    }
+    .slider-wrap{
+        margin-top:2em;
     }
 }
 
