@@ -85,6 +85,16 @@ a:visited{
 h1, h2{
     color:#367bd1;
     text-shadow: 1px 1px 8px #ddd;
+    line-height:1em;
+}
+
+h1{
+    font-size:2.5em;
+    
+}
+h2{
+    font-size:2.25em;
+    
 }
 
 section{
@@ -99,8 +109,8 @@ section h1{
 }
 
 #content{
-    overflow-x:hidden;
     background-color:#fff;
+    overflow-x:hidden;
 }
 
 .active{
@@ -111,6 +121,9 @@ section h1{
     clear:both;
 }
 
+.sqs-container{
+    height:100% !important;
+}
 
 /* ============
    Intro
@@ -122,12 +135,18 @@ section h1{
 
 }
 
+#home-wrap{
+    text-align:center;
+}
+
 #home-intro{
+    text-align:left;
     display:inline-block;
     vertical-align:middle;
     width:40%;
     padding:0 2%;
-
+    min-width:400px;
+    margin:auto;
 }
 
 #home-image{
@@ -135,14 +154,17 @@ section h1{
     vertical-align:middle;
     width:40%;
     padding: 3%;
+    margin:auto;
 }
 
 
 #home-intro h1, #about-details h2{
     text-align:center;
     margin:0;
-    font-size:2em;
-    line-height:1.5em;
+}
+
+#about-details h2{
+    padding-bottom:.5em;
 }
 
 
@@ -150,11 +172,13 @@ section h1{
     display:block;
     vertical-align:middle;
     max-width:80%;
+    min-width:300px;
     margin:auto;
 }
 
 #about-details{
     width:80%;
+    max-width:40em;
     margin:auto;
 }
 
@@ -170,16 +194,14 @@ section h1{
 }
 
 #projects-wrap{
-    position:relative;
-    height:100%;
-    padding:5% 2%;
+    padding:2em 0;
+    text-align:center;
 }
 
 .project-header {
     text-align:center;
     padding:0;
     margin:0;
-    font-size:2.5em;
 }
 
 #projects ul{
@@ -190,7 +212,7 @@ section h1{
 
 .project{
     width:90%;
-    margin:0 auto 5% auto;
+    margin:auto;
     
 }
 
@@ -200,12 +222,13 @@ section h1{
 }
 
 .project-title h3{
-    
+    margin:0;
+    padding:0;
     color:#517bb9;
 }
 
 .project-tags{
-    
+    padding-top:1em;
     font-size:.75em;
 }
 
@@ -213,15 +236,33 @@ section h1{
     border:1px solid #ddd;
     display:inline-block;
     padding:0 .6em;
-    margin:0 .2em .5em 0;
+    margin:0 .5em .5em 0;
     background-color:#367bd1;
     color:#f9f9f9;
 }
 
-#slider-wrap{
-    margin-top:3em;
-    height:100%;
+.project-details{
+    display:inline-block;
+    vertical-align:top;
+    width:25%; 
+    padding:0 5% 0 5%;
+ 
+}
 
+.project-image{
+    display:inline-block;
+    width:50%;
+    margin:auto;
+    vertical-align:top;
+}
+
+.project-image img{
+    width:100%;
+    height:auto;
+}
+
+#slider-wrap{
+    margin-top:2em;
 }
 
 #slider {
@@ -258,24 +299,6 @@ section h1{
     
 }
 
-.project-details{
-    float: left;
-    width:25%; 
-    padding:0 5% 0 5%;
-    
-}
-
-.project-image{
-    float: left;
-    width:60%;
-    margin-top:-10px;
-}
-
-.project-image img{
-    width:100%;
-    height:auto;
-}
-
 
 
 /* ============
@@ -283,7 +306,6 @@ section h1{
    ============ */
 
 #posts{
-    clear:both;
     font-size:1.1em;
     float:left;
     width:100%;
@@ -293,11 +315,12 @@ section h1{
 
 #posts-wrap{
     max-width:70%;
-    margin:3em auto 3em auto;
+    margin:3em auto;
 }
 
 #posts-wrap h2{
     text-align:center;
+    
 }
 
 #posts ul{
@@ -316,22 +339,21 @@ section h1{
 }
 
 .post-date{
-    display:inline-block;
     float:right;
     font-size:.8em;
 }
 
 #post-wrap{
-    width:100%;
-    height:100%;
     float:left;
     background-color:#f9f9f9;
+
 }
 
 #post-container {
-    max-width: 68%;
-    margin-left:200px; 
-    padding:10%;  
+    max-width: 70%;
+    margin:auto; 
+    padding:6%;  
+
 }
 
 #post-content {
@@ -441,50 +463,33 @@ tr.first-row td {
    Sidebar
    ============ */ 
 
-#post-sidebar{
-    width:200px;
+#post-header{
+    width:100%;
     text-align:center;
     background-color:#2f4a70;
     color:#f9f9f9;
-    border-right:1px solid #222;
-    box-shadow:5px 0px 10px #777;
-    -webkit-box-shadow: 5px 0px 10px #777;
-    -moz-box-shadow:5px 0px 10px #777;
-    height:100%;
-    float:left;
-    position:fixed;
-    letter-spacing:2px;
-
+    border-bottom:1px solid #555;
+    box-shadow:0px 2px 4px #aaa;
+    -webkit-box-shadow: 0px 2px 4px #aaa;
+    -moz-box-shadow:0px 2px 4px #aaa;
+    letter-spacing:4px;
 }
-
-#post-sidebar:hover{
-    
-}
-
-
 
 #site-title{
     font-family: "Arial", sans-serif;
+    font-size:3em;
     text-shadow: 1px 1px 6px #000, 0px 0px 1px #fff;
-    padding:1em .5em 0 .5em;
+    padding:.5em .25em;
+    margin:0;
     line-height:1em;
     color: #385682; 
 }
 
 #site-title:hover{
-    color:#ddd;
+    color:#f9f9f9;
 }
 
 
-#page-nav{
-    list-style-type:none;
-    
-}
-
-#page-nav ul{
-    padding:0;
-    margin:0;
-}
 
 
 /* ============
@@ -546,10 +551,6 @@ tr.first-row td {
   top:30%;
 }
 
-#contact-wrap h2{
-    font-size:2em;
-}
-
 #contact { 
     clear:both;
     float:left;
@@ -570,10 +571,27 @@ tr.first-row td {
    ========================================================================== */
 
 @media only screen and (max-width: 760px) {
-    #home-image, #home-intro, #about-details {
+    h1{
+        font-size:2em;
+    }
+
+    h2{
+        font-size:1.75em;
+    }
+
+    #home-image, #home-intro, #about-details{
         display:block;
         width:100%;
         
+    }
+
+    #home-image img{
+        min-width:auto;
+        max-width:300px;
+    }
+
+    #home-intro{
+        min-width:auto;
     }
 
     .project-details, .project-image{
@@ -598,6 +616,7 @@ tr.first-row td {
         width:80%;
         max-width:45em;
         margin:auto;
+
     }
 
     .post-date{
@@ -606,7 +625,16 @@ tr.first-row td {
     .slider-wrap{
         margin-top:2em;
     }
+
+    #home-nav{
+        font-size:1.1em;
+    }
+
+    #home-nav ul li{
+        padding:.25em;
+    }
 }
+
 
 @media print,
 (-o-min-device-pixel-ratio: 5/4),

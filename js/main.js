@@ -39,13 +39,11 @@ $(function($){
         windowHeight = $(window).height();
         $("section").each(function(){
             $(this).height('auto');
-            var height = $(this).height();
-            console.log(height);
-            if($(this).height() <= windowHeight - 65){
-                $(this).height(windowHeight - 65);
-            }
-            else{
-                $(this).height(height);
+            var navHeight = $("#home-nav").height();
+            var sectionHeight = (windowHeight - navHeight);
+            if($(this).height() <=  sectionHeight){
+                $(this).height(sectionHeight);
+                
             }
         });
 
