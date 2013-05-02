@@ -214,12 +214,13 @@ section h1{
 }
 
 .project-header {
+    margin-top:0;
     text-align:center;
    
 }
 
 #projects ul{
-    padding:0;
+    padding:2em 0 0 0;
     list-style-type:none; 
     position:relative;
 }
@@ -275,12 +276,10 @@ section h1{
     height:auto;
 }
 
-#slider-wrap{
-    
-}
 
 #slider {
     width:100%;
+    padding-top:2em;
 }
 
 #slider li{
@@ -333,7 +332,8 @@ section h1{
 }
 
 #posts-wrap h2{
-    text-align:center;  
+    text-align:center; 
+    margin-top:0; 
 }
 
 #posts ul{
@@ -565,9 +565,7 @@ tr.first-row td {
 }
 
 #contact { 
-    clear:both;
-    float:left;
-    width:100%;
+    
 
 }
 
@@ -583,7 +581,7 @@ tr.first-row td {
    Media Queries
    ========================================================================== */
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 780px) {
     h1{
         font-size:2em;
     }
@@ -625,9 +623,6 @@ tr.first-row td {
     .post-date{
         display:none;
     }
-    .slider-wrap{
-        margin-top:2em;
-    }
 
     #home-nav{
         font-size:1.1em;
@@ -636,8 +631,9 @@ tr.first-row td {
     #home-nav ul li{
         padding:.25em;
     }
-
-    
+    section {
+        padding:2em 0;
+    }
 }
 
 

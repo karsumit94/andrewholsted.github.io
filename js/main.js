@@ -6,10 +6,8 @@ $(function($){
     windowHeight;
 
     // set the intial height for each section and the width of the slider
-   $(window).load(function(){
     setSlider();
     setHeight();
-});
 
 
     $("#home-link").addClass("active");
@@ -22,11 +20,11 @@ $(function($){
         $(document.body).animate({'scrollTop': $(this.hash).offset().top}, 1000);
     });
 
-
+$(window).resize(function(){
     //resize slider and section heights on window resize
- 
         setHeight();
         setSlider();
+});
 
      //load Square Send here instead of on the index page because it was slowing down page load
     loadSquareSend();
@@ -41,8 +39,9 @@ $(function($){
                 $(this).height(windowHeight - navHeight);
             }
         });
+        $('#contact').height(windowHeight);
 
-        $("#contact").height(windowHeight);
+
     }
 
      $(window).scroll(function() {    
