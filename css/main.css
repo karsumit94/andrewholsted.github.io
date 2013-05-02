@@ -13,6 +13,7 @@ textarea {
 body {
     font-size: 1em;
     line-height: 1.4;
+
 }
 
 ::-moz-selection {
@@ -64,6 +65,7 @@ html, body{
     width:100%;
     margin:0;
     padding:0;
+    
 }
 
 body {
@@ -98,19 +100,16 @@ h2{
 }
 
 section{
-    height:auto;
+    height:100%;
     clear:both;
     border-bottom:1px solid #ddd;
-    padding-bottom:2em;
+    position:relative;
+    overflow-x:hidden;
 }
+
 
 section h1{
     margin-top:0;
-}
-
-#content{
-    background-color:#fff;
-    overflow-x:hidden;
 }
 
 .active{
@@ -125,19 +124,40 @@ section h1{
     height:100% !important;
 }
 
+#home{
+    text-align:center;
+}
+#home:before, #about:before, #projects:before, #posts:before, #contact:before{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+#home-wrap, #about-wrap, #projects-wrap, #posts-wrap, #contact-wrap{
+    width:99%;
+    text-align:center;
+    display:inline-block;
+    vertical-align:middle;
+
+}
+
+
+
+#post-list{
+    width:70%;
+    text-align:left;
+    display:inline-block;
+}
+
 /* ============
    Intro
    ============ */
 
 
-#home-wrap, #about-wrap{
-    padding: 5%;
 
-}
 
-#home-wrap{
-    text-align:center;
-}
 
 #home-intro{
     text-align:left;
@@ -145,7 +165,6 @@ section h1{
     vertical-align:middle;
     width:40%;
     padding:0 2%;
-    min-width:400px;
     margin:auto;
 }
 
@@ -171,15 +190,16 @@ section h1{
 #home-image img{
     display:block;
     vertical-align:middle;
-    max-width:80%;
     min-width:300px;
+    max-width:80%;
     margin:auto;
 }
 
 #about-details{
     width:80%;
     max-width:40em;
-    margin:auto;
+    text-align:left;
+    display:inline-block;
 }
 
 /* ============
@@ -193,15 +213,9 @@ section h1{
     position:relative;
 }
 
-#projects-wrap{
-    padding:2em 0;
-    text-align:center;
-}
-
 .project-header {
     text-align:center;
-    padding:0;
-    margin:0;
+   
 }
 
 #projects ul{
@@ -211,7 +225,7 @@ section h1{
 }
 
 .project{
-    width:90%;
+    width:100%;
     margin:auto;
     
 }
@@ -262,7 +276,7 @@ section h1{
 }
 
 #slider-wrap{
-    margin-top:2em;
+    
 }
 
 #slider {
@@ -314,13 +328,12 @@ section h1{
 }
 
 #posts-wrap{
-    max-width:70%;
-    margin:3em auto;
+   
+    
 }
 
 #posts-wrap h2{
-    text-align:center;
-    
+    text-align:center;  
 }
 
 #posts ul{
@@ -364,7 +377,7 @@ section h1{
 
 #post-content h1, #post-content h2{
     text-align:center;
-    color:#2f4a70;
+    color:#444;
  
 }
 
@@ -505,6 +518,7 @@ tr.first-row td {
     bottom:0;
     width:100%;
     background-color:#2f4a70;
+    height:2.5em;
 }
 
 #home-nav ul{
@@ -518,7 +532,8 @@ tr.first-row td {
 
 #home-nav ul li {
     text-decoration:none;
-    padding:.5em;
+    line-height:2em;
+    padding:.25em .5em;
 }
 
 #home-nav ul li a{
@@ -547,8 +562,6 @@ tr.first-row td {
 
 #contact-wrap{
   text-align:center;
-  position:relative;
-  top:30%;
 }
 
 #contact { 
@@ -579,9 +592,11 @@ tr.first-row td {
         font-size:1.75em;
     }
 
-    #home-image, #home-intro, #about-details{
+    #home-image, #home-intro{
         display:block;
-        width:100%;
+        width:80%;
+        margin:auto;
+
         
     }
 
@@ -590,33 +605,21 @@ tr.first-row td {
         max-width:300px;
     }
 
-    #home-intro{
-        min-width:auto;
-    }
-
     .project-details, .project-image{
-        width:100%;
+        width:80%;
         margin:auto;
         padding:0;
         float:none;
 
     }
 
-    .project-details{
-        width:90%;
-        margin:auto;
-    }
-
     .project {
-        width:80%;
+        width:100%;
         margin:0;
     }
 
     #home-wrap, #about-wrap, #projects-wrap{
-        width:80%;
-        max-width:45em;
-        margin:auto;
-
+        
     }
 
     .post-date{
@@ -633,6 +636,8 @@ tr.first-row td {
     #home-nav ul li{
         padding:.25em;
     }
+
+    
 }
 
 
@@ -640,6 +645,15 @@ tr.first-row td {
 (-o-min-device-pixel-ratio: 5/4),
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
+
+}
+
+@media only screen and (max-width: 480px) {
+    #home-nav ul li{
+        width:100   %;
+        padding:.25em;
+    }
+
 
 }
 

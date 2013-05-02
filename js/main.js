@@ -25,11 +25,8 @@ $(function($){
 
     //resize slider and section heights on window resize
  
-    $(window).resize(function() {
         setHeight();
         setSlider();
-
-    });
 
      //load Square Send here instead of on the index page because it was slowing down page load
     loadSquareSend();
@@ -40,10 +37,8 @@ $(function($){
         $("section").each(function(){
             $(this).height('auto');
             var navHeight = $("#home-nav").height();
-            var sectionHeight = (windowHeight - navHeight);
-            if($(this).height() <=  sectionHeight){
-                $(this).height(sectionHeight);
-                
+            if($(this).height() <= windowHeight - navHeight){
+                $(this).height(windowHeight - navHeight);
             }
         });
 

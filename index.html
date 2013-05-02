@@ -13,6 +13,7 @@ layout: default
 			  		I love mexican food, snowboarding, and fixing things when they break. My latest project is called <a href ="https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi">hotfix</a>. Right now, I'm learning everything I can about building great web applications. 
 			  	</p>
 		  	</div>
+
 		</div>
   	</section>
 
@@ -31,10 +32,10 @@ layout: default
 	</section>
 
   	<section id ="projects" class = "section">
-  		
   		<div id="projects-wrap">
-  			<h2 class ="project-header">Projects </h2>
+  			
 	  		<div id = "slider-wrap">
+	  			<h2 class ="project-header">Projects </h2>
 	  			<ul id = "slider">
 	  				<li>
 				  		<div class = "project">
@@ -88,23 +89,25 @@ layout: default
 
 		</div>
 		<div id="slider-controls">
-		    		<a href="#" id="slider-prev"><img src="img/prev.png" alt="" /></a>
-		   		 	<a href="#" id="slider-next"><img src="img/next.png" alt="" /></a>
-				</div>
+    		<a href="#" id="slider-prev"><img src="img/prev.png" alt="" /></a>
+   		 	<a href="#" id="slider-next"><img src="img/next.png" alt="" /></a>
+		</div>
 	</section>
 
 	<section id ="posts" class = "section">
 		<div id="posts-wrap">
-			<h2> Posts</h2>
-			
-		    <ul>
-		    	{% for post in site.posts %}
-			    	<li class = "post-item">
-			      		<a href="{{ post.url }}">{{ post.title }}</a>
-			    		<span class = "post-date">{{ post.date | date: "%B %e, %Y" }}</span> 
-			    	</li>
-		      	{% endfor %}
-		    </ul> 
+			<div id="post-list">
+				<h2> Posts</h2>
+				
+			    <ul>
+			    	{% for post in site.posts %}
+				    	<li class = "post-item">
+				      		<a href="{{ post.url }}">{{ post.title }}</a>
+				    		<span class = "post-date">{{ post.date | date: "%B %e, %Y" }}</span> 
+				    	</li>
+			      	{% endfor %}
+			    </ul>
+		    </div> 
 		</div>
 	</section>
 
@@ -113,6 +116,7 @@ layout: default
 	  		<h2><a href="mailto:andrew@fajitanachos.com?sqs_title=I love email. Send me one. ">Talk to me, Goose.</a></h2>
   		</div>
   	</section>
+
 	<nav id ="home-nav">
 		<ul>
 		  	<li><a href = "#home" id= "home-link" class = "nav-link">Home</a></li>
