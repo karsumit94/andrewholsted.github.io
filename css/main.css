@@ -90,10 +90,10 @@ h1, h2{
 
 section{
     height:100%;
-   
     border-bottom:1px solid #ddd;
     position:relative;
     overflow-x:hidden;
+    text-align:center;
 }
 
 .active{
@@ -101,7 +101,7 @@ section{
 }
 
 .sqs-container{
-    height:100% !important;
+    height:100% !important; 
 }
 
 #home:before, #about:before, #projects:before, #posts:before, #contact:before{
@@ -116,8 +116,7 @@ section{
     text-align:center;
     display:inline-block;
     vertical-align:middle;
-    width:100%;
-
+    width:99%; 
 }
 
 /* ============
@@ -258,7 +257,6 @@ section{
    ============ */
 
 #posts{
-    width:100%;
     background-color:#f9f9f9;
 }
 
@@ -495,15 +493,18 @@ tr.first-row td {
    ============ */
 
 #contact-wrap{
-  text-align:center;
+ 
 }
 
 #contact { 
     
 }
 
+#contact-wrap h2{
+    padding:0;
+    margin:0;
+}
 #contact a{
-    font-size:1.25em;
     text-decoration:none;
 }
 
@@ -544,10 +545,6 @@ tr.first-row td {
         
     }
 
-    #post-list{
-        width:auto;
-    }
-
     .project-details, .project-image{
         width:80%;
         margin:auto;
@@ -559,12 +556,6 @@ tr.first-row td {
     .project {
         width:auto;
         margin:0;
-        padding:0 5%;
-    }
-
-    #post-list{
-        width:auto;
-        display:block;
         padding:0 5%;
     }
 
@@ -596,6 +587,10 @@ tr.first-row td {
 
     h2{
         font-size:1.5em;
+    }
+
+    #home-image img{
+        max-width:200px;
     }
 
     #post-content h2{
