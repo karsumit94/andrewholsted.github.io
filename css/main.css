@@ -578,7 +578,7 @@ tr.first-row td {
 
 /* Smartphones (portrait and landscape) ----------- */
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (max-device-width : 480px) {
 /* Styles */
     
      h1{
@@ -590,6 +590,7 @@ tr.first-row td {
     }
 
     #home-image img{
+        min-width:100px;
         max-width:200px;
     }
 
