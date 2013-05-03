@@ -82,52 +82,52 @@ The events_parent table
 The events table
 
 <div class="code-wrap">
-<table id="fc-events">
-<tbody>
-<tr class="fc-table-header">
-<td>Field</td>
-<td>Type</td>
-<td>Key</td>
-<td>Default</td>
-<td>Extra</td>
-</tr>
-<tr class="first-row">
-<td>event_id</td>
-<td>int(30)unsigned</td>
-<td>primary</td>
-<td>NULL</td>
-<td>auto_increment</td>
-</tr>
-<tr>
-<td>parent_id</td>
-<td>int(30)unsigned</td>
-<td></td>
-<td>NULL</td>
-<td></td>
-</tr>
-<tr>
-<td>start</td>
-<td>datetime</td>
-<td></td>
-<td>NULL</td>
-<td></td>
-</tr>
-<tr>
-<td>end</td>
-<td>datetime</td>
-<td></td>
-<td>NULL</td>
-<td></td>
-</tr>
-<tr>
-<td>title</td>
-<td>varchar(120)</td>
-<td></td>
-<td>NULL</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+    <table id="fc-events">
+        <tbody>
+            <tr class="fc-table-header">
+                <td>Field</td>
+                <td>Type</td>
+                <td>Key</td>
+                <td>Default</td>
+                <td>Extra</td>
+            </tr>
+            <tr class="first-row">
+                <td>event_id</td>
+                <td>int(30)unsigned</td>
+                <td>primary</td>
+                <td>NULL</td>
+                <td>auto_increment</td>
+            </tr>
+            <tr>
+                <td>parent_id</td>
+                <td>int(30)unsigned</td>
+                <td></td>
+                <td>NULL</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>start</td>
+                <td>datetime</td>
+                <td></td>
+                <td>NULL</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>end</td>
+                <td>datetime</td>
+                <td></td>
+                <td>NULL</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>title</td>
+                <td>varchar(120)</td>
+                <td></td>
+                <td>NULL</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
 A brief explanation. 
@@ -224,9 +224,9 @@ Alright, let's make some bacon. And by that I mean let's add an event to the cal
             <input type="text" name="end-time" id="end-time" />
             </p>
             <p>
-            <label for = "repeats">repeat </label>
+            <label for="repeats">repeat </label>
             <input type="checkbox" name="repeats" id="repeats" value="1"/>
-            <div id = "repeat-options" >
+            <div id="repeat-options" >
                  Repeat every: day <input type="radio" value="1" name="repeat-freq" align="bottom">
                  week <input type="radio" value="7" name="repeat-freq" align="bottom">
                  two weeks <input type="radio" value="14" name="repeat-freq" align="bottom">
@@ -377,4 +377,4 @@ So, I made the choice to allow my users to only edit individual events directly 
 
 So that is the basic flow of how I add recurring events to the calendar. I won't get into editing events or deleting events in detail. Deleting an event is as simple as making an AJAX request with the parent_id and deleting the relevant row from the parent_events table. To edit an event (in my case) you are only editing one instance of an event. Simply make an AJAX request using the current event_id and update the row in your events table to the new start time and end time.
 
-That's about it. If you have questions feel free to send me an email on the contact page and I'll do my best to help you out.
+That's about it. If you have questions feel free to get in touch and I'll do my best to help you out.

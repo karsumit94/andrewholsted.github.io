@@ -15,7 +15,7 @@ Next, I did a quick search of the WordPress directory to see if something like t
 
 Of course it did. Aptly named [Ctrl-S][1]. Damn.
 
-At that point, I had two choices. I could search for another idea, or I could find a way to make my plugin a little different. I thought it was a perfect starter project. It was simple, it wouldn't take too long to build, and I would be able to get a feel for the process of creating a plugin. I decided to stick with it and add a preview of the post after saving.
+At that point, I had two choices. I could search for another idea, or I could find a way to make my plugin a little different. I thought it was a perfect starter project. It was simple, it wouldn't take too long to build, and I would be able to get a feel for the process of creating a plugin. I decided to stick with it and to change it up I added a preview of the post after saving.
 
 Here's a couple issues I ran into during the course of creating it.
 
@@ -23,6 +23,7 @@ Here's a couple issues I ran into during the course of creating it.
 
 2. WordPress uses Tiny MCE. TinyMCE has it's own keydown function which means the keydown function I set in my plugin wasn't firing when the editor took focus. It took a little bit of time to track down why my keydown event wasn't firing and how to correct it. Essentially, you have to add the keydown event in the WordPress initialization of tinyMCE.
 
-Quick-Preview has been active in the directory for a few weeks now. There are 95 downloads as of today which isn't too bad considering I haven't told anyone about it. There's one user on the support forum who is having trouble with the plugin not showing a preview at all. I've tried my best to duplicate the problem, but everything works fine for me on multiple computers in Chrome, FireFox, and IE. If anyone reading this wants to test it out, please let me know either here or on the support forum if you have problems. I'd really like to resolve that issue.
+[Quick-Preview][2] has been active in the directory for a few weeks now. There are 95 downloads as of today which isn't too bad considering I haven't told anyone about it. There's one user on the support forum who is having trouble with the plugin not showing a preview at all. I've tried my best to duplicate the problem, but everything works fine for me on multiple computers in Chrome, FireFox, and IE. If anyone reading this wants to test it out, please let me know either here or on the support forum if you have problems. I'd really like to resolve that issue.
 
 [1]: http://wordpress.org/extend/plugins/ctrl-s/ "Ctrl-S WordPress Plugin"
+[2]: http://wordpress.org/extend/plugins/quick-preview/ "Quick Preview WordPress Plugin"
