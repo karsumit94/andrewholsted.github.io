@@ -220,7 +220,7 @@ section h1{
 }
 
 #projects ul{
-    padding:2em 0 0 0;
+    padding:0;
     list-style-type:none; 
     position:relative;
 }
@@ -279,7 +279,6 @@ section h1{
 
 #slider {
     width:100%;
-    padding-top:2em;
 }
 
 #slider li{
@@ -580,7 +579,7 @@ tr.first-row td {
    Media Queries
    ========================================================================== */
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 768px) {
     h1{
         font-size:2em;
     }
