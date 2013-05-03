@@ -195,10 +195,11 @@ section h1{
 }
 
 #about-details{
-    width:80%;
+    width:95%;
     max-width:40em;
     text-align:left;
     display:inline-block;
+    margin:auto;
 }
 
 /* ============
@@ -587,16 +588,16 @@ tr.first-row td {
         font-size:1.75em;
     }
 
-    #home-intro{
+    #home-intro, #about-details{
         display:block;
-        width:80%;
-        margin:auto; 
-        padding-top:1em;   
+        width:auto;
+        padding:1em;   
     }
 
     #home-image{
         width:100%;
     }
+
     #home-image img{
         width:100%;
         max-width:300px;
@@ -612,12 +613,14 @@ tr.first-row td {
     }
 
     .project {
-        width:100%;
+        width:auto;
         margin:0;
+        padding:0 1em;
     }
 
-    #home-wrap, #about-wrap, #projects-wrap{
-        
+    .post-list{
+        width:auto;
+        padding:1em;
     }
 
     .post-date{
