@@ -564,6 +564,7 @@ tr.first-row td {
 
     #post-list{
         width:auto;
+        display:block;
         padding:0 5%;
     }
 
@@ -609,10 +610,7 @@ tr.first-row td {
         display:none;
     }
 
-    #post-container{
-        width:auto;
-        padding: 6% 5%;
-    }
+
 
 }
 
