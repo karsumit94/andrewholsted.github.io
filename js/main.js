@@ -6,8 +6,10 @@ $(function($){
     windowHeight;
 
     // set the intial height for each section and the width of the slider
-    setSlider();
-    setHeight();
+    $(window).load(function(){
+        setSlider();
+        setHeight();
+      });
 
 
     $("#home-link").addClass("active");

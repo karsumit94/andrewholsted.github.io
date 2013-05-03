@@ -13,7 +13,6 @@ layout: default
 			  		I love mexican food, snowboarding, and fixing things when they break. My latest project is called <a href ="https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi">hotfix</a>. Right now, I'm learning everything I can about building great web applications. 
 			  	</p>
 		  	</div>
-
 		</div>
   	</section>
 
@@ -22,7 +21,7 @@ layout: default
 	 		<div id="about-details">
 		 		<h2>About Me</h2>
 				<p>
-					I was a stockbroker for two years after I graduated from college. Gradually, I realized that I didn’t enjoy what I was doing. At that time, my wife and I were 25, we didn't have anything tying us down, and moving to Japan sounded pretty awesome. So we did.
+					I was a stockbroker for two years after I graduated from college. Gradually, I realized that I didn’t enjoy what I was doing. At that time, my wife and I were 25, we didn't have anything tying us down and moving to Japan sounded pretty awesome. So we did.
 				</p>	
 				<p>
 					After a few months here and a little soul searching, I decided to pursue something I really enjoy. Web development. Now, I’m teaching English full-time while learning as much as I can at night and on the weekends. I’m loving it.
@@ -33,9 +32,8 @@ layout: default
 
   	<section id ="projects" class = "section">
   		<div id="projects-wrap">
-  			
+  			<h2 class ="project-header">Projects </h2>
 	  		<div id = "slider-wrap">
-	  			<h2 class ="project-header">Projects </h2>
 	  			<ul id = "slider">
 	  				<li>
 				  		<div class = "project">
@@ -97,16 +95,16 @@ layout: default
 	<section id ="posts" class = "section">
 		<div id="posts-wrap">
 			<div id="post-list">
-				<h2> Posts</h2>
-				
-			    <ul>
-			    	{% for post in site.posts %}
-				    	<li class = "post-item">
-				      		<a href="{{ post.url }}">{{ post.title }}</a>
-				    		<span class = "post-date">{{ post.date | date: "%B %e, %Y" }}</span> 
-				    	</li>
-			      	{% endfor %}
-			    </ul>
+			<h2> Posts</h2>
+			
+		    <ul>
+		    	{% for post in site.posts %}
+			    	<li class = "post-item">
+			      		<a href="{{ post.url }}">{{ post.title }}</a>
+			    		<span class = "post-date">{{ post.date | date: "%B %e, %Y" }}</span> 
+			    	</li>
+		      	{% endfor %}
+		    </ul>
 		    </div> 
 		</div>
 	</section>

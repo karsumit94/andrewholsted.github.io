@@ -164,7 +164,7 @@ section h1{
     display:inline-block;
     vertical-align:middle;
     width:40%;
-    padding:0 2%;
+    padding:0 2em;
     margin:auto;
 }
 
@@ -172,7 +172,6 @@ section h1{
     display:inline-block;
     vertical-align:middle;
     width:40%;
-    padding: 3%;
     margin:auto;
 }
 
@@ -190,8 +189,8 @@ section h1{
 #home-image img{
     display:block;
     vertical-align:middle;
-    min-width:300px;
     max-width:80%;
+    min-width:300px;
     margin:auto;
 }
 
@@ -337,7 +336,7 @@ section h1{
 }
 
 #posts ul{
-    padding:0;
+    padding:1em 0 0 0;
 
 }
 
@@ -518,7 +517,6 @@ tr.first-row td {
     bottom:0;
     width:100%;
     background-color:#2f4a70;
-    height:2.5em;
 }
 
 #home-nav ul{
@@ -532,8 +530,7 @@ tr.first-row td {
 
 #home-nav ul li {
     text-decoration:none;
-    line-height:2em;
-    padding:.25em .5em;
+    padding:.5em .5em;
 }
 
 #home-nav ul li a{
@@ -590,17 +587,20 @@ tr.first-row td {
         font-size:1.75em;
     }
 
-    #home-image, #home-intro{
+    #home-intro{
         display:block;
         width:80%;
-        margin:auto;
-
-        
+        margin:auto; 
+        padding-top:1em;   
     }
 
+    #home-image{
+        width:100%;
+    }
     #home-image img{
-        min-width:auto;
+        width:100%;
         max-width:300px;
+        
     }
 
     .project-details, .project-image{
@@ -646,7 +646,7 @@ tr.first-row td {
 
 @media only screen and (max-width: 480px) {
     #home-nav ul li{
-        width:100   %;
+        width:30%;
         padding:.25em;
     }
 
