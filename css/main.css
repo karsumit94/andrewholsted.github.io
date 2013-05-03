@@ -70,9 +70,6 @@ html, body{
 
 body {
     font-family:"Open Sans", "Arial", sans-serif;
-    font-size:1.1em;
-    line-height:1.75em;
-    
 }
 
 a {
@@ -88,45 +85,25 @@ h1, h2{
     color:#367bd1;
     text-shadow: 1px 1px 8px #ddd;
     line-height:1em;
-}
-
-h1{
     font-size:2.5em;
-    
-}
-h2{
-    font-size:2.25em;
-    
 }
 
 section{
     height:100%;
-    clear:both;
+   
     border-bottom:1px solid #ddd;
     position:relative;
     overflow-x:hidden;
-}
-
-
-section h1{
-    margin-top:0;
 }
 
 .active{
     color:#f9f9f9 !important;
 }
 
-.clear{
-    clear:both;
-}
-
 .sqs-container{
     height:100% !important;
 }
 
-#home{
-    text-align:center;
-}
 #home:before, #about:before, #projects:before, #posts:before, #contact:before{
     content: '';
     display: inline-block;
@@ -136,53 +113,33 @@ section h1{
 }
 
 #home-wrap, #about-wrap, #projects-wrap, #posts-wrap, #contact-wrap{
-    width:99%;
     text-align:center;
     display:inline-block;
     vertical-align:middle;
+    width:100%;
 
-}
-
-
-
-#post-list{
-    width:70%;
-    text-align:left;
-    display:inline-block;
 }
 
 /* ============
-   Intro
+   Home & About Sections
    ============ */
 
 
-
-
-
-#home-intro{
+#home-intro, #home-image{
     text-align:left;
     display:inline-block;
     vertical-align:middle;
-    width:40%;
-    padding:0 2em;
-    margin:auto;
+    width:45%; 
 }
 
-#home-image{
-    display:inline-block;
-    vertical-align:middle;
-    width:40%;
-    margin:auto;
+#home-intro p{
+    font-size:1.25em;
+    line-height:1.75em;
 }
-
 
 #home-intro h1, #about-details h2{
     text-align:center;
-    margin:0;
-}
-
-#about-details h2{
-    padding-bottom:.5em;
+    padding-bottom:5%;
 }
 
 
@@ -195,28 +152,23 @@ section h1{
 }
 
 #about-details{
-    width:95%;
     max-width:40em;
     text-align:left;
     display:inline-block;
-    margin:auto;
+}
+
+#about-details p{
+    font-size:1.2em;
+    line-height:1.6em;
 }
 
 /* ============
    Projects
    ============ */
 
-#projects{
-    clear:both; 
-    width:100%;
-    height:100%;
-    position:relative;
-}
-
 .project-header {
-    margin-top:0;
+    margin-bottom:5%;
     text-align:center;
-   
 }
 
 #projects ul{
@@ -225,33 +177,21 @@ section h1{
     position:relative;
 }
 
-.project{
-    width:100%;
-    margin:auto;
-    
-}
-
-.project-title{
-    font-size:1.15em;
-    text-align:center;
-}
-
 .project-title h3{
-    margin:0;
-    padding:0;
-    color:#517bb9;
+    font-size:1.5em;
+    text-align:center;
 }
 
 .project-tags{
     padding-top:1em;
-    font-size:.75em;
+    font-size:.9em;
 }
 
 .project-tag{
     border:1px solid #ddd;
     display:inline-block;
-    padding:0 .6em;
-    margin:0 .5em .5em 0;
+    padding:.2em .6em;
+    margin:0 .6em .6em 0;
     background-color:#367bd1;
     color:#f9f9f9;
 }
@@ -276,14 +216,12 @@ section h1{
     height:auto;
 }
 
-
 #slider {
     width:100%;
 }
 
 #slider li{
     float:left;
-   
 }
 
 #slider-controls{
@@ -296,12 +234,14 @@ section h1{
     float:left;
     padding-left:1%;
     opacity:.3;
-
 }
 
 #slider-prev:hover, #slider-next:hover{
     opacity:.8;
-
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 #slider-next{
@@ -314,35 +254,27 @@ section h1{
 
 
 /* ============
-   Posts
+   Posts Section
    ============ */
 
 #posts{
-    font-size:1.1em;
-    float:left;
     width:100%;
     background-color:#f9f9f9;
-    
 }
 
-#posts-wrap{
-   
-    
-}
-
-#posts-wrap h2{
+#post-list h2{
+    margin-bottom:5%;
     text-align:center; 
-    margin-top:0; 
 }
 
 #posts ul{
-    padding:1em 0 0 0;
+    padding:0 0 0 0;
 
 }
 
 .post-item {
     list-style-type:none;
-    font-size:1.1em;
+    font-size:1.5em;
     line-height:2em; 
 }
 
@@ -352,40 +284,50 @@ section h1{
 
 .post-date{
     float:right;
-    font-size:.8em;
+    font-size:.7em;
+    color:#777;
 }
 
-#post-wrap{
-    float:left;
-    width:100%;
-    background-color:#f9f9f9;
+#post-list{
+    width:70%;
+    text-align:left;
+    display:inline-block;
+}
 
+/* ============
+   Individual Post
+   ============ */
+
+#post-wrap{
+    background-color:#f9f9f9;
+    width:100%;
+    float:left;
 }
 
 #post-container {
-    width: 70%;
-    margin:auto; 
-    padding:6% 0 0 0;  
-
+    max-width:50em;
+    margin:auto;
+    padding:5%;
+    height:100%;
 }
 
-#post-content {
+#post-content p{
     font-size: 1.1em;
     line-height: 2em;
     color:#555;
 }
 
-#post-content h1, #post-content h2{
+#post-container h1, #post-content h2{
     text-align:center;
     color:#444;
- 
+    margin:5% 0 10% 0;
 }
 
 #post-content img{
    height: auto;
    max-width:90%;
    display:block;
-   margin:5% auto 5% auto; 
+   margin:5% auto; 
    border:1px solid #ccc;
    box-shadow: 0 4px 10px 2px #ccc;
    -webkit-box-shadow:0 4px 10px 2px #ccc;
@@ -393,8 +335,10 @@ section h1{
 }
 
 #post-content h2{
-    font-size:1.2em;
-    margin: 6% 0 1% 0;
+    text-align:center;
+    color:#444;
+    font-size:1.5em;
+    margin:5% 0;
 }
 
 #post-content table{
@@ -420,14 +364,11 @@ tr.first-row td {
     padding-top:.5em !important;
 }
 
-
-
 #post-nav{
     float:left;
     width:100%;
     padding: 5% 0 10% 0;
     font-size:1em;
-
 }
 
 #previous-post {
@@ -435,17 +376,15 @@ tr.first-row td {
     float:left;
 }
 
+#previous-post a, #next-post a{
+    font-size:1.4em;
+}
+
 #next-post{
     display:inline-block;
     float:right;
 }
 
-#post-title{
-    text-align:center;
-    font-size:1.75em;
-    margin:0 0 6% 0;
-    color:#2f4a70;
-}
 
 /* ============
    Code
@@ -502,15 +441,12 @@ tr.first-row td {
     color:#f9f9f9;
 }
 
-
-
-
 /* ============
    Navigation
    ============ */ 
 
 #home-nav{
-    font-size:1.25em;
+    font-size:1.4em;
     text-align:center;
     clear:both;
     list-style-type: none;
@@ -564,7 +500,6 @@ tr.first-row td {
 
 #contact { 
     
-
 }
 
 #contact a{
@@ -579,19 +514,24 @@ tr.first-row td {
    Media Queries
    ========================================================================== */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
     h1{
-        font-size:2em;
+        font-size:1.75em;
     }
 
     h2{
         font-size:1.75em;
+    }
+    #post-content h2{
+        font-size:1.25em;
     }
 
     #home-intro, #about-details{
         display:block;
         width:auto;
         padding:5%;   
+        max-width:40em;
+        margin:auto;
     }
 
     #home-image{
@@ -602,6 +542,10 @@ tr.first-row td {
         width:100%;
         max-width:300px;
         
+    }
+
+    #post-list{
+        width:auto;
     }
 
     .project-details, .project-image{
@@ -618,9 +562,9 @@ tr.first-row td {
         padding:0 5%;
     }
 
-    .post-list{
+    #post-list{
         width:auto;
-        padding:5%;
+        padding:0 5%;
     }
 
     .post-date{
@@ -628,26 +572,39 @@ tr.first-row td {
     }
 
     #home-nav{
-        font-size:1.1em;
+        font-size:1.25em;
     }
 
     #home-nav ul li{
         padding:.25em;
     }
     section {
-        padding:2em 0;
+        padding:5% 0;
     }
+    
 }
 
+/* Smartphones (portrait and landscape) ----------- */
 
-@media print,
-(-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+    
+     h1{
+        font-size:1.5em;
+    }
 
-}
+    h2{
+        font-size:1.5em;
+    }
 
-@media only screen and (max-width: 480px) {
+    #post-content h2{
+        font-size:1.25em;
+    }
+
+    #home-intro p, #about-details p, .post-item, #contact a{
+        font-size:1em;
+    }
+
     #home-nav {
         display:none;
     }
@@ -657,10 +614,43 @@ tr.first-row td {
         padding: 6% 5%;
     }
 
-
-
-
 }
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+/* Styles */
+}
+
 
 /* ==========================================================================
    Helper classes
