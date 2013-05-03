@@ -8,7 +8,7 @@ tags: "Dev Bootcamp"
 The first interview
 -------------------
 
-I applied to Dev Bootcamp in January. The day after I applied, I received an email to set up a time to interview. Sweet. The first available time slot was a month away, but I already had plans for that day. I ended up snagging a spot on March 5th, a little over 6 weeks later. I can be no patient. No worries.
+I applied to Dev Bootcamp in January. The day after I applied, I received an email to set up a time to interview. Sweet. The first available time slot was a month away, but I already had plans for that day. I ended up snagging a spot on March 5th, a little over 6 weeks later. I can be patient. No worries.
 
 February flew by and my interview arrived shortly thereafter. I was pumped. The interview was set for 2:00pm PST which was 7 am the next day for me. I woke up at 5:30 to make sure everything was in order and working properly. I decided to use my wife's computer as my webcam occasionally decides to give me the middle finger and not cooperate.
 

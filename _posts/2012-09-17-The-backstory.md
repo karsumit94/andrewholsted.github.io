@@ -24,8 +24,8 @@ Once we got here, I started thinking about what I really wanted to do. Over the 
 
 This is what I want to do. I want to be a developer.
 
-[1]: http://en.wikipedia.org/wiki/Osborne_1 "Osbourne 1"
-[2]: /img/osbourne-1.jpg
+[1]: http://en.wikipedia.org/wiki/osborne_1 "Osbourne 1"
+[2]: /img/Osbourne-1.jpg
 [3]: http://commons.wikimedia.org/wiki/User:Bilby "Bilby"
 [4]: http://www.amazon.com/Reminiscences-Stock-Operator-Investment-Classics/ "Reminiscences of a Stock Operator"
 
