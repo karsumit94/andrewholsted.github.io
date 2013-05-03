@@ -606,6 +606,10 @@ tr.first-row td {
         display:none;
     }
 
+    #site-title{
+        font-size:2em;
+    }
+
 
 
 }
