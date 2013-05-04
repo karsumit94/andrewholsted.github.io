@@ -157,8 +157,8 @@ recommend [GitHub.js][7] and [Gatekeeper][5]. Both have helped me immensely in
 getting this extension off the ground. I'm still working on a few minor bugs 
 but I'm hoping to release it in the chrome store in a couple more weeks.
 
-[1]: /img/github-setup.png "GitHub Applications"
-[2]: /img/new-github-application.png "New GitHub Application"
+[1]: /img/github-app-setup.png "GitHub Applications"
+[2]: /img/github-app-new.png "New GitHub Application"
 [3]: https://www.nodejitsu.com/ "Nodejitsu"
 [4]: http://developer.github.com/v3/oauth/#scopes
 [5]: https://github.com/prose/gatekeeper "Gatekeeper.js"
