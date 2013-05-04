@@ -86,6 +86,8 @@ h1, h2{
     text-shadow: 1px 1px 8px #ddd;
     line-height:1em;
     font-size:2.5em;
+    font-family:"Droid Serif", "Georgia", serif;
+    letter-spacing:-1px;
 }
 
 section{
@@ -304,10 +306,11 @@ section{
 }
 
 #post-container {
-    max-width:55em;
+    max-width:70%;
     margin:auto;
-    padding:5%;
+    padding:0 5% 5% 5%;
     height:100%;
+    clear:both;
 }
 
 #post-content p{
@@ -320,6 +323,9 @@ section{
     text-align:center;
     color:#444;
     margin:0 0 5% 0;
+    font-weight:normal;
+    letter-spacing:1px;
+    cursor:default;
 }
 
 #post-content img{
@@ -413,28 +419,25 @@ tr.first-row td {
 
 #post-header{
     width:100%;
+    float:left;
     text-align:center;
-    background-color:#2f4a70;
-    color:#f9f9f9;
-    border-bottom:1px solid #555;
-    box-shadow:0px 2px 4px #aaa;
-    -webkit-box-shadow: 0px 2px 4px #aaa;
-    -moz-box-shadow:0px 2px 4px #aaa;
-    letter-spacing:4px;
+  
 }
 
-#site-title{
-    font-family: "Arial", sans-serif;
-    font-size:3em;
-    text-shadow: 1px 1px 6px #000, 0px 0px 1px #fff;
-    padding:.5em .25em;
-    margin:0;
+#site-title a{
+    font-family: "Droid Serif", sans-serif;
+    padding:.5em 0 .5em 0;
     line-height:1em;
-    color: #385682; 
+    color:#444;
+    font-weight:normal;
+    letter-spacing:-1px;
+    display:block;
 }
 
-#site-title:hover{
-    color:#f9f9f9;
+#site-title a:hover{
+
+    
+
 }
 
 /* ============
@@ -514,7 +517,7 @@ tr.first-row td {
     text-align:center;
 }
 .cws-link, .github-link{
-    border:1px solid #ccc;
+    border:1px solid #555;
     padding:1em;
     display:inline-block;
     margin:3% 6%;
@@ -526,7 +529,7 @@ tr.first-row td {
     -webkit-box-shadow:2px 2px 6px #ccc;
     -mox-boz-shadow: 2px 2px 6px #ccc;
      color: #f9f9f9;
-    text-shadow: 1px 1px 8px #222;
+    text-shadow: 1px 1px 4px #222;
     font-size:1.25em;
 }
 
@@ -537,7 +540,8 @@ tr.first-row td {
     background-image: -webkit-linear-gradient(bottom, #367CD1 8%, #3C85D9 54%, #438CE0 77%);
     background-image: -ms-linear-gradient(bottom, #367CD1 8%, #3C85D9 54%, #438CE0 77%);
     background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.08, #367CD1),color-stop(0.54, #3C85D9),color-stop(0.77, #438CE0));
-  
+    text-shadow: -1px -1px 1px #222;
+
 }
 .cws-link:active, .github-link:active{
     position: relative;
