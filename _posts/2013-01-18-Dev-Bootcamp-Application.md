@@ -5,8 +5,8 @@ meta-description: "Application for Dev Bootcamp."
 tags: "Dev Bootcamp"
 ---
 
-I just submitted my Dev Bootcamp application!  If you don't know what the 
-Dev Bootcamp program is, head over [here] [1] and take a look.
+I just submitted my Dev Bootcamp application. If you don't know what
+Dev Bootcamp is, head over [here] [1] and take a look.
 
 I'm hoping to make a strong case, and with a little luck, get accepted into one 
 of the fall/winter 2013 cohorts. It's a big investment though. I'm sure most 

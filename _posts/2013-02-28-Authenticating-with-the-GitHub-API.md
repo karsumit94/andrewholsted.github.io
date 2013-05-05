@@ -21,7 +21,7 @@ Applications on the left. Click on Register New Application.
 
 Now give the application a name, main URL, and callback URL. The 
 callback URL is where GitHub will redirect your users to after they successfully 
-login. It has to be on the same domain as your main URL. Also, it needs to be a 
+login. It has to be on the same domain as your main URL. It also needs to be a 
 valid http:// URL. GitHub won't accept 'localhost', 'your mom', etc..
 
 ![New-GitHub-Application][2]

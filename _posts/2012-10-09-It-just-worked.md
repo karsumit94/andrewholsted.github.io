@@ -4,9 +4,9 @@ title: "It Just Worked"
 meta-description: "It's amazing the first time something works without fail."
 ---
 
-I want to share a brief story that happened about a month after I started learning to code. It was late one Friday night, maybe midnight or a little thereafter.  I was making my closing rounds on the internet when I had a sudden bout of inspiration. I fired up my text editor, and got to work. By this time, I was a few rounds into my beverage of choice. I admit, I was being a little sloppy.
+This story happened about a month after I really started teaching myself how to code. It was late one Friday night, maybe midnight or a little thereafter.  I was making my closing rounds on the internet when I had a sudden bout of inspiration. I fired up my text editor, and got to work. By this time, I was a few rounds into my beverage of choice. I'll admit it, I was being a little sloppy.
 
-"I'll clean it up in the morning", I reassured myself. "I just want to try this out."  I took another drink and persevered. Thirty minutes later (I made that up. I don't know how long it was.) I pulled up Chrome and browsed to my local site.
+"I'll clean it up in the morning", I reassured myself. "I just want to test this out."  I took another drink and persevered. Thirty minutes later (I made that up. I don't know how long it was.) I pulled up Chrome and browsed to my local site.
 
 "Holy shit... I think it worked."
 

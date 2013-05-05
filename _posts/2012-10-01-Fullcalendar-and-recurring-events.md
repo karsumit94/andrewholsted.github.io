@@ -5,7 +5,7 @@ meta-description: "How to set up recurring events using arshaw's fullcalendar."
 tags: "Fullcalendar, PHP, MySQL"
 ---
 
-I'm currently using arshaw's <a href="http://arshaw.com/fullcalendar/">fullcalendar</a> for a project I'm working on. It's a nice calendar with great documentation. However, it is up to the developers to implement their own back end for the calendar. Here's what I did using PHP and MySQL.
+I'm currently using arshaw's <a href="http://arshaw.com/fullcalendar/">fullcalendar</a> for a project I'm working on. It's a nice calendar with great documentation. However, it is up to the developers to implement their own back end for the calendar. Here's one way to do it using PHP and MySQL.
 
 First, I use two MySQL tables to store the event data. One is called 'events_parent' and the other is 'events'. Each event can have only one parent event.
 
@@ -130,9 +130,7 @@ The events table
     </table>
 </div>
 
-A brief explanation. 
-
-**weekday** - 1 for Monday, 2 for Tuesday etc. I use 0 if the event repeats daily as the starting weekday name doesn't really matter in that case. 
+**weekday** - 1 for Monday, 2 for Tuesday etc. I use 0 if the event repeats daily since the starting weekday name doesn't really matter in that case. 
 
 **repeats** - 1 for recurring events and 0 for single events. 
 
@@ -145,7 +143,7 @@ Including fullcalendar is just like loading any other external js file.
     <script type="text/javascript" src="/path_to_your_fullcalendar_folder/fullcalendar.js"> </script>
     {% endhighlight %}
 
-You have several options where you can pull your event data from. I chose to pass a URL to a php file where I fetch the events and return them (via JSON).
+You have several options as to where you pull your event data from. I chose to pass a URL to a php file where I fetch the events and return them (via JSON).
 
 {% highlight javascript %}
 
