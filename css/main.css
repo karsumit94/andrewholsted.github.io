@@ -83,11 +83,16 @@ a:visited{
 
 h1, h2{
     color:#367bd1;
-    text-shadow: 1px 1px 8px #ddd;
     line-height:1em;
     font-size:2.5em;
     font-family:"Droid Serif", "Georgia", serif;
     letter-spacing:-1px;
+}
+
+h3 {
+    font-family:"Droid Serif", "Georgia", serif;
+    letter-spacing:-1px;
+    
 }
 
 section{
@@ -323,9 +328,12 @@ section{
     text-align:center;
     color:#444;
     margin:0 0 5% 0;
-    font-weight:normal;
-    letter-spacing:1px;
+    letter-spacing:0px;
     cursor:default;
+}
+
+#post-container h2{
+    font-weight:normal;
 }
 
 #post-content img{
@@ -418,20 +426,29 @@ tr.first-row td {
    ============ */ 
 
 #post-header{
-    width:100%;
-    float:left;
+    width:25%;
+    min-width:17em;
+    margin:auto;
     text-align:center;
-  
+    box-shadow:0 0 4px #222;
+    -webkit-box-shadow: 0 0 4px #222;
+    -moz-box-shadow: 0 0 4px #222;
+
+}
+
+#site-title{
+    margin:0 0 2em 0;
 }
 
 #site-title a{
     font-family: "Droid Serif", sans-serif;
     padding:.5em 0 .5em 0;
-    line-height:1em;
-    color:#444;
+    line-height:2em;
+    color:#fff;
     font-weight:normal;
     letter-spacing:-1px;
     display:block;
+    background-color:#2f4a70;
 }
 
 #site-title a:hover{
@@ -471,14 +488,14 @@ tr.first-row td {
 
 #home-nav ul li a{
     font-weight:bold;
-    text-shadow: 1px 1px 6px #000;
+    text-shadow: 1px 1px 2px #222;
     color:#517bb9;
 }
 
 
 #home-nav li a:hover{
     color:#f9f9f9;
-    text-shadow: 1px 1px 4px #000;
+    text-shadow: 1px 1px 2px #222;
 
 }
 
