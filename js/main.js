@@ -6,11 +6,9 @@ $(function($){
     windowHeight;
 
     // set the intial height for each section and the width of the slider
-    $(window).load(function(){
-        setSlider();
-        setHeight();
-      });
-
+    setSlider();
+    setHeight();
+    
 
     $("#home-link").addClass("active");
     $(document.body).animate({'scrollTop':0});
