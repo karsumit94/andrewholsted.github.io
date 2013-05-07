@@ -122,7 +122,7 @@ The call from Karim came in a few minutes early and what I thought was just goin
 Total time: 15 minutes (again).
 
 
-The Result
+The Result - April 5th, 2013
 -----------
 
 ~ 6 hours later, I saw the message come in. I felt fairly confident with my application after my interview. Despite that, when I saw a new message from Karim, my heart skipped a beat. 
