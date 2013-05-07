@@ -154,6 +154,7 @@ section {
 
 #projects ul {
     padding: 0;
+    margin:0;
     list-style-type: none;
     position: relative;
 }
@@ -179,7 +180,7 @@ section {
 
 .project-details {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
     width: 25%;
     padding: 0 5% 0 5%;
 }
@@ -187,12 +188,20 @@ section {
     display: inline-block;
     width: 50%;
     margin: auto;
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 .project-image img {
     width: 100%;
     height: auto;
+}
+.project-links{
+    margin-top:1em;
+}
+
+.github-badge, .chrome-badge, .wordpress-badge{ 
+    display:inline-block;
+    padding:1em .5em 0 .5em;
 }
 
 #slider {
@@ -524,6 +533,7 @@ h2 {
     padding: 0;
     float: none;
 }
+
 
 .project {
     width: auto;
