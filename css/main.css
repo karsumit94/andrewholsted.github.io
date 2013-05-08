@@ -281,7 +281,8 @@ section {
     transition: opacity .5s ease-in-out;
     -moz-transition: opacity .5s ease-in-out;
     -webkit-transition: opacity .5s ease-in-out;
-    padding:0 2px;
+    padding:0 3px;
+    font-size:1.1em;
 
 }
 
