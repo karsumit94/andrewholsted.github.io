@@ -5,13 +5,13 @@ meta-description: "Dev Bootcamp application and interview"
 tags: "Dev Bootcamp"
 ---
 
-*This was previously 3 posts that I've combined into 1. If you want to read more about my progress in Dev Bootcamp, I started a journal on [Tumbler][1].*
+*This was previously 3 posts that have been combined into 1. If you want to read more about my progress in Dev Bootcamp, I've started a journal on [Tumbler][1].*
 
 The Application - January 18, 2013
 -----------------------------------
 
 I just submitted my Dev Bootcamp application! If you don't know what
-[Dev Bootcamp][2], click that link and have a look around.
+[Dev Bootcamp][2], click on that link and have a look around.
 
 I'm hoping to make a strong case, and with a little luck, get accepted into one 
 of the fall/winter 2013 cohorts. I'm sure most 
@@ -69,7 +69,7 @@ The code snippet itself wasn't difficult. It was the first time I had ever analy
 
 At the end we talked about a few other things and he recommended that I work through a Ruby tutorial to get a feel for things.
 
-Total time: 15 minutes.
+Total time: 20 minutes
 
 
 The Second Interview - March 15, 2013
@@ -119,15 +119,15 @@ The night before my second interview, I resolved to make sure that things would 
 
 The call from Karim came in a few minutes early and what I thought was just going to be a 'fit' interview, was not. He asked if I had any questions. I asked a few that I had skipped over previoulsy and then dove into 3 or 4 small code snippets, fairly similar to the first interview in length and complexity. Most of the material you should have picked up going through the tutorial. I stumbled to express myself clearly one spot, but after I settled down, things went fine. I was a litttle surprised there weren't any questions about me or my background. I don't know if it's the same for all interviews or that is just how mine went. 
 
-Total time: 15 minutes (again).
+Total time: 15 minutes
 
 
 The Result - April 5th, 2013
 -----------
 
-~ 6 hours later, I saw the message come in. I felt fairly confident with my application after my interview. Despite that, when I saw a new message from Karim, my heart skipped a beat. 
+Throughout the application process, I felt fairly confident about my application. I can't say that is the norm for me. Six hours after I applied, a new message from Karim popped in my inbox. My confidence wavered. 
 
-No worries, we're San Francisco bound baby! I paid my deposit and was promptly placed in the October 2013 cohort. I can't wait to meet my fellow aspiring devs. It's going to be a great ride.
+No worries though, we're San Francisco bound! I paid my deposit and was promptly placed in the October 2013 cohort. I can't wait to meet my fellow aspiring devs. It's going to be a great ride.
 
 Now, about that $12k...
 

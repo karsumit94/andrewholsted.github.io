@@ -61,15 +61,19 @@ body {
 
 a {
     text-decoration: none;
-    color: #367bd1;
+    color: #4c7fbe;
+}
+
+a:visited:hover, a:hover{
+    text-decoration:underline;
 }
 
 a:visited {
-    color: #367bd1;
+    color: #4c7fbe;
 }
 
 h1, h2 {
-    color: #367bd1;
+    color: #4c7fbe;
     line-height: 1em;
     font-size: 2.5em;
     font-family: "Droid Serif", "Georgia", serif;
@@ -164,6 +168,14 @@ section {
     text-align: center;
 }
 
+.project-title a, .project-title  a:visited{
+    color:#555;
+}
+
+.project-title a:hover{
+    color:#4c7fbe;
+}
+
 .project-tags {
     padding-top: 1em;
     font-size: .9em;
@@ -174,7 +186,7 @@ section {
     display: inline-block;
     padding: .2em .6em;
     margin: 0 .6em .6em 0;
-    background-color: #367bd1;
+    background-color: #4c7fbe;
     color: #f9f9f9;
 }
 
@@ -199,9 +211,9 @@ section {
     margin-top:1em;
 }
 
-.github-badge, .chrome-badge, .wordpress-badge{ 
+.github-icon, .chrome-store-icon, .wordpress-icon{ 
     display:inline-block;
-    padding:1em .5em 0 .5em;
+    padding:1em .5em 1em .5em;
 }
 
 #slider {
@@ -259,9 +271,37 @@ section {
     line-height: 2em;
 }
 
-.post-item a {
-    text-decoration: none;
+.post-item a:hover{
+    text-decoration:none;
 }
+
+.post-item a:before, .post-item a:after{
+    opacity: 0;
+    color: #444;
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+    padding:0 2px;
+
+}
+
+.post-item a:hover:before, .post-item a:hover:after {
+    color: #555; /* Or whatever colour you want. */
+    opacity:.7;
+
+}
+
+/* For movement */
+.post-item a:before {
+    content: "{";
+    
+}
+
+.post-item a:after {
+    content: "}";
+    
+}
+
 
 .post-date {
     float: right;
@@ -593,6 +633,9 @@ section {
         margin-bottom: 1em;
     }
 
+    #post-container{
+        width:100%;
+    }
     #post-container h1, #post-content h2 {
         margin-bottom: 1em;
     }
