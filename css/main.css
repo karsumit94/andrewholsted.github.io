@@ -330,7 +330,7 @@ section {
 }
 
 #post-container {
-    max-width: 70%;
+    max-width: 55em;
     margin: auto;
     padding: 0 5% 5% 5%;
     height: 100%;
@@ -648,7 +648,7 @@ section {
     }
 
     #post-container{
-        width:100%;
+        max-width:100%;
     }
     #post-container h1, #post-content h2 {
         margin-bottom: 1em;
