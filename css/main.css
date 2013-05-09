@@ -114,6 +114,7 @@ section {
     display: inline-block;
     vertical-align: middle;
     width: 99%;
+    padding:1em 0;
 }
 
 #home-intro, #home-image {
@@ -270,6 +271,7 @@ section {
     list-style-type: none;
     font-size: 1.5em;
     line-height: 2em;
+    position:relative;
 }
 
 .post-item a:hover{
@@ -285,6 +287,11 @@ section {
     padding:0 3px;
     font-size:1.1em;
 
+}
+
+.post-item a:before{
+    position:absolute;
+    left:-15px;
 }
 
 .post-item a:hover:before, .post-item a:hover:after {
@@ -489,6 +496,7 @@ tr.first-row td {
 #home-nav li a:hover {
     text-decoration:none;
 
+
 }
 
 #home-nav img {
@@ -544,7 +552,8 @@ tr.first-row td {
 }
 
 @media only screen and (max-width: 1024px)  {
-    h1 {
+
+h1 {
     font-size: 2em;
 }
 
@@ -559,7 +568,6 @@ h2 {
 #home-intro, #about-details {
     display: block;
     width: auto;
-    padding: 5%;
     max-width: 40em;
     margin: auto;
 }
@@ -584,7 +592,7 @@ h2 {
 .project {
     width: auto;
     margin: 0;
-    padding: 0 5%;
+    padding: 0 1em;
 }
 
 .post-date {
@@ -600,7 +608,7 @@ h2 {
 }
 
 section {
-    padding: 5% 0;
+    padding: 1em 0;
 }
 
 }
