@@ -210,7 +210,7 @@ section {
     height: auto;
 }
 .project-links{
-    margin-top:1em;
+    padding-top:1em;
 }
 
 .github-icon, .chrome-store-icon, .wordpress-icon{ 
@@ -653,22 +653,10 @@ section {
     #post-container h1, #post-content h2 {
         margin-bottom: 1em;
     }
+
+
 }
 
-@media only screen and (min-width : 321px)  {
-}
-@media only screen and (max-width : 320px)  {
-}
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
-}
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)  {
-}
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)  {
-}
-@media only screen and (min-width : 1224px)  {
-}
-@media only screen and (min-width : 1824px)  {
-}
 
 .ir {
     background-color: transparent;
