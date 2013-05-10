@@ -169,11 +169,11 @@ section {
 }
 
 .project-title a, .project-title  a:visited{
-    color:#2f4a70;
+    
 }
 
 .project-title a:hover{
-    color:#4c7fbe;
+    text-decoration:underline;
 }
 
 .project-tags {
