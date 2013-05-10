@@ -115,9 +115,9 @@ I'll let you know how it turns out.
 The Real Second Interview - April 5th, 2013
 --------------------------------------------
 
-The night before my second interview, I resolved to make sure that things would go smoother than my last attempt. The interview was set for 7:30am, my time. I woke up at 5:30 to make sure our internet was cooporating and I didn't need to come up with a back up plan. Fortunately, things went off without a hitch. 
+The night before my second interview, I resolved to make sure that things would go smoother than my last attempt. The interview was set for 7:30am, my time. I woke up at 5:30 to make sure our internet was cooperating and I didn't need to come up with a back up plan. Fortunately, things went off without a hitch. 
 
-The call from Karim came in a few minutes early and what I thought was just going to be a 'fit' interview, was not. He asked if I had any questions. I asked a few that I had skipped over previoulsy and then dove into 3 or 4 small code snippets, fairly similar to the first interview in length and complexity. Most of the material you should have picked up going through the tutorial. I stumbled to express myself clearly one spot, but after I settled down, things went fine. I was a litttle surprised there weren't any questions about me or my background. I don't know if it's the same for all interviews or that is just how mine went. 
+The call from Karim came in a few minutes early and what I thought was just going to be a 'fit' interview, was not. He asked me if I had any questions. I asked a few that I had skipped over in the previous interview, and then we dove into 3 or 4 small code snippets. I stumbled to express myself clearly one spot, but after I settled down, things went fine. I was a little surprised there weren't any questions about me or my background. I don't know if it's the same for all interviews or that is just how mine went. 
 
 Total time: 15 minutes
 
@@ -125,7 +125,7 @@ Total time: 15 minutes
 The Result - April 5th, 2013
 -----------
 
-Throughout the application process, I felt fairly confident about my application. I can't say that is the norm for me. Six hours after I applied, a new message from Karim popped in my inbox. My confidence wavered. 
+Throughout the application process, I felt fairly confident about my application. I can't say that is the norm for me. Six hours after I applied, a new message from Karim popped in my inbox. My confidence wavered a bit. 
 
 No worries though, we're San Francisco bound! I paid my deposit and was promptly placed in the October 2013 cohort. I can't wait to meet my fellow aspiring devs. It's going to be a great ride.
 
