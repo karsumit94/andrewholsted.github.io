@@ -18,7 +18,7 @@ $(function($){
 
     //attach the click event to the menu links 
 
-    $(".nav-link").click(function(e){
+    $(".nav-link").on("click", function(e){
         e.preventDefault();
         $('body, html').animate({'scrollTop': $(this.hash).offset().top}, 1000);
     });
@@ -104,7 +104,7 @@ $(window).resize(function(){
         //unbind click events because the resize function executes multiple times and in turn adds multiple click events tot he que
       
 
-        $("#slider-prev").unbind("click").on('click',function(){
+        $("#slider-prev").off("click").on("click",function(){
             
             if(slidePosition !== 1){
                 $("#slider").animate({left : "+=" + slideWidth + "px"});
@@ -112,24 +112,24 @@ $(window).resize(function(){
                 manageSlideControls(slidePosition,sliderLength);
                 
             }
-            return false;
-        });
-        
-        $("#slider-next").unbind("click").on('click',function(){
-           
-            if(slidePosition !== sliderLength){
-                $("#slider").animate({left : "-=" + slideWidth + "px"});
-                slidePosition += 1;
-                manageSlideControls(slidePosition,sliderLength);
-                
-            }
-            return false;
-        });
-    }
+                return false;
+            });
+            
+            $("#slider-next").off("click").on("click",function(){
+               
+                if(slidePosition !== sliderLength){
+                    $("#slider").animate({left : "-=" + slideWidth + "px"});
+                    slidePosition += 1;
+                    manageSlideControls(slidePosition,sliderLength);
+                    
+                }
+                return false;
+            });
+        }
 
-    function manageSlideControls(slidePosition, sliderLength) {
-    	if(slidePosition == 1) {
-    		 $("#slider-prev").hide();
+        function manageSlideControls(slidePosition, sliderLength) {
+        	if(slidePosition == 1) {
+        		 $("#slider-prev").hide();    
     	}
     	else{
     		$("#slider-prev").show();
