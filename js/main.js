@@ -9,6 +9,7 @@ $(function($){
     $(window).load(function(){
     	setSlider();
     	setHeight();
+        loadSquareSend();
     });
     
 
@@ -26,10 +27,10 @@ $(window).resize(function(){
     //resize slider and section heights on window resize
         setHeight();
         setSlider();
+
 });
 
-     //load Square Send here instead of on the index page because it was slowing down page load
-    loadSquareSend();
+   
     //set section height
 
     function setHeight(){
@@ -84,12 +85,13 @@ $(window).resize(function(){
 
         // Set the width of each slide to the widow width;
         $("#slider li").width($(window).innerWidth());
-      
+    
         // Declare variables
             slideWidth = $("#slider > li:first").width();
             var sliderLength = $("#slider > li").length;
             var totalWidth = slideWidth * sliderLength;
-            
+
+
         $("#slider").width(totalWidth);
         
         if(slidePosition != 1){
@@ -99,22 +101,27 @@ $(window).resize(function(){
         //hide the slider-prev control on initial load.
         manageSlideControls(slidePosition,sliderLength);
 
-        $("#slider-prev").on('click',function(){
+        //unbind click events because the resize function executes multiple times and in turn adds multiple click events tot he que
+      
+
+        $("#slider-prev").unbind("click").on('click',function(){
             
             if(slidePosition !== 1){
                 $("#slider").animate({left : "+=" + slideWidth + "px"});
                 slidePosition -= 1;
                 manageSlideControls(slidePosition,sliderLength);
+                
             }
             return false;
         });
         
-        $("#slider-next").on('click',function(){
+        $("#slider-next").unbind("click").on('click',function(){
            
             if(slidePosition !== sliderLength){
                 $("#slider").animate({left : "-=" + slideWidth + "px"});
                 slidePosition += 1;
                 manageSlideControls(slidePosition,sliderLength);
+                
             }
             return false;
         });
