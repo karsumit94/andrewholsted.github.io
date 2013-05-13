@@ -19,7 +19,7 @@ $(function($){
 
     $(".nav-link").click(function(e){
         e.preventDefault();
-        $(document.body).animate({'scrollTop': $(this.hash).offset().top}, 1000);
+        $('body, html').animate({'scrollTop': $(this.hash).offset().top}, 1000);
     });
 
 $(window).resize(function(){
