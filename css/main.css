@@ -622,7 +622,7 @@ h2 {
 }
 
 section {
-    padding: 1em 0;
+    padding: 1em;
 }
 
 }
@@ -633,7 +633,7 @@ section {
     }
     
     h2 {
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
 
     #home-image img {
