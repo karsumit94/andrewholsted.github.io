@@ -584,6 +584,7 @@ h2 {
     width: auto;
     max-width: 40em;
     margin: auto;
+    padding:0 1em;
 }
 
 #home-image {
