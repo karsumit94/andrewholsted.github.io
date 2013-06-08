@@ -5,7 +5,7 @@ meta-description: "Dev Bootcamp application and interview"
 tags: "Dev Bootcamp"
 ---
 
-*This was previously 3 posts that have been combined into 1. If you want to read more about my progress in Dev Bootcamp, I've started a journal on [Tumbler][1].*
+*This was previously 3 posts that have been combined into 1. *
 
 The Application - January 18, 2013
 -----------------------------------
@@ -132,6 +132,5 @@ No worries though, we're San Francisco bound! I paid my deposit and was promptly
 Now, about that $12k...
 
 
-[1]: http://fajitanachos.tumblr.com "FajitaNachos - Tumblr"
 [2]: http://www.devbootcamp.com "Dev Bootcamp"
 

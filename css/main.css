@@ -250,6 +250,15 @@ section {
     background-color: #f9f9f9;
 }
 
+
+#tumblr{    
+    display:block;
+    margin-top:3em;
+    width:100%;
+    font-style:italic;
+    color:#999;
+    text-align:center;
+}
 #post-list h2 {
     margin-bottom: 5%;
     text-align: center;
@@ -400,6 +409,13 @@ tr.first-row td {
 #next-post {
     display: inline-block;
     float: right;
+}
+
+.center-quote {
+    text-align:center;
+    display:block;
+    width:100%;
+    font-size:1.25em;
 }
 
 .highlight {
