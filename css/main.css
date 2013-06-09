@@ -419,24 +419,27 @@ tr.first-row td {
 }
 
 .highlight {
-    line-height: 1.2em;
+    line-height: 1em;
     font-size: 1em;
     display: block;
     width: auto;
     overflow-x: auto;
-    border: 1px solid #aaa;
-    margin: 5% 0 5% 0;
-    padding: 1em 0 1em 0;
-    box-shadow: 3px 3px 14px #aaa;
-    -webkit-box-shadow: 3px 3px 14px #aaa;
-    -moz-box-shadow: 3px 3px 14px #aaa;
-    background-color: #fff;
+    border: 1px solid #dedede;
+    padding:.5em 0 .5em 0;
+    margin: 2% 0 2% 0;
+    background-color: #f6f6f6;
+
 }
 
+
+.highlight, code, pre {
+    font-family:"Inconsolata" , sans-serif !important;
+}
 .highlight pre {
     white-space: pre!important;
     word-wrap: normal;
     margin: 0;
+
 }
 
 #post-header {
