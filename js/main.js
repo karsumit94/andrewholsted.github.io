@@ -1,6 +1,5 @@
 $(function($){
    
-    
     var slidePosition = 1,
 	slideWidth,
     windowHeight;
@@ -148,6 +147,7 @@ $(window).resize(function(){
       squareScript.src = "//squaresend.com/squaresend.js";
       document.getElementsByTagName('head')[0].appendChild(squareScript);
     };
+
 
 });
 
