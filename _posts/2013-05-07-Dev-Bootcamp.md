@@ -5,7 +5,7 @@ meta-description: "Dev Bootcamp application and interview"
 tags: "Dev Bootcamp"
 ---
 
-*This was previously 3 posts that have been combined into 1.*
+->*This was previously 3 posts that have been combined into 1.*<-
 
 The Application - January 18, 2013
 -----------------------------------
