@@ -8,7 +8,7 @@ It doesn't matter what you did in a previous life. What matters is what you do t
 
 Why? 
 
-Because it pays well? Because you want to work at a start up? Because your mom said you are good at the interwebs? Let's cut the bs. This isn't going to be easy. This is about busting your ass to get where you want to be. Here are five ways to help you get there.
+Because it pays well? Because you want to work at a start up? Because your mom said you are good at the interwebs? Let's cut the bullshit. This isn't going to be easy. This is about busting your ass to get where you want to be. Here are five ways to help you get there.
 
 
 Number One
@@ -21,7 +21,7 @@ Number Two
 
 You need to be writing code *every single day*. 
 
-The only two days I'm not writing code are my wife's birthday and our anniversary. That's it. If you aren't in your text editor, making sweet passionate love to your keyboard day in and day out, then you're doing it wrong. Every day you will get a little better. You'll look back on things you did three months ago and cringe because you've gotten so much better. There will be small triumphs along the way, like when things [just work][1], and rest assured there will also be many failures. You'll need to fight through the frustration, tediousness, and problems that you encounter along the way. And you have to love doing it. 
+The only two days I'm not writing code are my wife's birthday and our anniversary. That's it. If you aren't in your text editor, making sweet passionate love to your keyboard day in and day out, then you're doing it wrong. Every day you will get a little better. You'll look back on things you did three months ago and cringe because you've gotten so much better. There will be small triumphs along the way, like when things [just work][1], and rest assured there will also be many failures. You'll need to fight through the frustration, tediousness, and mind fucks that you encounter along the way. And you have to love doing it. 
 
 Number Three
 ------------
@@ -31,7 +31,7 @@ You need a blog, no questions asked. I waited 9 months before I started this blo
 Number Four
 ------------
 
-Join [GitHub][2], write some code, and put it out there for the world to see. Forget about contributing to open source projects for now. There will come a time and place for that. Just get started with whatever you are working on. At first, you won't understand why you even need version control. In time though, you'll come to wonder how you ever lived without it. You can use git by itself, but GitHub makes it easier to manage and it's the perfect platform for you to show others that you can, in fact, write some code. As time goes on you'll come across open source projects that pique your interest. When you do, take some time to contribute to them. 
+Join [GitHub][2], write some code, and put it out there for the world to see. Forget about contributing to open source projects for now. There will come a time and place for that. Just get started with whatever your working on. At first, you won't understand why you even need version control. In time though, you'll come to wonder how you ever lived without it. You can use git by itself, but GitHub makes it easier to manage and it's the perfect platform for you to show others that you can, in fact, write some code. As time goes on you'll come across open source projects that pique your interest. When you do, take some time to contribute to them. 
 
 Number Five
 -------------
