@@ -33,7 +33,7 @@ A: "Never tell a restaurant in Thailand that you "like spicy"...
 
 Quick back story: We went to Thailand and Malaysia over the Christmas holidays. Thai food is all around pretty amazing. One night we were at a restaurant and I asked our server if a dish was spicy. The server 
 cocked her head to the side and said "a little spicy". Well, I like spicy food 
-and I didn't want them to think otherwise. So, nodding my head with a big smile, I said "I like spicy." Bad idea. Two bites in I was crying, sweating, and cursing myself all at the same time. I had a habanero plant one summer and I enjoyed it immensely. But that was nothing compared to what I ate that night.
+and I didn't want them to think otherwise. So, nodding my head with a big smile, I said "I like spicy." Bad idea. Two bites in I was crying, sweating, and cursing myself all at the same time. 
 
 Anyway, on to the video.
 
