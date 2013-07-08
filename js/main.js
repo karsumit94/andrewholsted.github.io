@@ -88,10 +88,10 @@ $(window).resize(function(){
         // Declare variables
             slideWidth = $("#slider > li:first").width();
             var sliderLength = $("#slider > li").length;
-            var totalWidth = slideWidth * sliderLength;
+            var totalHeight = slideWidth * sliderLength;
 
 
-        $("#slider").width(totalWidth);
+        $("#slider").width(totalHeight);
         
         if(slidePosition != 1){
             $("#slider").css({left:slideWidth*(slidePosition-1)*-1});
