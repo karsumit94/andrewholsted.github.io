@@ -1,0 +1,195 @@
+---
+layout: layout
+title: "Home"
+---
+  	<section id = "home" class = "section">
+  		<div id="home-wrap">
+	  		<div id = "home-image"> 
+          <%= image_tag 'profile9.jpg' %>
+	  		</div>
+	  		<div id = "home-intro">
+	  			<h1>Hi, I'm Andrew. </h1>
+	  		
+		  		<p>
+			  		I love mexican food, snowboarding, and fixing things when they break. My latest project is called <a href ="https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi">hotfix</a>. 
+			  	</p>
+		  	</div>
+		</div>
+  	</section>
+
+ 	<section id= "about" class = "section">
+ 		<div id="about-wrap">
+	 		<div id="about-details">
+		 		<h2>About Me</h2>
+				<p>
+					I was a stockbroker for two years after I graduated from college. Gradually, I realized that I didn’t enjoy what I was doing. At that time, my wife and I were 25, we didn't have anything tying us down and moving to Japan sounded pretty awesome. So we did.
+				</p>	
+				<p>
+					For the last two yeras, I've been teaching English every day and writing code every night. We'll be moving back to the U.S. this October. If you're looking to hire a developer, I'd love to hear from you.
+				</p>
+			</div>
+		</div>	
+	</section>
+
+  	<section id ="projects" class = "section">
+  		<div id="projects-wrap">
+  			<h2 class ="project-header">Projects </h2>
+	  		<div id = "slider-wrap">
+	  			<ul id = "slider">
+	  				<li>
+				  		<div class = "project">
+				  			<div class = "project-image">
+                   <% link_to '/Hotfix' do %>
+                    <%= image_tag 'hotfix-screenshot.jpg' %>
+                   <% end %>
+					    	</div>	
+				  			<div class = "project-details">
+				  				<div class="project-title">
+				  					<h3><a href="/Hotfix">Hotfix</a></h3>
+				  				</div>
+				  				<p>
+						    		Hotfix is a Chrome Extension to save changes from
+						    		Chrome Developer Tools directly to GitHub.
+						    	</p>
+						    	<div class= "project-tags">
+						    		<span class="project-tag">Javascript</span>
+						    		<span class="project-tag">Node.js</span>
+						    		<span class="project-tag">GitHub API</span>
+						    		<span class="project-tag">Chrome Dev Tools</span>
+						    	</div>
+						    	<div class= "project-links">
+						    		<span class = "github-icon">
+                       <% link_to 'https://github.com/FajitaNachos/hotfix' do %>
+                        <%= image_tag 'Octocat.jpg' %>
+                      <% end %>
+					    			</span>
+						    		<span class = "chrome-store-icon">
+                      <% link_to 'https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi' do %>
+                        <%= image_tag 'chrome-store-badge2.png' %>
+                      <% end %>
+					    			</span>
+					    			
+					    		</div>
+
+					    	</div>	
+
+				  		    
+					    </div>
+					</li>
+					<li>
+			    		<div class = "project">
+			    			<div class = "project-image">
+                   <% link_to '/Quick-Preview' do %>
+                      <%= image_tag 'quick-preview-screenshot.jpg' %>
+                    <% end %>
+					    	</div>
+			    			<div class = "project-details">
+					    		<div class="project-title">
+					    			<h3><%= link_to 'Quick Preview', '/Quick-Preview' %></h3>
+					    		</div>
+					    			<p>
+					    			 Quick Preview is a WordPress plugin to save and preview a post using Ctrl+S (Cmd+S).
+					    			</p>
+					    		<div class="project-tags">
+					    			<span class="project-tag">PHP</span>
+					    			<span class="project-tag">Javascript</span>
+					    			<span class="project-tag">WordPress</span>
+
+					    		</div>
+					    		<div class= "project-links">
+					    			<span class = "github-icon">
+                       <% link_to 'https://github.com/FajitaNachos/quick-preview' do %>
+                        <%= image_tag 'Octocat.jpg' %>
+                      <% end %>
+					    			</span>
+					    			<span class = "wordpress-icon">
+                      <% link_to 'http://wordpress.org/extend/plugins/quick-preview/' do %>
+                        <%= image_tag 'wordpress.png' %>
+                      <% end %>
+					    			</span>
+					    			
+					    		</div>
+
+						    </div>  
+				   		</div>
+				   	</li>
+				   			<li>
+			    		<div class = "project">
+			    			<div class = "project-image">
+					    		 <% link_to '/' do %>
+                        <%= image_tag 'fajitanachos-screenshot.jpg' %>
+                      <% end %>
+					    	</div>
+			    			<div class = "project-details">
+					    		<div class="project-title">
+                     <h3><%= link_to 'fajitanachos.com', 'https://github.com/FajitaNachos/fajitanachos.github.io' %></h3>
+					    		</div>
+					    			<p>
+					    			 This site was built from scratch, with love. It's generated with <%= link_to 'Middleman','http://middlemanapp.com/' %>and hosted on GitHub pages. Fork it, change it, do whatever you like with it. It was a lot of fun to build, and I'll never use WordPress again. 
+					    			</p>
+					    		<div class="project-tags">
+					    			<span class="project-tag">JQuery</span>
+					    			<span class="project-tag">Jekyll</span>
+					    			<span class="project-tag">GitHub</span>
+
+					    		</div>
+					    		<div class= "project-links">
+					    			<span class = "github-icon">
+                       <% link_to 'https://github.com/FajitaNachos/fajitanachos.github.io' do %>
+                        <%= image_tag 'Octocat.jpg' %>
+                      <% end %>
+					    			</span>
+					    			
+					    		</div>
+
+						    </div>  
+				   		</div>
+				   	</li>
+				</ul>
+			</div>
+
+		</div>
+		<div id="slider-controls">
+    		<a href="#" id="slider-prev"> <%= image_tag 'prev.png' %></a>
+   		 	<a href="#" id="slider-next"><%= image_tag 'next.png' %></a>
+		</div>
+	</section>
+
+	<section id ="posts" class = "section">
+		<div id="posts-wrap">
+			<div id="post-list">
+
+			<h2> Posts</h2>
+			<span id="tumblr"> If you prefer something shorter and more frequent, have at look at my blog on <a href="
+http://fajitanachos.tumblr.com">Tumblr</a></span>
+		    <ul>
+
+            <% blog.articles.each do |post| %>
+          <li class = "post-item">
+            <%= link_to(post.title, post.url)%>
+            <span class = "post-date"><%= post.date.strftime('%b %e, %Y') %></span>
+         </li>
+    
+           <% end %>
+
+		    </ul>
+		    
+		    </div> 
+		</div>
+	</section>
+
+	<section id ="contact" class = "section">
+  		<div id="contact-wrap">
+	  		<h2><a href="mailto:andrew@fajitanachos.com?sqs_title=I love email. Send me one.">Talk to me, Goose.</a></h2>
+  		</div>
+  	</section>
+
+	<nav id ="home-nav">
+		<ul>
+		  	<li><span class = "down-arrow"></span><a href = "#home" id= "home-link" class = "nav-link">Home</a></li>
+		  	<li><span class = "down-arrow"></span><a href = "#about" id= "about-link" class = "nav-link">About</a></li>
+			<li><span class = "down-arrow"></span><a href = "#projects" id = "projects-link" class = "nav-link" >Projects</a></li>
+			<li><span class = "down-arrow"></span><a href = "#posts" id = "posts-link" class = "nav-link">Posts</a></li>
+			<li><span class = "down-arrow"></span><a href = "#contact" id= "contact-link" class = "nav-link">Contact</a></li>
+		</ul>
+	</nav>

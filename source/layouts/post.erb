@@ -1,0 +1,30 @@
+<% wrap_layout :layout do %>
+  <div id="post-wrap">
+    <div id = "post-header">
+      <h1 id ="site-title"> <a href ="/">FajitaNachos</a></h1>
+
+    </div>
+    <div id = "post-container">
+      <article>
+      	<h1 id = "post-title"><%= current_page.title %></h1>
+        <div id = "post-content">
+           <%= yield %>
+        </div>
+           <div id ="post-nav"> 
+        <% if current_page.previous_article %>
+          <div id="previous-post">
+            <%= link_to current_page.previous_article.title, current_page.previous_article %> 
+          </div> 
+        <% end%> 
+
+        <% if current_page.next_article %>
+          <div id="next-post"> 
+            <%= link_to current_page.next_article.title, current_page.next_article %> 
+        
+          </div> 
+        <% end%>
+      </div>
+      </article>
+    </div>
+  </div>
+<% end %>
