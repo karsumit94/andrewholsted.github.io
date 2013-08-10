@@ -5,10 +5,28 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-06-21T00:00:00Z</updated>
+  <updated>2013-07-21T08:50:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Friday Night</title>
+    <link rel="alternate" href="/Friday_night/"/>
+    <id>/Friday_night/</id>
+    <published>2013-07-21T08:50:00Z</published>
+    <updated>2013-07-21T08:50:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Right now, I&amp;#39;m on a train, riding backwards, en route to Kyoto. It&amp;#39;s about an hour journey all in. This morning, I started working on a user authentication system using &lt;a href="https://github.com/plataformatec/devise]"&gt;Devise&lt;/a&gt;. Now, I&amp;#39;m reading through the devise documententation and trying to make everything fit together. It&amp;#39;s Friday night, and I&amp;#39;m sifting through documentation on a Rails gem...and I&amp;#39;m loving it. &lt;/p&gt;
+
+&lt;p&gt;Did you know that trains in Japan are quieter than most libraries in the U.S.? I shit you not. I can see 4 people sleeping, 3 people staring at their phones, two listening to music, and another staring out the window. I haven&amp;#39;t heard a single word in the last 20 minutes, save the train conductor over the intercom announcing the stops in a soothing voice, that borders on a whisper. &lt;/p&gt;
+
+&lt;p&gt;&amp;quot;Otsu, Otsu desu.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s times like this when it hits me. That I was meant to be a developer. When we get to Kyoto, I&amp;#39;ll go have a nice dinner with my wife. Then, tomorrow morning, I&amp;#39;ll get up early and get right back to it. I love doing this, day in and day out.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Dear Aspiring Developer</title>
     <link rel="alternate" href="/Dear-Aspiring-Developer/"/>
@@ -282,24 +300,24 @@ GitHub will redirect back to the Callback URL you set up with an access code in 
 
 &lt;p&gt;Get the access code from the URL
 ```javascript
-    // Get the authorization code from the url that was returned by GitHub&lt;/p&gt;
-&lt;pre class="highlight text"&gt;var authCode = getAuthCode(window.location.href);
+// Get the authorization code from the url that was returned by GitHub&lt;/p&gt;
 
-// Extract the auth code from the original URL
+&lt;p&gt;var authCode = getAuthCode(window.location.href);&lt;/p&gt;
 
-function getAuthCode(url){
+&lt;p&gt;// Extract the auth code from the original URL&lt;/p&gt;
+
+&lt;p&gt;function getAuthCode(url){
     var error = url.match(/[&amp;amp;\?]error=([^&amp;amp;]+)/);
     if (error) {
-        throw &amp;#39;Error getting authorization code: &amp;#39; + error[1];
+        throw &amp;#39;Error getting authorization code: &amp;#39; + error&lt;a title="GitHub Applications" href="/images/github-app-setup.jpg"&gt;1&lt;/a&gt;;
     }
-    return url.match(/[&amp;amp;\?]code=([\w\/\-]+)/)[1];
-}
-&lt;/pre&gt;&lt;pre class="highlight text"&gt;
+    return url.match(/[&amp;amp;\?]code=([\w\/-]+)/)&lt;a title="GitHub Applications" href="/images/github-app-setup.jpg"&gt;1&lt;/a&gt;;
+}&lt;/p&gt;
+&lt;pre class="highlight text"&gt;
 And exchange this for an auth token by sending a POST request to
 
 ```javascript
-
-    https://github.com/login/oauth/access_token?client_id=your-client-id&amp;amp;client_secret=your-client-secret&amp;amp;code=your-access-code
+https://github.com/login/oauth/access_token?client_id=your-client-id&amp;amp;client_secret=your-client-secret&amp;amp;code=your-access-code
 &lt;/pre&gt;
 &lt;p&gt;Your client secret can be found in the same place as your client id from above. 
 You should never share this secret with anyone. It&amp;#39;s called a client &lt;em&gt;secret&lt;/em&gt; 
@@ -311,38 +329,38 @@ relevant code from Gatekeeper. If you want to implement it yourself, grab it
 from GitHub and let me know if you have any questions. The only change I made 
 was replacing a deprecated Express call and adding a few small features like 
 404 handling.&lt;/p&gt;
-&lt;pre class="highlight javascript"&gt;    &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;authenticate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;code&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;cb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;qs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;stringify&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
-            &lt;span class="na"&gt;client_id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;oauth_client_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;//your GitHub client_id
-&lt;/span&gt;            &lt;span class="na"&gt;client_secret&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;oauth_client_secret&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="c1"&gt;//and secret
-&lt;/span&gt;           &lt;span class="na"&gt;code&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;code&lt;/span&gt;   &lt;span class="c1"&gt;//the access code we parsed earlier
-&lt;/span&gt;        &lt;span class="p"&gt;});&lt;/span&gt;
+&lt;pre class="highlight javascript"&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;authenticate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;code&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;cb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;qs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;stringify&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+        &lt;span class="na"&gt;client_id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;oauth_client_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;//your GitHub client_id
+&lt;/span&gt;        &lt;span class="na"&gt;client_secret&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;oauth_client_secret&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="c1"&gt;//and secret
+&lt;/span&gt;       &lt;span class="na"&gt;code&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;code&lt;/span&gt;   &lt;span class="c1"&gt;//the access code we parsed earlier
+&lt;/span&gt;    &lt;span class="p"&gt;});&lt;/span&gt;
 
-        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;reqOptions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="na"&gt;host&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;github.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="na"&gt;port&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;443&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="na"&gt;path&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/login/oauth/access_token&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="na"&gt;method&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;POST&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="na"&gt;headers&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;content-length&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-        &lt;span class="p"&gt;};&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;reqOptions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;host&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;github.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="na"&gt;port&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;443&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="na"&gt;path&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/login/oauth/access_token&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="na"&gt;method&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;POST&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="na"&gt;headers&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;content-length&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;};&lt;/span&gt;
 
-        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;body&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;req&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;https&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;request&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;reqOptions&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setEncoding&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;utf8&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-            &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;data&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;chunk&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;body&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="nx"&gt;chunk&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
-            &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;end&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="nx"&gt;cb&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;qs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;access_token&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-            &lt;span class="p"&gt;});&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;body&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;req&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;https&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;request&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;reqOptions&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setEncoding&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;utf8&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;data&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;chunk&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;body&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="nx"&gt;chunk&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+        &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;end&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nx"&gt;cb&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;qs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;access_token&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
         &lt;span class="p"&gt;});&lt;/span&gt;
+    &lt;span class="p"&gt;});&lt;/span&gt;
 
-        &lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;end&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-        &lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;error&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;cb&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;message&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;end&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;error&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;cb&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;message&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;
 &lt;p&gt;This is just a small snippet to illustrate what is going on. Once you send the 
 POST request, GitHub will return a response that looks like this&lt;/p&gt;
-&lt;pre class="highlight javascript"&gt;    &lt;span class="nx"&gt;access_token&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;e72e16c7e42f292c6912e7710c838347ae178b4a&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nx"&gt;token_type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;bearer&lt;/span&gt;
+&lt;pre class="highlight javascript"&gt;&lt;span class="nx"&gt;access_token&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;e72e16c7e42f292c6912e7710c838347ae178b4a&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nx"&gt;token_type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;bearer&lt;/span&gt;
 &lt;/pre&gt;
 &lt;p&gt;From here you just need to parse the auth token and save it somewhere. 
 Going forward, when you want to make an API call, you need to retrieve the 
@@ -374,35 +392,6 @@ but I&amp;#39;m hoping to release it in the chrome store in a couple more weeks.
 &lt;p&gt;I hit F5. I hit it again. And then it starts to hit me.&lt;/p&gt;
 
 &lt;p&gt;I had finally done it. I had gotten it right on the first try. There were no errors, no silly mistakes, no running to Google or StackOverflow to search out an answer. That night I had an idea, I implemented it, and it just &lt;em&gt;worked&lt;/em&gt;. It was a magnificent feeling. It sounds like a trivial triumph, but for some reason that&amp;#39;s when I knew I could do this. It&amp;#39;s when I knew I didn&amp;#39;t want to do anything else.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Quick Preview</title>
-    <link rel="alternate" href="/Quick-Preview/"/>
-    <id>/Quick-Preview/</id>
-    <published>2012-10-26T00:00:00Z</published>
-    <updated>2012-10-26T00:00:00Z</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;Last week I was looking around for suggestions on how rookie devs can contribute to open source projects. I stumbled across a post that suggested, if you&amp;#39;re using WordPress, writing WordPress plugin in lieu of contributig to an existing project. At that time I was using WordPress and it sounded like fun, so I did.  &lt;/p&gt;
-
-&lt;p&gt;I started thinking about things I wanted to see in my own install of WordPress.The first thing that came to mind was how I tried to hit Cmd-S every time I wanted to save a post. I use Cmd-S to save things everywhere else, but in WordPress, it opened the save file dialog instead of saving the post. Bingo. I had my idea.&lt;/p&gt;
-
-&lt;p&gt;Next, I did a quick search of the WordPress directory to see if something like that already existed.&lt;/p&gt;
-
-&lt;p&gt;Of course it did. Aptly named &lt;a title="Ctrl-S WordPress Plugin" href="http://wordpress.org/extend/plugins/ctrl-s/"&gt;Ctrl-S&lt;/a&gt;. Damn.&lt;/p&gt;
-
-&lt;p&gt;At that point, I had two choices. I could search for another idea, or I could find a way to make my plugin a little different. I felt like it was a perfect starter project. It was simple, it wouldn&amp;#39;t take too long to build, and I would be able to get a feel for the process of creating a plugin. I decided to stick with it and change it up a bit by adding a preview of the post after saving.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#39;s a couple issues I ran into during the course of creating it.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Whenever you click the save preview button on WordPress, it refreshes the page. When I simulated the click event, the page would refresh before I could open the preview. I couldn&amp;#39;t use a setTimeout() function either because the timeout would be reset when the page was refreshed. What I ended up doing was setting a cookie and then checking for the cookie each time the page is visited. If the cookie is set, then I open the preview and unset the cookie. If it&amp;#39;s not, then it&amp;#39;s just business as usual.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;WordPress uses Tiny MCE. TinyMCE has it&amp;#39;s own keydown function which means the keydown function I set in my plugin wasn&amp;#39;t firing when the editor took focus. It took a little bit of time to track down why my keydown event wasn&amp;#39;t firing and how to correct it. Essentially, you have to add the keydown event in the WordPress initialization of tinyMCE.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;a title="Quick Preview WordPress Plugin" href="http://wordpress.org/extend/plugins/quick-preview/"&gt;Quick-Preview&lt;/a&gt; has been active in the directory for a couple of weeks now. There are 95 downloads as of today which isn&amp;#39;t too bad considering I haven&amp;#39;t told anyone about it. There&amp;#39;s one user on the support forum who is having trouble with the plugin not showing a preview at all. I&amp;#39;ve tried my best to duplicate the problem, but everything works fine for me on multiple computers in Chrome, FireFox, and IE. If anyone reading this wants to test it out, please let me know either here or on the support forum if you have problems. I&amp;#39;d really like to resolve that issue.&lt;/p&gt;
 </content>
   </entry>
 </feed>

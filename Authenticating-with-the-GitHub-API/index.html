@@ -101,24 +101,24 @@ GitHub will redirect back to the Callback URL you set up with an access code in 
 
 <p>Get the access code from the URL
 ```javascript
-    // Get the authorization code from the url that was returned by GitHub</p>
-<pre class="highlight text">var authCode = getAuthCode(window.location.href);
+// Get the authorization code from the url that was returned by GitHub</p>
 
-// Extract the auth code from the original URL
+<p>var authCode = getAuthCode(window.location.href);</p>
 
-function getAuthCode(url){
+<p>// Extract the auth code from the original URL</p>
+
+<p>function getAuthCode(url){
     var error = url.match(/[&amp;\?]error=([^&amp;]+)/);
     if (error) {
-        throw &#39;Error getting authorization code: &#39; + error[1];
+        throw &#39;Error getting authorization code: &#39; + error<a title="GitHub Applications" href="/images/github-app-setup.jpg">1</a>;
     }
-    return url.match(/[&amp;\?]code=([\w\/\-]+)/)[1];
-}
-</pre><pre class="highlight text">
+    return url.match(/[&amp;\?]code=([\w\/-]+)/)<a title="GitHub Applications" href="/images/github-app-setup.jpg">1</a>;
+}</p>
+<pre class="highlight text">
 And exchange this for an auth token by sending a POST request to
 
 ```javascript
-
-    https://github.com/login/oauth/access_token?client_id=your-client-id&amp;client_secret=your-client-secret&amp;code=your-access-code
+https://github.com/login/oauth/access_token?client_id=your-client-id&amp;client_secret=your-client-secret&amp;code=your-access-code
 </pre>
 <p>Your client secret can be found in the same place as your client id from above. 
 You should never share this secret with anyone. It&#39;s called a client <em>secret</em> 
@@ -130,38 +130,38 @@ relevant code from Gatekeeper. If you want to implement it yourself, grab it
 from GitHub and let me know if you have any questions. The only change I made 
 was replacing a deprecated Express call and adding a few small features like 
 404 handling.</p>
-<pre class="highlight javascript">    <span class="kd">function</span> <span class="nx">authenticate</span><span class="p">(</span><span class="nx">code</span><span class="p">,</span> <span class="nx">cb</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">qs</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
-            <span class="na">client_id</span><span class="p">:</span> <span class="nx">config</span><span class="p">.</span><span class="nx">oauth_client_id</span><span class="p">,</span> <span class="c1">//your GitHub client_id
-</span>            <span class="na">client_secret</span><span class="p">:</span> <span class="nx">config</span><span class="p">.</span><span class="nx">oauth_client_secret</span><span class="p">,</span>  <span class="c1">//and secret
-</span>           <span class="na">code</span><span class="p">:</span> <span class="nx">code</span>   <span class="c1">//the access code we parsed earlier
-</span>        <span class="p">});</span>
+<pre class="highlight javascript"><span class="kd">function</span> <span class="nx">authenticate</span><span class="p">(</span><span class="nx">code</span><span class="p">,</span> <span class="nx">cb</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">qs</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+        <span class="na">client_id</span><span class="p">:</span> <span class="nx">config</span><span class="p">.</span><span class="nx">oauth_client_id</span><span class="p">,</span> <span class="c1">//your GitHub client_id
+</span>        <span class="na">client_secret</span><span class="p">:</span> <span class="nx">config</span><span class="p">.</span><span class="nx">oauth_client_secret</span><span class="p">,</span>  <span class="c1">//and secret
+</span>       <span class="na">code</span><span class="p">:</span> <span class="nx">code</span>   <span class="c1">//the access code we parsed earlier
+</span>    <span class="p">});</span>
 
-        <span class="kd">var</span> <span class="nx">reqOptions</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="na">host</span><span class="p">:</span> <span class="s1">&#39;github.com&#39;</span><span class="p">,</span>
-            <span class="na">port</span><span class="p">:</span> <span class="s1">&#39;443&#39;</span><span class="p">,</span>
-            <span class="na">path</span><span class="p">:</span> <span class="s1">&#39;/login/oauth/access_token&#39;</span><span class="p">,</span>
-            <span class="na">method</span><span class="p">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
-            <span class="na">headers</span><span class="p">:</span> <span class="p">{</span> <span class="s1">&#39;content-length&#39;</span><span class="err">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">length</span> <span class="p">}</span>
-        <span class="p">};</span>
+    <span class="kd">var</span> <span class="nx">reqOptions</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="na">host</span><span class="p">:</span> <span class="s1">&#39;github.com&#39;</span><span class="p">,</span>
+        <span class="na">port</span><span class="p">:</span> <span class="s1">&#39;443&#39;</span><span class="p">,</span>
+        <span class="na">path</span><span class="p">:</span> <span class="s1">&#39;/login/oauth/access_token&#39;</span><span class="p">,</span>
+        <span class="na">method</span><span class="p">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+        <span class="na">headers</span><span class="p">:</span> <span class="p">{</span> <span class="s1">&#39;content-length&#39;</span><span class="err">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">length</span> <span class="p">}</span>
+    <span class="p">};</span>
 
-        <span class="kd">var</span> <span class="nx">body</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
-        <span class="kd">var</span> <span class="nx">req</span> <span class="o">=</span> <span class="nx">https</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">reqOptions</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">res</span><span class="p">.</span><span class="nx">setEncoding</span><span class="p">(</span><span class="s1">&#39;utf8&#39;</span><span class="p">);</span>
-            <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">chunk</span><span class="p">)</span> <span class="p">{</span> <span class="nx">body</span> <span class="o">+=</span> <span class="nx">chunk</span><span class="p">;</span> <span class="p">});</span>
-            <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;end&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-                <span class="nx">cb</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">qs</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">body</span><span class="p">).</span><span class="nx">access_token</span><span class="p">);</span>
-            <span class="p">});</span>
+    <span class="kd">var</span> <span class="nx">body</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">req</span> <span class="o">=</span> <span class="nx">https</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">reqOptions</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">res</span><span class="p">.</span><span class="nx">setEncoding</span><span class="p">(</span><span class="s1">&#39;utf8&#39;</span><span class="p">);</span>
+        <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">chunk</span><span class="p">)</span> <span class="p">{</span> <span class="nx">body</span> <span class="o">+=</span> <span class="nx">chunk</span><span class="p">;</span> <span class="p">});</span>
+        <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;end&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">cb</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">qs</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">body</span><span class="p">).</span><span class="nx">access_token</span><span class="p">);</span>
         <span class="p">});</span>
+    <span class="p">});</span>
 
-        <span class="nx">req</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-        <span class="nx">req</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
-        <span class="nx">req</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> <span class="nx">cb</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span> <span class="p">});</span>
-    <span class="p">}</span>
+    <span class="nx">req</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+    <span class="nx">req</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+    <span class="nx">req</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> <span class="nx">cb</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span> <span class="p">});</span>
+<span class="p">}</span>
 </pre>
 <p>This is just a small snippet to illustrate what is going on. Once you send the 
 POST request, GitHub will return a response that looks like this</p>
-<pre class="highlight javascript">    <span class="nx">access_token</span><span class="o">=</span><span class="nx">e72e16c7e42f292c6912e7710c838347ae178b4a</span><span class="o">&amp;</span><span class="nx">token_type</span><span class="o">=</span><span class="nx">bearer</span>
+<pre class="highlight javascript"><span class="nx">access_token</span><span class="o">=</span><span class="nx">e72e16c7e42f292c6912e7710c838347ae178b4a</span><span class="o">&amp;</span><span class="nx">token_type</span><span class="o">=</span><span class="nx">bearer</span>
 </pre>
 <p>From here you just need to parse the auth token and save it somewhere. 
 Going forward, when you want to make an API call, you need to retrieve the 
