@@ -146,57 +146,55 @@ Including fullcalendar is just like loading any other external js file.
 You have several options as to where you pull your event data from. I chose to pass a URL to a php file where I fetch the events and return them (via JSON).
 
 ```javascript
+$(document).ready(function() { 
+    var date = new Date();
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getFullYear();
+    var calendar = $('#calendar').fullCalendar({
+    //configure options for the calendar
+       header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'month,agendaWeek,agendaDay'
+       },
 
-    $(document).ready(function() { 
-        var date = new Date();
-        var d = date.getDate();
-        var m = date.getMonth();
-        var y = date.getFullYear();
-        var calendar = $('#calendar').fullCalendar({
-        //configure options for the calendar
-           header: {
-              left: 'prev,next today',
-              center: 'title',
-              right: 'month,agendaWeek,agendaDay'
-           },
 
+       // this is where you specify where to pull the events from.
 
-           // this is where you specify where to pull the events from.
-
-           events: "includes/json-events.php",
-           editable: true,
-           defaultView: 'month',
-           allDayDefault: false,
-           //etc etc
-       });
-    });
-
+       events: "includes/json-events.php",
+       editable: true,
+       defaultView: 'month',
+       allDayDefault: false,
+       //etc etc
+   });
+});
 ```
 
 This is the json-events.php page
 
 ```php
-    <?php 
-        require_once '../../../config/db-config.php';
+<?php 
+    require_once '../../../config/db-config.php';
 
-        $dbh = new PDO("mysql:host=$mysql_hostname;dbname=$mysql_dbname, $mysql_username, $mysql_password");
-        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $dbh->prepare("SELECT event_id, parent_id, title, start, end
-                               FROM events");
-        $stmt->;execute();
-        $events = array();
+    $dbh = new PDO("mysql:host=$mysql_hostname;dbname=$mysql_dbname, $mysql_username, $mysql_password");
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $stmt = $dbh->prepare("SELECT event_id, parent_id, title, start, end
+                           FROM events");
+    $stmt->;execute();
+    $events = array();
 
-        while ($row = $stmt->;fetch(PDO::FETCH_ASSOC)){
-            $eventArray['id'] = $row['event_id'];
-            $eventArray['parent_id'] = $row['parent_id'];
-            $eventArray['title'] = stripslashes($row['title']);
-            $eventArray['start'] = $row['start'];
-            $eventArray['end'] = $row['end'];
-            $events[] = $eventArray;
-        }
+    while ($row = $stmt->;fetch(PDO::FETCH_ASSOC)){
+        $eventArray['id'] = $row['event_id'];
+        $eventArray['parent_id'] = $row['parent_id'];
+        $eventArray['title'] = stripslashes($row['title']);
+        $eventArray['start'] = $row['start'];
+        $eventArray['end'] = $row['end'];
+        $events[] = $eventArray;
+    }
 
-        echo json_encode($events);
-    ?>
+    echo json_encode($events);
+?>
 ```
 
 
@@ -205,166 +203,164 @@ I query the database for all the events in my events table, put them in an array
 Alright, let's make some bacon. And by that I mean let's add an event to the calendar. I have a div with the display set to none. I open this div as a dialog with the event select callback. Here's the div.
 
 ```html
-    <div id="add-event" title="Add New Event">
-        <form action="" id ="add-event-form" name="add-event-form">
-            <label for="title">Event Name</label>
-            <input type="text" name="title" id="title"/>
-            <p>
-            <label for="add-date">Date</label>
-            <input type="text" name="event-date" id="event-date" tabindex="-1" />
-            </p>
-            <p>
-            <label for="add-start-time">Start Time</label>
-            <input type="text" name="start-time" id="start-time" />
-            </p>
-            <p>
-            <label for="add-end-time">End Time</label>
-            <input type="text" name="end-time" id="end-time" />
-            </p>
-            <p>
-            <label for="repeats">repeat </label>
-            <input type="checkbox" name="repeats" id="repeats" value="1"/>
-            <div id="repeat-options" >
-                 Repeat every: day <input type="radio" value="1" name="repeat-freq" align="bottom">
-                 week <input type="radio" value="7" name="repeat-freq" align="bottom">
-                 two weeks <input type="radio" value="14" name="repeat-freq" align="bottom">
-            </div>
-        </form>
-    </div>
+<div id="add-event" title="Add New Event">
+    <form action="" id ="add-event-form" name="add-event-form">
+        <label for="title">Event Name</label>
+        <input type="text" name="title" id="title"/>
+        <p>
+        <label for="add-date">Date</label>
+        <input type="text" name="event-date" id="event-date" tabindex="-1" />
+        </p>
+        <p>
+        <label for="add-start-time">Start Time</label>
+        <input type="text" name="start-time" id="start-time" />
+        </p>
+        <p>
+        <label for="add-end-time">End Time</label>
+        <input type="text" name="end-time" id="end-time" />
+        </p>
+        <p>
+        <label for="repeats">repeat </label>
+        <input type="checkbox" name="repeats" id="repeats" value="1"/>
+        <div id="repeat-options" >
+             Repeat every: day <input type="radio" value="1" name="repeat-freq" align="bottom">
+             week <input type="radio" value="7" name="repeat-freq" align="bottom">
+             two weeks <input type="radio" value="14" name="repeat-freq" align="bottom">
+        </div>
+    </form>
+</div>
 ```
 
 Next, the js for the dialog
 
 ```javascript
-
-    $("add-event").dialog({
-        autoOpen: false,
-        height: 'auto',
-        width: 'auto',
-        autoResize:true,
-        modal: false,
-        resizable: false,
-        open: function(){
-            $("#title").attr("tabindex","1");
+$("add-event").dialog({
+    autoOpen: false,
+    height: 'auto',
+    width: 'auto',
+    autoResize:true,
+    modal: false,
+    resizable: false,
+    open: function(){
+        $("#title").attr("tabindex","1");
+    },
+    buttons: {
+        "Save Event": function() {
+            $.ajax({
+                type:"POST",
+                url: "includes/add-event.php",
+                data: $('#add-event-form').serialize(),
+                success: function(){
+                    calendar.fullCalendar('refetchEvents');
+                }
+            });
+            $(this).dialog("close");
         },
-        buttons: {
-            "Save Event": function() {
-                $.ajax({
-                    type:"POST",
-                    url: "includes/add-event.php",
-                    data: $('#add-event-form').serialize(),
-                    success: function(){
-                        calendar.fullCalendar('refetchEvents');
-                    }
-                });
-                $(this).dialog("close");
-            },
 
-            Cancel: function() {
-                $(this).dialog("close");
-            }
-        },
-    });
-
+        Cancel: function() {
+            $(this).dialog("close");
+        }
+    },
+});
 ```
 
 Finally, let's have a look at the add-event.php page
 
 ```php
-    <?php
-        require_once '../../../config/db-config.php';
-        $title = $_POST['title']; $start_date = $_POST['event-date'];
-        $weekday = date('N', strtotime($start_date));
-        $start_time = $_POST['start-time'];
-        $end_time = $_POST['end-time'];
-        $start = $start_date . " " . $start_time; $end = $start_date . " " . $end_time;
+<?php
+    require_once '../../../config/db-config.php';
+    $title = $_POST['title']; $start_date = $_POST['event-date'];
+    $weekday = date('N', strtotime($start_date));
+    $start_time = $_POST['start-time'];
+    $end_time = $_POST['end-time'];
+    $start = $start_date . " " . $start_time; $end = $start_date . " " . $end_time;
 
-        if (!isset($_POST['repeats'])) {
-            $repeats = 0;
-            $repeat_freq = 0;
-            $dbh = new PDO("mysql:host=$mysql_hostname;dbname=$mysql_dbname", $mysql_username, $mysql_password);
-            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
-            try{
-                $dbh->beginTransaction();
-                $stmt = $dbh->prepare("INSERT INTO events_parent 
-                    (title,start_date, start_time, end_time, weekday, repeats, repeat_freq)
-                    VALUES (:title,:start_date, :start_time, :end_time, :weekday, :repeats, :repeat_freq)");
+    if (!isset($_POST['repeats'])) {
+        $repeats = 0;
+        $repeat_freq = 0;
+        $dbh = new PDO("mysql:host=$mysql_hostname;dbname=$mysql_dbname", $mysql_username, $mysql_password);
+        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
+        try{
+            $dbh->beginTransaction();
+            $stmt = $dbh->prepare("INSERT INTO events_parent 
+                (title,start_date, start_time, end_time, weekday, repeats, repeat_freq)
+                VALUES (:title,:start_date, :start_time, :end_time, :weekday, :repeats, :repeat_freq)");
 
-                $stmt->bindParam(':title', $title );
-                $stmt->bindParam(':start_date', $start_date);
-                $stmt->bindParam(':start_time', $start_time);
-                $stmt->bindParam(':end_time', $end_time);
-                $stmt->bindParam(':weekday', $weekday);
-                $stmt->bindParam(':repeats', $repeats);
-                $stmt->bindParam(':repeat_freq', $repeat_freq);
-                $stmt->execute();
-                $last_id = $dbh->lastInsertId();
+            $stmt->bindParam(':title', $title );
+            $stmt->bindParam(':start_date', $start_date);
+            $stmt->bindParam(':start_time', $start_time);
+            $stmt->bindParam(':end_time', $end_time);
+            $stmt->bindParam(':weekday', $weekday);
+            $stmt->bindParam(':repeats', $repeats);
+            $stmt->bindParam(':repeat_freq', $repeat_freq);
+            $stmt->execute();
+            $last_id = $dbh->lastInsertId();
 
+            $stmt = $dbh->prepare("INSERT INTO events 
+                (parent_id, title, start, end)
+                VALUES (:parent_id, :title, :start, :end)");
+
+            $stmt->bindParam(':title', $title );
+            $stmt->bindParam(':start', $start);
+            $stmt->bindParam(':end', $end);
+            $stmt->bindParam(':parent_id', $last_id);
+            $stmt->execute();
+
+            $dbh->commit();
+
+        }
+        catch(Exception $e){
+            $dbh->rollback();
+        }
+    }
+    else {
+        $repeats = $_POST['repeats'];
+        $repeat_freq = $_POST['repeat-freq'];
+        $until = (365/$repeat_freq);
+        if ($repeat_freq == 1){
+            $weekday = 0;
+        }
+        $dbh = new PDO("mysql:host=$mysql_hostname;dbname=$mysql_dbname", $mysql_username, $mysql_password);
+        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  // set the error mode to excptions
+        $dbh->beginTransaction();
+        try{
+            $stmt = $dbh->prepare("INSERT INTO events_parent 
+                (title,start_date, start_time, end_time, weekday, repeats, repeat_freq)
+                VALUES (:title, :start_date, :start_time, :end_time, :weekday, :repeats, :repeat_freq)");
+
+            $stmt->bindParam(':title', $title );
+            $stmt->bindParam(':start_date', $start_date);
+            $stmt->bindParam(':start_time', $start_time);
+            $stmt->bindParam(':end_time', $end_time);
+            $stmt->bindParam(':weekday', $weekday);
+            $stmt->bindParam(':repeats', $repeats);
+            $stmt->bindParam(':repeat_freq', $repeat_freq);
+            $stmt->execute();
+            $last_id = $dbh->lastInsertId();
+
+            for($x = 0; $x <$until; $x++){
                 $stmt = $dbh->prepare("INSERT INTO events 
-                    (parent_id, title, start, end)
-                    VALUES (:parent_id, :title, :start, :end)");
-
+                    (title, start, end, parent_id)
+                    VALUES (:title, :start, :end, :parent_id)");
                 $stmt->bindParam(':title', $title );
                 $stmt->bindParam(':start', $start);
                 $stmt->bindParam(':end', $end);
                 $stmt->bindParam(':parent_id', $last_id);
                 $stmt->execute();
-
-                $dbh->commit();
-
+                $start_date = strtotime($start . '+' . $repeat_freq . 'DAYS');
+                $end_date = strtotime($end . '+' . $repeat_freq . 'DAYS');
+                $start = date("Y-m-d H:i", $start_date);
+                $end = date("Y-m-d H:i";, $end_date);
             }
-            catch(Exception $e){
-                $dbh->rollback();
-            }
+            $dbh->commit();
         }
-        else {
-            $repeats = $_POST['repeats'];
-            $repeat_freq = $_POST['repeat-freq'];
-            $until = (365/$repeat_freq);
-            if ($repeat_freq == 1){
-                $weekday = 0;
-            }
-            $dbh = new PDO("mysql:host=$mysql_hostname;dbname=$mysql_dbname", $mysql_username, $mysql_password);
-            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  // set the error mode to excptions
-            $dbh->beginTransaction();
-            try{
-                $stmt = $dbh->prepare("INSERT INTO events_parent 
-                    (title,start_date, start_time, end_time, weekday, repeats, repeat_freq)
-                    VALUES (:title, :start_date, :start_time, :end_time, :weekday, :repeats, :repeat_freq)");
 
-                $stmt->bindParam(':title', $title );
-                $stmt->bindParam(':start_date', $start_date);
-                $stmt->bindParam(':start_time', $start_time);
-                $stmt->bindParam(':end_time', $end_time);
-                $stmt->bindParam(':weekday', $weekday);
-                $stmt->bindParam(':repeats', $repeats);
-                $stmt->bindParam(':repeat_freq', $repeat_freq);
-                $stmt->execute();
-                $last_id = $dbh->lastInsertId();
-
-                for($x = 0; $x <$until; $x++){
-                    $stmt = $dbh->prepare("INSERT INTO events 
-                        (title, start, end, parent_id)
-                        VALUES (:title, :start, :end, :parent_id)");
-                    $stmt->bindParam(':title', $title );
-                    $stmt->bindParam(':start', $start);
-                    $stmt->bindParam(':end', $end);
-                    $stmt->bindParam(':parent_id', $last_id);
-                    $stmt->execute();
-                    $start_date = strtotime($start . '+' . $repeat_freq . 'DAYS');
-                    $end_date = strtotime($end . '+' . $repeat_freq . 'DAYS');
-                    $start = date("Y-m-d H:i", $start_date);
-                    $end = date("Y-m-d H:i";, $end_date);
-                }
-                $dbh->commit();
-            }
-
-            catch(Exception $e){
-                $dbh->rollback();
-            }
+        catch(Exception $e){
+            $dbh->rollback();
         }
-        header ("location: ../");
-    ?>
+    }
+    header ("location: ../");
+?>
 ```
 
 Every time I add an event to the calendar, I insert a row into the parent_events table. After I insert the row, I grab the new parent_id using lastInsertId(). Next, I run a loop and insert a row for every occurrence of the event until the end date.This allows me to do a few things. One, I can change any single event and it won't affect any of the other events. Two, I can edit all events by using their common parent id. Three, I can still delete all occurrences of an event by deleting the relevant rows from the events table using the parent_id

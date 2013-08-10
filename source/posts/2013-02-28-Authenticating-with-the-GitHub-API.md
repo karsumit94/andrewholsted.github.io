@@ -74,27 +74,26 @@ Once GitHub redirects back to your Callback URL with an access code, you need to
 
 Get the access code from the URL
 ```javascript
-    // Get the authorization code from the url that was returned by GitHub
-    
-    var authCode = getAuthCode(window.location.href);
+// Get the authorization code from the url that was returned by GitHub
 
-    // Extract the auth code from the original URL
-    
-    function getAuthCode(url){
-        var error = url.match(/[&\?]error=([^&]+)/);
-        if (error) {
-            throw 'Error getting authorization code: ' + error[1];
-        }
-        return url.match(/[&\?]code=([\w\/\-]+)/)[1];
+var authCode = getAuthCode(window.location.href);
+
+// Extract the auth code from the original URL
+
+function getAuthCode(url){
+    var error = url.match(/[&\?]error=([^&]+)/);
+    if (error) {
+        throw 'Error getting authorization code: ' + error[1];
     }
+    return url.match(/[&\?]code=([\w\/\-]+)/)[1];
+}
 
 ```
 
 And exchange this for an auth token by sending a POST request to
 
 ```javascript
-
-    https://github.com/login/oauth/access_token?client_id=your-client-id&client_secret=your-client-secret&code=your-access-code
+https://github.com/login/oauth/access_token?client_id=your-client-id&client_secret=your-client-secret&code=your-access-code
 ```
 
 Your client secret can be found in the same place as your client id from above. 
@@ -109,41 +108,41 @@ was replacing a deprecated Express call and adding a few small features like
 404 handling.
 
 ```javascript
-    function authenticate(code, cb) {
-        var data = qs.stringify({
-            client_id: config.oauth_client_id, //your GitHub client_id
-            client_secret: config.oauth_client_secret,  //and secret
-           code: code   //the access code we parsed earlier
+function authenticate(code, cb) {
+    var data = qs.stringify({
+        client_id: config.oauth_client_id, //your GitHub client_id
+        client_secret: config.oauth_client_secret,  //and secret
+       code: code   //the access code we parsed earlier
+    });
+
+    var reqOptions = {
+        host: 'github.com',
+        port: '443',
+        path: '/login/oauth/access_token',
+        method: 'POST',
+        headers: { 'content-length': data.length }
+    };
+
+    var body = '';
+    var req = https.request(reqOptions, function(res) {
+        res.setEncoding('utf8');
+        res.on('data', function (chunk) { body += chunk; });
+        res.on('end', function() {
+            cb(null, qs.parse(body).access_token);
         });
+    });
 
-        var reqOptions = {
-            host: 'github.com',
-            port: '443',
-            path: '/login/oauth/access_token',
-            method: 'POST',
-            headers: { 'content-length': data.length }
-        };
-
-        var body = '';
-        var req = https.request(reqOptions, function(res) {
-            res.setEncoding('utf8');
-            res.on('data', function (chunk) { body += chunk; });
-            res.on('end', function() {
-                cb(null, qs.parse(body).access_token);
-            });
-        });
-
-        req.write(data);
-        req.end();
-        req.on('error', function(e) { cb(e.message); });
-    }
+    req.write(data);
+    req.end();
+    req.on('error', function(e) { cb(e.message); });
+}
 ```
 
 This is just a small snippet to illustrate what is going on. Once you send the 
 POST request, GitHub will return a response that looks like this
 
 ```javascript
-    access_token=e72e16c7e42f292c6912e7710c838347ae178b4a&token_type=bearer
+access_token=e72e16c7e42f292c6912e7710c838347ae178b4a&token_type=bearer
 ```
 
 From here you just need to parse the auth token and save it somewhere. 
