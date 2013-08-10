@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://fajitanachos.com/Dear-Aspiring-Developer/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://fajitanachos.com/Dev-Bootcamp/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://fajitanachos.com/Hotfix/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://fajitanachos.com/Authenticating-with-the-GitHub-API/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://fajitanachos.com/It-just-worked/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://fajitanachos.com/Quick-Preview/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://fajitanachos.com/Fullcalendar-and-recurring-events/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://fajitanachos.com/The-backstory/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+</urlset>

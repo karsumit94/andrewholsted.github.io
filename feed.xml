@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog Name</title>
+  <subtitle>Blog subtitle</subtitle>
+  <id>http://blog.url.com/</id>
+  <link href="http://blog.url.com/"/>
+  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <updated>2013-06-21T00:00:00Z</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>Dear Aspiring Developer</title>
+    <link rel="alternate" href="/Dear-Aspiring-Developer/"/>
+    <id>/Dear-Aspiring-Developer/</id>
+    <published>2013-06-21T00:00:00Z</published>
+    <updated>2013-06-21T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;It doesn&amp;#39;t matter what you did in a previous life. What matters is what you do today, and every day going forward. You want to be a developer. Awesome. &lt;/p&gt;
+
+&lt;p&gt;Why? &lt;/p&gt;
+
+&lt;p&gt;Because it pays well? Because you want to work at a start up? Because your mom said you are good at the interwebs? This isn&amp;#39;t going to be an easy process. It&amp;#39;s going to take a lot of hardwork and dedication from the beginning. I certainly don&amp;#39;t know everything, but as someone who is on the same path, I thought I would share some of the things I&amp;#39;ve done that have helped me along the way.&lt;/p&gt;
+
+&lt;h2&gt;Number One&lt;/h2&gt;
+
+&lt;p&gt;If you don&amp;#39;t have a project you&amp;#39;re currently working on, you should really find one. There will never be a magic time or place to get started. Today is better than tomorrow, which is better than the next day. It&amp;#39;s fine to start with a tutorial or a book, but you&amp;#39;ll learn a lot more from working on something that you are passionate about. Can&amp;#39;t find an idea? You&amp;#39;re probably not looking hard enough. Open your eyes and view every potential problem, inconvenience, or desire through the lens of it being your next project. Have an idea languishing in the back of your mind? Build it. I don&amp;#39;t care if it sucks. One shitty project is infinitely better than zero projects. If you aren&amp;#39;t actively working on something, anything, then you are doing yourself a huge disservice. &lt;/p&gt;
+
+&lt;h2&gt;Number Two&lt;/h2&gt;
+
+&lt;p&gt;You should to be writing code &lt;em&gt;every single day&lt;/em&gt;. &lt;/p&gt;
+
+&lt;p&gt;The only two days I&amp;#39;m not writing code are my wife&amp;#39;s birthday and our anniversary. That&amp;#39;s it. If you aren&amp;#39;t in your text editor, making sweet passionate love to your keyboard day in and day out, then you&amp;#39;re doing it wrong. Every day you will get a little better. You&amp;#39;ll look back on things you did three months ago and cringe because you&amp;#39;ve gotten so much better. There will be small triumphs along the way, like when things &lt;a href="/It-just-worked"&gt;just work&lt;/a&gt;, and rest assured there will also be many failures. You&amp;#39;ll need to fight through the frustration, tediousness, and problems that you encounter along the way. And hopefully you&amp;#39;ll love doing it. &lt;/p&gt;
+
+&lt;h2&gt;Number Three&lt;/h2&gt;
+
+&lt;p&gt;You need a blog, no questions asked. I waited several months before I started this blog. That was a mistake. My reasoning was that I didn&amp;#39;t have anything to say. That was a pretty poor reason. You can write about your latest projects, things you&amp;#39;ve learned, or anything else that comes to mind. In fact, if you don&amp;#39;t already have a project you are working on, a blog is the perfect starter project. Spend some time thinking about the layout you want to use and then go build it. It took me too long to realize that it&amp;#39;s really not so much about what you write. Your blog/portfolio is your calling card. It&amp;#39;s the perfect opportunity to tell your story, and no one else is going to tell it for you. Tell me a story. &lt;/p&gt;
+
+&lt;h2&gt;Number Four&lt;/h2&gt;
+
+&lt;p&gt;Join &lt;a href="https://www.github.com"&gt;GitHub&lt;/a&gt;, write some code, and put it out there for the world to see. Forget about contributing to open source projects for now. There will come a time and place for that. Just get started with whatever you are working on. At first, you won&amp;#39;t understand why you even need version control. In time though, you&amp;#39;ll come to wonder how you ever lived without it. You can use git by itself, but GitHub makes it easier to manage and it&amp;#39;s the perfect platform for you to show others that you can, in fact, write code. As time goes on you&amp;#39;ll come across open source projects that pique your interest. When you do, take some time to contribute to them. &lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Dev Bootcamp</title>
+    <link rel="alternate" href="/Dev-Bootcamp/"/>
+    <id>/Dev-Bootcamp/</id>
+    <published>2013-05-07T00:00:00Z</published>
+    <updated>2013-05-07T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;center&gt;&lt;em&gt;This was previously 3 posts that have been combined into 1.&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;h2&gt;The Application - January 18, 2013&lt;/h2&gt;
+
+&lt;p&gt;I just submitted my Dev Bootcamp application! If you don&amp;#39;t know what
+&lt;a title="Dev Bootcamp" href="http://www.devbootcamp.com"&gt;Dev Bootcamp&lt;/a&gt;, click on that link and have a look around.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m hoping to make a strong case, and with a little luck, get accepted into one 
+of the fall/winter 2013 cohorts. I&amp;#39;m sure most 
+applicants have thought to themselves &amp;quot;What if I shell out $12k and don&amp;#39;t get a 
+job after the program is over...?&amp;quot;  I know I have. But that&amp;#39;s a risk I&amp;#39;m willing to 
+take. This is an opportunity for me to exponentially increase how much I know 
+about web development, meet some amazing people, and hopefully land a job as a 
+developer after it&amp;#39;s all said and done. &lt;/p&gt;
+
+&lt;p&gt;Yeah, I&amp;#39;m willing to take that risk.&lt;/p&gt;
+
+&lt;p&gt;So, about the application. As of now, it consists of two parts. The first part is a series of questions about you, your background, and why you want to join Dev Bootcamp. For the second part they ask you to submit a video in which you A) tell a little about yourself and B) teach them something.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;#39;t know how Dev Bootcamp feels about me going through the full application (although anyone can sign up and see it) so I&amp;#39;ll just tell you about one question. I changed my answer to this 3 or 4 times and eventually settled on this.&lt;/p&gt;
+
+&lt;p&gt;Q: &amp;quot;Tell us something surprising or amusing that you have discovered.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;A: &amp;quot;Never tell a restaurant in Thailand that you &amp;quot;like spicy&amp;quot;...&lt;/p&gt;
+
+&lt;p&gt;Quick back story: We went to Thailand and Malaysia over the Christmas holidays. Thai food is all around pretty amazing. One night we were at a restaurant and I asked our server if a dish was spicy. The server 
+cocked her head to the side and said &amp;quot;a little spicy&amp;quot;. Well, I like spicy food 
+and I didn&amp;#39;t want them to think otherwise. So, nodding my head with a big smile, I said &amp;quot;I like spicy.&amp;quot; Bad idea. Two bites in I was crying, sweating, and cursing myself all at the same time. &lt;/p&gt;
+
+&lt;p&gt;Anyway, on to the video.&lt;/p&gt;
+
+&lt;p&gt;The video was shot over two days. I went to Kyoto to film the first part with a 
+friend. We went to Nanzen-ji Temple which is a great little spot. If you are ever in 
+Kyoto, it&amp;#39;s worth checking out. My wife helped me film the second part in our 
+apartment and at a restaurant down the street. We got there early and the place 
+was pretty empty. I wanted to stay and catch more of the vibe but when every 
+take you do costs you a beer, it gets expensive.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s the video.&lt;/p&gt;
+
+&lt;iframe width="420" height="315" src="http://www.youtube.com/embed/ps5rRrIyrcI" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;The First Interview - March 15th, 2013&lt;/h2&gt;
+
+&lt;p&gt;I applied to Dev Bootcamp in January of 2013. The day after I applied, I received an email to set up a time to interview. Sweet. The first available time slot was a month away, but unfotunately I had already made plans for that day. I ended up snagging a spot on March 5th, a little over 6 weeks later. I can be patient. No worries.&lt;/p&gt;
+
+&lt;p&gt;February flew by and my interview arrived shortly thereafter. I was pumped. The interview was set for 2:00pm PST which was 7 am the next day for me. I woke up at 5:30 to make sure everything was in order and working properly. I decided to use my wife&amp;#39;s computer as my webcam occasionally decides to give me the middle finger and not cooperate.&lt;/p&gt;
+
+&lt;p&gt;The appointed time rolled around and I found myself staring at Karim Bishay on the other end. A quick hello, how are you, and we were off. We started with questions from me. The ones I had prepared all of a sudden seemed ridiculous. They weren&amp;#39;t. I picked a select few and decided to skip the rest.  Next, Karim gave me a puzzle to work through. The exact question doesn&amp;#39;t matter, so I won&amp;#39;t share it here. He was more interested in my thought process than the actual solution. I made my way around to the right answer after a few nudges from Karim, but in hindsight I definitely should have done better. Just nerves I guess.&lt;/p&gt;
+
+&lt;p&gt;Next, Karim typed a short code snippet into the Skype chat box and asked me to take a look at it. &lt;/p&gt;
+
+&lt;p&gt;&amp;quot;Bear with me a second, I&amp;#39;m using my wife&amp;#39;s computer and can&amp;#39;t pull up the message.&amp;quot; I said, later realizing how dumb it sounded.&lt;/p&gt;
+
+&lt;p&gt;He kindly reminded me that I could click on the bubble next to his name. You know, the spot where it notifies you in bright orange when someone has entered a message. Oops.&lt;/p&gt;
+
+&lt;p&gt;The code snippet itself wasn&amp;#39;t difficult. It was the first time I had ever analyzed a piece of code with/for someone. I knew the answer, but I should have been more confident in expressing it. A&lt;/p&gt;
+
+&lt;p&gt;At the end we talked about a few other things and he recommended that I work through a Ruby tutorial to get a feel for things.&lt;/p&gt;
+
+&lt;p&gt;Total time: 20 minutes&lt;/p&gt;
+
+&lt;h2&gt;The Second Interview - March 15, 2013&lt;/h2&gt;
+
+&lt;p&gt;After I completed the tutorial, I received an email to schedule a second interview. There was an opening the following week and I jumped on it. That interview was today. Well, it was supposed to be.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Anything that can go wrong, will—at the worst possible moment.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That&amp;#39;s Finagle&amp;#39;s corollary to [Murphy&amp;#39;s Law][1], and I know it&amp;#39;s cliche. I wouldn&amp;#39;t even bring it up if it didn&amp;#39;t &lt;em&gt;perfectly&lt;/em&gt; describe the situation in my apartment this morning. Short of a natural disaster, everything that could go wrong, did, and at the worst possible moment.&lt;/p&gt;
+
+&lt;p&gt;20 minutes before the interview was scheduled to start, I fired up my computer and tried to log into Skype. I couldn&amp;#39;t connect. I tried my email next and quickly realized that our internet connection had gone south.&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;Not now..&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;The wifi in our apartment goes out on a semi-regular basis. I went back and forth with our internet provider when we first moved in but it didn&amp;#39;t help. Switching providers isn&amp;#39;t an option either. When it happens, I can usually get online with a wired connection. Not today though. I can recall that happening two times in the last year. Today makes #3. With time dwindling, I frantically tried to reset the router and modem. &lt;/p&gt;
+
+&lt;p&gt;As our scheduled start time neared, and a solid internet connection was still no where to be found, I turned to plan B. My phone. I logged in to the Skype app and tried to shake the past 15 minutes off.&lt;/p&gt;
+
+&lt;p&gt;A few minutes later, the call came in. I accepted, and the Skype app instantly crashed.&lt;/p&gt;
+
+&lt;p&gt;Solid.&lt;/p&gt;
+
+&lt;p&gt;I opened it back up and found a message from Karim.&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;Are you there?&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;I told him I was having some internet problems and I was on my phone. He replied, asking me to give him a call on his number. I tried calling his number from Skype, but I needed to have Skype credits. No dice, and making a 15-20 minute regular long distance call to SF isn&amp;#39;t cheap. I resorted to calling him from Google Talk. Two rings and he answered. A glimmer of hope. I finished my first sentence.&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;Sorry, Andrew. I can barely hear you.&amp;quot; &lt;/p&gt;
+
+&lt;p&gt;I asked him if we could give Skype another shot. A last and desperate attempt. We got connected. I could hear him on the other end. &lt;/p&gt;
+
+&lt;p&gt;&amp;quot;Hello? Andrew? You there?&amp;quot;  He couldn&amp;#39;t see or hear me. Game over.&lt;/p&gt;
+
+&lt;p&gt;He sent me a nice message suggesting we reschedule for another day. I apologized for wasting his time and he sent back a reassuring message that everything was ok. At that point there was nothing more I could do.&lt;/p&gt;
+
+&lt;p&gt;As you might surmise, my internet connection came back to life 5 minutes after we decided to reschedule.Go figure. Sometimes these things just happen. We&amp;#39;ve rescheduled the interview for April 5th. I&amp;#39;ve also purchased plenty of Skype credits to call him, should things go awry again. &lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ll let you know how it turns out.&lt;/p&gt;
+
+&lt;h2&gt;The Real Second Interview - April 5th, 2013&lt;/h2&gt;
+
+&lt;p&gt;The night before my second interview, I resolved to make sure that things would go smoother than my last attempt. The interview was set for 7:30am, my time. I woke up at 5:30 to make sure our internet was cooperating and I didn&amp;#39;t need to come up with a back up plan. Fortunately, things went off without a hitch. &lt;/p&gt;
+
+&lt;p&gt;The call from Karim came in a few minutes early and what I thought was just going to be a &amp;#39;fit&amp;#39; interview, was not. He asked me if I had any questions. I asked a few that I had skipped over in the previous interview, and then we dove into 3 or 4 small code snippets. I stumbled to express myself clearly one spot, but after I settled down, things went fine. I was a little surprised there weren&amp;#39;t any questions about me or my background. I don&amp;#39;t know if it&amp;#39;s the same for all interviews or that is just how mine went. &lt;/p&gt;
+
+&lt;p&gt;Total time: 15 minutes&lt;/p&gt;
+
+&lt;h2&gt;The Result - April 5th, 2013&lt;/h2&gt;
+
+&lt;p&gt;Throughout the application process, I felt fairly confident about my application. I can&amp;#39;t say that is the norm for me. Six hours after I applied, a new message from Karim popped in my inbox. My confidence wavered a bit. &lt;/p&gt;
+
+&lt;p&gt;No worries though, we&amp;#39;re San Francisco bound! I paid my deposit and was promptly placed in the October 2013 cohort. I can&amp;#39;t wait to meet my fellow aspiring devs. It&amp;#39;s going to be a great ride.&lt;/p&gt;
+
+&lt;p&gt;Now, about that $12k...&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Hotfix</title>
+    <link rel="alternate" href="/Hotfix/"/>
+    <id>/Hotfix/</id>
+    <published>2013-03-21T00:00:00Z</published>
+    <updated>2013-03-21T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;One day at work I noticed I messed up the layout of this site with some changes 
+I had made earlier that morning. Things looked fine on my laptop, but due to
+different screen resolutions and an older browser, it looked pretty bad on my work computer. I wasn&amp;#39;t going to be home for another 6 hours and doing any kind of local
+dev work on that computer was out of the question. I needed a simple way 
+to make changes to my site using only a browser.&lt;/p&gt;
+
+&lt;p&gt;And now I have one.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi"&gt;Hotfix&lt;/a&gt; is a Chrome extension that I&amp;#39;ve been working on for the last month or so. 
+It allows you to make changes in Chrome Developer Tools and push those changes directly to 
+GitHub. No more saving locally and then committing later. You can edit the CSS and 
+Javscript of your projects from anywhere at anytime.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s a brief demo of how the extension works. &lt;/p&gt;
+
+&lt;iframe width="560" height="315" src="http://www.youtube.com/embed/ASRf2XC1wtU" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I can now edit this site from anywhere with an 
+internet connection, and see the changes reflected immediately. You should give it a test drive by downloading it from the Chrome Web Store or if you&amp;#39;re feeling frisky, why don&amp;#39;t you fork it on GitHub? &lt;/p&gt;
+
+&lt;div class= "buttons-wrap"&gt;
+    &lt;a href="https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi"&gt;&lt;span class="cws-link"&gt;Chrome Web Store&lt;/span&gt;&lt;/a&gt;
+    &lt;a href="https://github.com/FajitaNachos/hotfix"&gt;&lt;span class="github-link"&gt;
+    GitHub Repository&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Authenticating with the GitHub API</title>
+    <link rel="alternate" href="/Authenticating-with-the-GitHub-API/"/>
+    <id>/Authenticating-with-the-GitHub-API/</id>
+    <published>2013-02-28T00:00:00Z</published>
+    <updated>2013-02-28T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;I&amp;#39;ve been working on a chrome extension for the last few weeks that utilizes the
+GitHub API. It&amp;#39;s my first time working with an API and I&amp;#39;ve enjoyed it thus far. 
+Everything is written in Javascript with a little Node.js on the server. Here&amp;#39;s 
+the process.&lt;/p&gt;
+
+&lt;h2&gt;Setup an application on GitHub&lt;/h2&gt;
+
+&lt;p&gt;The first thing you need to do is login to your GitHub account. Once logged in, 
+click on the wrench icon (account settings) at the top and then click on 
+Applications on the left. Click on Register New Application.&lt;/p&gt;
+
+&lt;p&gt;&lt;img title="GitHub Applications" alt="GitHub-Setup" src="/images/github-app-setup.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now give the application a name, main URL, and callback URL. The 
+callback URL is where GitHub will redirect your users to after they successfully 
+login. It has to be on the same domain as your main URL. It also needs to be a 
+valid http:// URL. GitHub won&amp;#39;t accept &amp;#39;localhost&amp;#39;, &amp;#39;your mom&amp;#39;, etc..&lt;/p&gt;
+
+&lt;p&gt;&lt;img title="New GitHub Application" alt="New-GitHub-Application" src="/images/github-app-new.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Seeing as how I am writing a browser extension, I REALLY didn&amp;#39;t want to have to 
+set up a server just for the extension. However, doing the entire Oauth process 
+on the client side would expose my GitHub client secret, and that&amp;#39;s never a good 
+thing. So in the end, I bit the bullet and set up a simple node.js server.  I 
+decided to go with &lt;a title="Nodejitsu" href="https://www.nodejitsu.com/"&gt;Nodejitsu&lt;/a&gt; instead of using my existing server. I&amp;#39;ll get 
+into some of the code down below, but you can use any server you have access too. 
+Also, there&amp;#39;s no repercussions to setting up an application on GitHub. It doesn&amp;#39;t 
+cost anything, and you can delete it at any time.&lt;/p&gt;
+
+&lt;h2&gt;Redirect your users to GitHub and get an Access Code&lt;/h2&gt;
+
+&lt;p&gt;When you are ready to authenticate a user you&amp;#39;ll need to send them to GitHub to 
+request an access code for you application.&lt;/p&gt;
+
+&lt;p&gt;{% highlight javascript %}
+    window.open(&amp;#39;https://github.com/login/oauth/authorize?client_id=your-client-id&amp;#39;);
+{% endhighlight %}&lt;/p&gt;
+
+&lt;p&gt;You can find your client ID on the in your GitHub account settings page under 
+Applications. Click on your application name and the client id will be in the 
+top right. There are several other parameters you can (and should) append to the 
+URL. Here are the available parameters;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;client_id&lt;/strong&gt;  &lt;em&gt;Required&lt;/em&gt; - The client ID you received from GitHub when you registered the application.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;redirect_uri&lt;/strong&gt; &lt;em&gt;Optional&lt;/em&gt;  - URL in your app where users will be sent after authorization.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;scope&lt;/strong&gt;  &lt;em&gt;Optional&lt;/em&gt;  - Comma separated list of &lt;a href="http://developer.github.com/v3/oauth/#scopes"&gt;scopes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;state&lt;/strong&gt;  &lt;em&gt;Optional&lt;/em&gt;  - An unguessable random string. It is used to protect against cross-site request forgery attacks.&lt;/p&gt;
+
+&lt;p&gt;You can add any of these parameters to the URL by adding an &amp;amp; between them. For example&lt;/p&gt;
+
+&lt;p&gt;{% highlight javascript %}
+    window.open(&amp;#39;https://github.com/login/oauth/authorize?client_id=your-client-id&amp;amp;scopes=scopes&amp;amp;state=unguessable-string&amp;#39;);
+{% endhighlight %}&lt;/p&gt;
+
+&lt;p&gt;Once redirected to GitHub the user will be prompted to login. After they do, 
+GitHub will redirect back to the Callback URL you set up with an access code in the url.&lt;/p&gt;
+
+&lt;h2&gt;Parse the access code from the URL and exchange it for an auth token&lt;/h2&gt;
+
+&lt;p&gt;Once GitHub redirects back to your Callback URL with an access code, you need to exchange it for an auth token.&lt;/p&gt;
+
+&lt;p&gt;Get the access code from the URL
+```javascript
+    // Get the authorization code from the url that was returned by GitHub&lt;/p&gt;
+&lt;pre class="highlight text"&gt;var authCode = getAuthCode(window.location.href);
+
+// Extract the auth code from the original URL
+
+function getAuthCode(url){
+    var error = url.match(/[&amp;amp;\?]error=([^&amp;amp;]+)/);
+    if (error) {
+        throw &amp;#39;Error getting authorization code: &amp;#39; + error[1];
+    }
+    return url.match(/[&amp;amp;\?]code=([\w\/\-]+)/)[1];
+}
+&lt;/pre&gt;&lt;pre class="highlight text"&gt;
+And exchange this for an auth token by sending a POST request to
+
+```javascript
+
+    https://github.com/login/oauth/access_token?client_id=your-client-id&amp;amp;client_secret=your-client-secret&amp;amp;code=your-access-code
+&lt;/pre&gt;
+&lt;p&gt;Your client secret can be found in the same place as your client id from above. 
+You should never share this secret with anyone. It&amp;#39;s called a client &lt;em&gt;secret&lt;/em&gt; 
+for a reason.&lt;/p&gt;
+
+&lt;p&gt;Regarding the POST request, I&amp;#39;m using &lt;a title="Gatekeeper.js" href="https://github.com/prose/gatekeeper"&gt;Gatekeeper&lt;/a&gt; to handle the 
+authentication with GitHub on my nodejitsu server. Here is a small snippet of 
+relevant code from Gatekeeper. If you want to implement it yourself, grab it 
+from GitHub and let me know if you have any questions. The only change I made 
+was replacing a deprecated Express call and adding a few small features like 
+404 handling.&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;    &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;authenticate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;code&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;cb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;qs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;stringify&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+            &lt;span class="na"&gt;client_id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;oauth_client_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;//your GitHub client_id
+&lt;/span&gt;            &lt;span class="na"&gt;client_secret&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;oauth_client_secret&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="c1"&gt;//and secret
+&lt;/span&gt;           &lt;span class="na"&gt;code&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;code&lt;/span&gt;   &lt;span class="c1"&gt;//the access code we parsed earlier
+&lt;/span&gt;        &lt;span class="p"&gt;});&lt;/span&gt;
+
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;reqOptions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="na"&gt;host&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;github.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="na"&gt;port&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;443&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="na"&gt;path&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/login/oauth/access_token&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="na"&gt;method&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;POST&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="na"&gt;headers&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;content-length&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;};&lt;/span&gt;
+
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;body&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;req&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;https&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;request&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;reqOptions&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setEncoding&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;utf8&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;data&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;chunk&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;body&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="nx"&gt;chunk&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+            &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;end&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="nx"&gt;cb&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;qs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;access_token&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="p"&gt;});&lt;/span&gt;
+        &lt;span class="p"&gt;});&lt;/span&gt;
+
+        &lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;end&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;error&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;cb&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;message&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;This is just a small snippet to illustrate what is going on. Once you send the 
+POST request, GitHub will return a response that looks like this&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;    &lt;span class="nx"&gt;access_token&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;e72e16c7e42f292c6912e7710c838347ae178b4a&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nx"&gt;token_type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;bearer&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;From here you just need to parse the auth token and save it somewhere. 
+Going forward, when you want to make an API call, you need to retrieve the 
+auth token from wherever you saved it and send it along with your request.&lt;/p&gt;
+
+&lt;p&gt;Check the &lt;a title="GitHub Documentation" href="href=&amp;quot;http://developer.github.com/v3/"&gt;GitHub documentation&lt;/a&gt; for more details.&lt;/p&gt;
+
+&lt;p&gt;Also, if you&amp;#39;re looking to work with the GitHub API via Javascript, I highly 
+recommend &lt;a title="GitHub.js" href="https://github.com/michael/github"&gt;GitHub.js&lt;/a&gt; and &lt;a title="Gatekeeper.js" href="https://github.com/prose/gatekeeper"&gt;Gatekeeper&lt;/a&gt;. Both have helped me immensely in 
+getting this extension off the ground. I&amp;#39;m still working on a few minor bugs 
+but I&amp;#39;m hoping to release it in the chrome store in a couple more weeks.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>It Just Worked</title>
+    <link rel="alternate" href="/It-just-worked/"/>
+    <id>/It-just-worked/</id>
+    <published>2012-12-21T00:00:00Z</published>
+    <updated>2012-12-21T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;This story happened about a month after I really started teaching myself how to code. It was late one Friday night, maybe midnight or a little thereafter.  I was making my closing rounds on the internet when I had a sudden bout of inspiration. I fired up my text editor, and got to work. By this time, I was a few rounds into my beverage of choice. I&amp;#39;ll admit it, I was being a little sloppy.&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;I&amp;#39;ll clean it up in the morning&amp;quot;, I reassured myself. &amp;quot;I just want to test this out.&amp;quot;  I took another drink and persevered. Thirty minutes later (I made that up. I don&amp;#39;t know how long it was.) I pulled up Chrome and browsed to my local site.&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;Holy shit... I think it worked.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;I hit F5. I hit it again. And then it starts to hit me.&lt;/p&gt;
+
+&lt;p&gt;I had finally done it. I had gotten it right on the first try. There were no errors, no silly mistakes, no running to Google or StackOverflow to search out an answer. That night I had an idea, I implemented it, and it just &lt;em&gt;worked&lt;/em&gt;. It was a magnificent feeling. It sounds like a trivial triumph, but for some reason that&amp;#39;s when I knew I could do this. It&amp;#39;s when I knew I didn&amp;#39;t want to do anything else.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Quick Preview</title>
+    <link rel="alternate" href="/Quick-Preview/"/>
+    <id>/Quick-Preview/</id>
+    <published>2012-10-26T00:00:00Z</published>
+    <updated>2012-10-26T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Last week I was looking around for suggestions on how rookie devs can contribute to open source projects. I stumbled across a post that suggested, if you&amp;#39;re using WordPress, writing WordPress plugin in lieu of contributig to an existing project. At that time I was using WordPress and it sounded like fun, so I did.  &lt;/p&gt;
+
+&lt;p&gt;I started thinking about things I wanted to see in my own install of WordPress.The first thing that came to mind was how I tried to hit Cmd-S every time I wanted to save a post. I use Cmd-S to save things everywhere else, but in WordPress, it opened the save file dialog instead of saving the post. Bingo. I had my idea.&lt;/p&gt;
+
+&lt;p&gt;Next, I did a quick search of the WordPress directory to see if something like that already existed.&lt;/p&gt;
+
+&lt;p&gt;Of course it did. Aptly named &lt;a title="Ctrl-S WordPress Plugin" href="http://wordpress.org/extend/plugins/ctrl-s/"&gt;Ctrl-S&lt;/a&gt;. Damn.&lt;/p&gt;
+
+&lt;p&gt;At that point, I had two choices. I could search for another idea, or I could find a way to make my plugin a little different. I felt like it was a perfect starter project. It was simple, it wouldn&amp;#39;t take too long to build, and I would be able to get a feel for the process of creating a plugin. I decided to stick with it and change it up a bit by adding a preview of the post after saving.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s a couple issues I ran into during the course of creating it.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Whenever you click the save preview button on WordPress, it refreshes the page. When I simulated the click event, the page would refresh before I could open the preview. I couldn&amp;#39;t use a setTimeout() function either because the timeout would be reset when the page was refreshed. What I ended up doing was setting a cookie and then checking for the cookie each time the page is visited. If the cookie is set, then I open the preview and unset the cookie. If it&amp;#39;s not, then it&amp;#39;s just business as usual.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;WordPress uses Tiny MCE. TinyMCE has it&amp;#39;s own keydown function which means the keydown function I set in my plugin wasn&amp;#39;t firing when the editor took focus. It took a little bit of time to track down why my keydown event wasn&amp;#39;t firing and how to correct it. Essentially, you have to add the keydown event in the WordPress initialization of tinyMCE.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a title="Quick Preview WordPress Plugin" href="http://wordpress.org/extend/plugins/quick-preview/"&gt;Quick-Preview&lt;/a&gt; has been active in the directory for a couple of weeks now. There are 95 downloads as of today which isn&amp;#39;t too bad considering I haven&amp;#39;t told anyone about it. There&amp;#39;s one user on the support forum who is having trouble with the plugin not showing a preview at all. I&amp;#39;ve tried my best to duplicate the problem, but everything works fine for me on multiple computers in Chrome, FireFox, and IE. If anyone reading this wants to test it out, please let me know either here or on the support forum if you have problems. I&amp;#39;d really like to resolve that issue.&lt;/p&gt;
+</content>
+  </entry>
+</feed>
