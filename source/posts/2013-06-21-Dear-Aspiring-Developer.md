@@ -4,11 +4,11 @@ title: "Dear Aspiring Developer"
 meta-description: "Steps to help you become a developer"
 ---
 
-It doesn't matter what you did in a previous life. What matters is what you do today, and every day going forward. You want to be a developer. Cool. 
+It doesn't matter what you did in a previous life. What matters is what you do today, and every day going forward. You want to be a developer. Awesome. 
 
 Why? 
 
-Because it pays well? Because you want to work at a start up? Because your mom said you are good at the interwebs? This isn't going to be easy. This is about busting your ass to get where you want to be. I certainly don't know everything, but as someone who is on the same path, here are four things I think you should do.
+Because it pays well? Because you want to work at a start up? Because your mom said you are good at the interwebs? This isn't going to be an easy process. It's going to take a lot of hardwork and dedication from the beginning. I certainly don't know everything, but as someone who is on the same path, I thought I would share some of the things I've done that have helped me along the way.
 
 
 Number One
@@ -26,7 +26,7 @@ The only two days I'm not writing code are my wife's birthday and our anniversar
 Number Three
 ------------
 
-You need a blog, no questions asked. I waited 9 months before I started this blog. That was a mistake. My reasoning was that I didn't have anything to say. That was a pretty poor reason. You can write about your latest projects, things you've learned, or anything else that comes to mind. In fact, if you don't already have a project you are working on, a blog is the perfect starter project. Spend some time thinking about the layout you want to use and then go build it. It took me too long to realize that it's really not so much about what you write. Your blog/portfolio is your calling card. It's the perfect opportunity to tell your story, and no one else is going to tell it for you. Tell me a story. 
+You need a blog, no questions asked. I waited several months before I started this blog. That was a mistake. My reasoning was that I didn't have anything to say. That was a pretty poor reason. You can write about your latest projects, things you've learned, or anything else that comes to mind. In fact, if you don't already have a project you are working on, a blog is the perfect starter project. Spend some time thinking about the layout you want to use and then go build it. It took me too long to realize that it's really not so much about what you write. Your blog/portfolio is your calling card. It's the perfect opportunity to tell your story, and no one else is going to tell it for you. Tell me a story. 
 
 Number Four
 ------------
