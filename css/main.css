@@ -247,6 +247,11 @@ section {
 
 #posts, #about {
     background-color: #f9f9f9;
+    padding-bottom:2em;
+}
+
+#posts{
+    padding-top:2em;
 }
 
 
