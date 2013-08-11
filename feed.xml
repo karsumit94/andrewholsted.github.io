@@ -5,10 +5,279 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-07-21T08:50:00Z</updated>
+  <updated>2013-08-10T09:04:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Goodbye Jekyll</title>
+    <link rel="alternate" href="/Goodbye-jekyll/"/>
+    <id>/Goodbye-jekyll/</id>
+    <published>2013-08-10T09:04:00Z</published>
+    <updated>2013-08-10T09:04:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;center&gt;&lt;em&gt;This post is about moving my blog from Jekyll to Middleman.&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;About a week ago, I was in the throws of one of my recent projects. I was running into the web developer&amp;#39;s equivalent of writers block. Is there a name for that? I decided to take a short break and try my hand a couple of other things. I wrote a &lt;a href="http://fajitanachos.com/minesweeper"&gt;Minesweeper&lt;/a&gt; clone in JQuery (blog post forthcoming), and my local Hacker News meetup had talked about redesigning their site so I played around with a few APIs to create a rough &lt;a href="http://hnk.herokuapp.com"&gt;mockup&lt;/a&gt;.  While I was talking to one of the &lt;a href="http://hnkansai.org"&gt;HN Kansai&lt;/a&gt; organizers he suggested I have a look at Middleman. Thank you &lt;a href="http://sachagreif.com/"&gt;Sacha&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://middlemanapp.com"&gt;Middleman&lt;/a&gt; is a static site generator just like Jekyll. With Jekyll being the default static site generator for GitHub Pages, I wasn&amp;#39;t sure if I could make GitHub and Middleman play nice together. Luckily, there&amp;#39;s a nice deployment extension for Middleman, which combined with a little git branch rearranging, works just fine. So what follows is a thoroughly incomplete and off the top of my head rendition of how to turn a Jekyll site into a Middleman site, and keep it hosted on GitHub pages. Please enjoy. &lt;/p&gt;
+
+&lt;p&gt;First, make a copy of your current Jekyll site and put it somewhere safe. You know, just in case... &lt;/p&gt;
+
+&lt;p&gt;And then set up a new project directory and install Middleman.&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;mkdir FajitaNachos
+&lt;span class="gp"&gt;$ &lt;/span&gt;gem install middleman
+&lt;span class="gp"&gt;$ &lt;/span&gt;gem install middleman-blog
+&lt;span class="gp"&gt;$ &lt;/span&gt;middleman init FajitaNachos --template&lt;span class="o"&gt;=&lt;/span&gt;blog
+&lt;/pre&gt;
+&lt;p&gt;Let&amp;#39;s have a look at our new diggs. &lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;FajitaNachos
+&lt;span class="gp"&gt;$ &lt;/span&gt;sublime .
+&lt;/pre&gt;
+&lt;p&gt;You should have a source/ directory, which is where we will be doing the majority of our work. Middleman takes whatever you have in your source/ directory, runs it through the generator, and spits out a static site into the build/ directory. The &amp;#39;sublime&amp;#39; command is an alias I have set up for Sublime Text 2. I think most people use &amp;#39;subl&amp;#39; but I prefer the full name. Open your config.rb file and have a look at the options inside the activate :blog block. Here is what mine looks like. Yours will probably differ. &lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="c1"&gt;#config.rb&lt;/span&gt;
+
+&lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="ss"&gt;:blog&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="c1"&gt;#blog.prefix = &amp;quot;posts&amp;quot;&lt;/span&gt;
+  &lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="nf"&gt;.permalink&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;:title.html&amp;quot;&lt;/span&gt;
+  &lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="nf"&gt;.sources&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;/posts/:year-:month-:day-:title.html&amp;quot;&lt;/span&gt;
+  &lt;span class="c1"&gt;# blog.taglink = &amp;quot;tags/:tag.html&amp;quot;&lt;/span&gt;
+  &lt;span class="c1"&gt;# blog.layout = &amp;quot;layout&amp;quot;&lt;/span&gt;
+  &lt;span class="c1"&gt;# blog.summary_separator = /()/&lt;/span&gt;
+  &lt;span class="c1"&gt;# blog.summary_length = 250&lt;/span&gt;
+  &lt;span class="c1"&gt;# blog.year_link = &amp;quot;:year.html&amp;quot;&lt;/span&gt;
+  &lt;span class="c1"&gt;# blog.month_link = &amp;quot;:year/:month.html&amp;quot;&lt;/span&gt;
+  &lt;span class="c1"&gt;# blog.day_link = &amp;quot;:year/:month/:day.html&amp;quot;&lt;/span&gt;
+  &lt;span class="c1"&gt;# blog.default_extension = &amp;quot;.markdown&amp;quot;&lt;/span&gt;
+  &lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="nf"&gt;.tag_template&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;tag.html&amp;quot;&lt;/span&gt;
+  &lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="nf"&gt;.calendar_template&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;calendar.html&amp;quot;&lt;/span&gt;
+  &lt;span class="c1"&gt;# blog.paginate = true&lt;/span&gt;
+  &lt;span class="c1"&gt;# blog.per_page = 10&lt;/span&gt;
+  &lt;span class="c1"&gt;# blog.page_link = &amp;quot;page/:num&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+
+&lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="ss"&gt;:directory_indexes&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;This line&lt;/p&gt;
+&lt;pre class="highlight text"&gt;Activate :directory_indexes 
+&lt;/pre&gt;
+&lt;p&gt;takes all of your posts and puts them into their own directory with an index.html file. Basically you end up with pretty URLs like &lt;a href="http://fajitanachos.com/Friday-Night/"&gt;http://fajitanachos.com/Friday-Night/&lt;/a&gt;. If you want to use it, just be sure it&amp;#39;s below the activate :blog block. The default Middleman structure is to keep all of your posts in the root directory of your site. That seemed a little messy to me, and luckily it is easy to customize. In the snippet above you can see &lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="nf"&gt;.sources&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;/posts/whatever-format-you-want-here&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;This tells Middleman that all of my posts reside in the /posts/ directory. Set it and forget it. &lt;/p&gt;
+
+&lt;p&gt;At this point, I would go ahead and copy all of your Jekyll posts into your new posts/ directory. Also, copy your _layouts into a new /layouts directory. In fact, go ahead and move everything from your Jekyll site, into your new Middleman project. Depending on what your directory names are, you may need to tweak the settings in your new config.rb. Look for these lines&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="ss"&gt;:css_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;css&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="ss"&gt;:js_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;js&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="ss"&gt;:images_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;images&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;And set those to the correct path names. Middleman has an asset pipeline that you should probably take advantage of. This post is long enough without diving into that, but if you are familiar with Ruby on Rails, then it shouldn&amp;#39;t be a problem. &lt;/p&gt;
+
+&lt;h2&gt;Layouts&lt;/h2&gt;
+
+&lt;p&gt;Layouts work almost the same way they did in Jekyll, although nested layouts are a little different. First, you&amp;#39;ll want to rename your layout.html.erb file to layout.erb. And wherever you had&lt;/p&gt;
+&lt;pre class="highlight text"&gt;{{ content }}
+&lt;/pre&gt;
+&lt;p&gt;You will want to replace with &lt;/p&gt;
+&lt;pre class="highlight text"&gt;&amp;lt;%= yield %&amp;gt;
+&lt;/pre&gt;
+&lt;p&gt;Here&amp;#39;s an example of a nested layout, post.erb , that I use for all my posts. The first line is the important part, with the regular yield statment coming where you wanted the content to be. I declare the layout in each posts&amp;#39; yaml front matter, which then renders the layout.erb, with this post.erb layout inside of it, and finally the post content rendered where the yield block is below. &lt;/p&gt;
+&lt;pre class="highlight erb"&gt;&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt; &lt;span class="n"&gt;wrap_layout&lt;/span&gt; &lt;span class="ss"&gt;:layout&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;post-wrap&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;id =&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;post-header&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;h1&lt;/span&gt; &lt;span class="na"&gt;id =&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;site-title&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href =&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;FajitaNachos&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;id =&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;post-container&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;article&amp;gt;&lt;/span&gt;
+          &lt;span class="nt"&gt;&amp;lt;h1&lt;/span&gt; &lt;span class="na"&gt;id =&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;post-title&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;current_page&lt;/span&gt;&lt;span class="nf"&gt;.title&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+          &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;id =&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;post-content&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+             &lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
+          &lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+          &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;id =&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;post-nav&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt; 
+          &lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;current_page&lt;/span&gt;&lt;span class="nf"&gt;.previous_article&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
+            &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;previous-post&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+              &lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;link_to&lt;/span&gt; &lt;span class="n"&gt;current_page&lt;/span&gt;&lt;span class="nf"&gt;.previous_article.title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;current_page&lt;/span&gt;&lt;span class="nf"&gt;.previous_article&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt; 
+            &lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt; 
+          &lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt; &lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt; 
+          &lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;current_page&lt;/span&gt;&lt;span class="nf"&gt;.next_article&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
+            &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;next-post&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt; 
+              &lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;link_to&lt;/span&gt; &lt;span class="n"&gt;current_page&lt;/span&gt;&lt;span class="nf"&gt;.next_article.title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;current_page&lt;/span&gt;&lt;span class="nf"&gt;.next_article&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt; 
+            &lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt; 
+          &lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt; &lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;/article&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt; &lt;span class="k"&gt;end&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;h2&gt;Markdown and Front Matter&lt;/h2&gt;
+
+&lt;p&gt;Both Jekyll and Middleman use markdown for your blog posts, and yaml front matter to handle things like titles and tags. You shouldn&amp;#39;t have to do anything here. Your posts should work right out of the box assuming you&amp;#39;ve referenced your image directories properly.&lt;/p&gt;
+
+&lt;h2&gt;Removing Jekyll Specific Code&lt;/h2&gt;
+
+&lt;p&gt;As I mentioned earlier, Middleman uses Ruby syntax so you can do all sorts of nifty things like &lt;/p&gt;
+&lt;pre class="highlight erb"&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;link_to&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Fajita Nachos&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;http://fajitanachos.com&amp;#39;&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
+
+&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt; &lt;span class="n"&gt;link_to&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;http://fajitanachos.com&amp;#39;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
+  &lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;image_tag&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;my_super_awesome_logo.png&amp;#39;&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt; &lt;span class="k"&gt;end&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;However, that also means that your previous Jekyll syntax won&amp;#39;t work. Things like &lt;/p&gt;
+&lt;pre class="highlight html"&gt;{% for post in site.posts %}
+  &lt;span class="nt"&gt;&amp;lt;li&lt;/span&gt; &lt;span class="na"&gt;class =&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;post-item&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ post.url }}&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;{{ post.title }}&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;class =&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;post-date&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;{{ post.date | date: &amp;quot;%B %e, %Y&amp;quot; }}&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&lt;/span&gt; 
+  &lt;span class="nt"&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+{% endfor %}
+&lt;/pre&gt;
+&lt;p&gt;Will need to be replaced with &lt;/p&gt;
+&lt;pre class="highlight erb"&gt;&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="nf"&gt;.articles.each&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;li&lt;/span&gt; &lt;span class="na"&gt;class =&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;post-item&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;link_to&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="nf"&gt;.title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="nf"&gt;.url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;class =&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;post-date&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="nf"&gt;.date.strftime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;%b %e, %Y&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt; &lt;span class="k"&gt;end&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Also worth mentioning is that common site references in Jekyll are different in Middleman, for example&lt;/p&gt;
+&lt;pre class="highlight html"&gt;{{site.title}} 
+&lt;/pre&gt;
+&lt;p&gt;will no longer work. Correcting all the syntax differences took a fair bit of time. &lt;/p&gt;
+
+&lt;h2&gt;Syntax Highlighting&lt;/h2&gt;
+
+&lt;p&gt;What&amp;#39;s a web development blog without syntax highlighting? It&amp;#39;s not hard to set up. I was already using Pygments with Jekyll so I decided to stick with that. Add this line to your Gemfile&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;middleman-syntax&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;redcarpet&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;And run &lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;bundle install
+&lt;/pre&gt;
+&lt;p&gt;In your config.rb file add&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="c1"&gt;#config.rb&lt;/span&gt;
+
+&lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="ss"&gt;:syntax&lt;/span&gt;
+&lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="ss"&gt;:markdown_engine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:redcarpet&lt;/span&gt;
+&lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="ss"&gt;:markdown&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;fenced_code_blocks: &lt;/span&gt;&lt;span class="kp"&gt;true&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;That&amp;#39;s it. Now you can use fenced code blocks like this&lt;/p&gt;
+&lt;pre class="highlight text"&gt;```ruby
+   #your code here
+```
+&lt;/pre&gt;
+&lt;p&gt;You can manage the styling by adding a pygments.css file in your css/ directory and including it in your pages. &lt;/p&gt;
+
+&lt;h2&gt;Drafts&lt;/h2&gt;
+
+&lt;p&gt;I never really liked how the drafts feature worked in Jekyll. Maybe I was doing it wrong, but I had a seperate directory called _drafts/ where all my drafts resided. When I was done I would move it out of drafts and into _posts/.With Middleman, I find it much simpler to setup and maintain. In the front matter of your post, just add this line&lt;/p&gt;
+&lt;pre class="highlight yaml"&gt;&lt;span class="s"&gt;published&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;false&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;And Middleman will ignore this post whenever it builds the site. &lt;/p&gt;
+
+&lt;h2&gt;Testing Locally&lt;/h2&gt;
+
+&lt;p&gt;After you have copied all your files and removed the Jekyll specific syntax, fire up a local sever to see what is broken. If it works on the first time, you&amp;#39;re a god. &lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;middleman
+&lt;/pre&gt;
+&lt;p&gt;Now you should have local server up and running at localhost:4567.  If your image files aren&amp;#39;t showing up, try running&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;middleman build
+&lt;/pre&gt;
+&lt;h2&gt;Generating a Site Map (Bonus)&lt;/h2&gt;
+
+&lt;p&gt;I wanted to generate a site map for my blog posts, but only based on the posts titles. Here&amp;#39;s what I came up with. In /source/sitemap.xml.erb add these lines&lt;/p&gt;
+&lt;pre class="highlight erb"&gt;&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt; &lt;span class="n"&gt;pages&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;page_articles&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;urlset&lt;/span&gt; &lt;span class="na"&gt;xmlns=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://www.sitemaps.org/schemas/sitemap/0.9&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt; &lt;span class="n"&gt;pages&lt;/span&gt;&lt;span class="nf"&gt;.each&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="nb"&gt;p&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;url&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;loc&amp;gt;&lt;/span&gt;http://yourblog.com&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt;&lt;span class="nb"&gt;p&lt;/span&gt;&lt;span class="nf"&gt;.url&lt;/span&gt;&lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;index.html&lt;span class="nt"&gt;&amp;lt;/loc&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;priority&amp;gt;&lt;/span&gt;0.7&lt;span class="nt"&gt;&amp;lt;/priority&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt; &lt;span class="k"&gt;end&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/urlset&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;h2&gt;Deploying&lt;/h2&gt;
+
+&lt;p&gt;Now we need to push this bad boy up to our GitHub Pages repo. This is assuming you have your repo at yourusername.github.io. For example, mine is fajitanachos.github.io. There&amp;#39;s a nice little gem called &lt;a href="http://rubygems.org/gems/middleman-deploy"&gt;middleman-deploy&lt;/a&gt; that we can use to push everything to GitHub. &lt;/p&gt;
+
+&lt;p&gt;Add this to your Gemfile&lt;/p&gt;
+&lt;pre class="highlight text"&gt;gem &amp;quot;middleman-deploy&amp;quot;
+&lt;/pre&gt;
+&lt;p&gt;Run &lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;bundle install
+&lt;/pre&gt;
+&lt;p&gt;Then open your config.rb and add these lines&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="ss"&gt;:deploy&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;deploy&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;deploy&lt;/span&gt;&lt;span class="nf"&gt;.method&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="ss"&gt;:git&lt;/span&gt;
+  &lt;span class="n"&gt;deploy&lt;/span&gt;&lt;span class="nf"&gt;.build_before&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;true&lt;/span&gt; &lt;span class="c1"&gt;# default: false&lt;/span&gt;
+  &lt;span class="n"&gt;deploy&lt;/span&gt;&lt;span class="nf"&gt;.branch&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;master&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Be careful here. If you deploy as is, it will overwrite everything in your master branch. Trust me, I&amp;#39;m speaking from personal experience here. For me, it was important to maintain all my previous commit history. Here is what your two projects should currently look like.&lt;/p&gt;
+
+&lt;p&gt;Old Jekyll project&lt;/p&gt;
+&lt;pre class="highlight text"&gt;.git
+.gitignore
+&lt;/pre&gt;
+&lt;p&gt;New Middleman project&lt;/p&gt;
+&lt;pre class="highlight text"&gt;build/ 
+source/ 
+config.rb 
+Gemfile 
+Gemfile.lock 
+README.md
+ + any of your other old Jekyll files
+&lt;/pre&gt;
+&lt;p&gt;Next, I copied everything from my new Middleman project back into my old Jekyll site (which should only have your .git and .gitignore files). You still have that backup of your Jekyll site right?  My new structure looked like this&lt;/p&gt;
+
+&lt;p&gt;Old Jekyll project directory&lt;/p&gt;
+&lt;pre class="highlight text"&gt;.git (from your Jekyll site)
+.gitignore (from your Jekyll site)
+build/ 
+source/ 
+config.rb 
+Gemfile 
+Gemfile.lock 
+README.md
+&lt;/pre&gt;
+&lt;p&gt;Then I added all of my new changes to my git working tree&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;git add -A
+&lt;span class="gp"&gt;$ &lt;/span&gt;git commit -m &lt;span class="s2"&gt;&amp;quot;Switching to Middleman&amp;quot;&lt;/span&gt;
+&lt;span class="c"&gt;# adding and removing lots of files here&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Now, all of my new changes are committed on my master branch and I still have the old history. However, whenever we deploy using the middleman-deploy gem, it&amp;#39;s going to push to master and overwrite all those commits. This is bad. One solution is to move everything out of your master branch, into a seperate branch, which I chose to call source.&lt;/p&gt;
+&lt;pre class="highlight text"&gt;$ git branch source master
+&lt;/pre&gt;
+&lt;p&gt;This will move your master branch into a new source branch, and then you can check it out and push it up to GitHub.&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;git checkout &lt;span class="nb"&gt;source&lt;/span&gt;
+&lt;span class="gp"&gt;$ &lt;/span&gt;git push origin &lt;span class="nb"&gt;source&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;For personal and organization pages, GitHub only reads what&amp;#39;s in the master branch. Now that our old git history is safely stored in the source branch, we can deploy our middleman site to our master branch. &lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;middleman deploy
+&lt;/pre&gt;
+&lt;p&gt;You should see something like this &lt;/p&gt;
+&lt;pre class="highlight shell"&gt; run  middleman build from &lt;span class="s2"&gt;&amp;quot;.&amp;quot;&lt;/span&gt;
+
+ //lots of stuff here
+
+ &lt;span class="c"&gt;## Deploying via git to remote=&amp;quot;origin&amp;quot; and branch=&amp;quot;master&amp;quot;&lt;/span&gt;
+
+&lt;/pre&gt;
+&lt;p&gt;One last thing. Go view your repo on GitHub. The first thing you should see on your master branch are commit messages that looks something like this.&lt;/p&gt;
+&lt;pre class="highlight text"&gt;Automated commit at 2013-08-10 04:17:26 UTC by middleman-deploy 3.1.4
+&lt;/pre&gt;
+&lt;p&gt;This is normal, and ugly. Luckily, all of our old history is still intact and on the source branch now. Go into your repo settings and change the default branch to be source instead of master. That way when you visit the repo, the first thing you will see is all of your commits and previous history instead of having to change branches to see it. &lt;/p&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Now, you should be able to make any changes you want, in any directory of your new blog, and push it to the source branch of your repo with your proper commit messages. To deploy your blog run&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;middleman deploy 
+&lt;/pre&gt;
+&lt;p&gt;and it will update the master branch and push it to GitHub. I know that I glossed over some things here and there, but this is what stuck with me when I was moving from Jekyll to Middleman. If you have any questions, I&amp;#39;ll be happy to help via email. &lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Friday Night</title>
     <link rel="alternate" href="/Friday_night/"/>
@@ -372,26 +641,6 @@ auth token from wherever you saved it and send it along with your request.&lt;/p
 recommend &lt;a title="GitHub.js" href="https://github.com/michael/github"&gt;GitHub.js&lt;/a&gt; and &lt;a title="Gatekeeper.js" href="https://github.com/prose/gatekeeper"&gt;Gatekeeper&lt;/a&gt;. Both have helped me immensely in 
 getting this extension off the ground. I&amp;#39;m still working on a few minor bugs 
 but I&amp;#39;m hoping to release it in the chrome store in a couple more weeks.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>It Just Worked</title>
-    <link rel="alternate" href="/It-just-worked/"/>
-    <id>/It-just-worked/</id>
-    <published>2012-12-21T00:00:00Z</published>
-    <updated>2012-12-21T00:00:00Z</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;This story happened about a month after I really started teaching myself how to code. It was late one Friday night, maybe midnight or a little thereafter.  I was making my closing rounds on the internet when I had a sudden bout of inspiration. I fired up my text editor, and got to work. By this time, I was a few rounds into my beverage of choice. I&amp;#39;ll admit it, I was being a little sloppy.&lt;/p&gt;
-
-&lt;p&gt;&amp;quot;I&amp;#39;ll clean it up in the morning&amp;quot;, I reassured myself. &amp;quot;I just want to test this out.&amp;quot;  I took another drink and persevered. Thirty minutes later (I made that up. I don&amp;#39;t know how long it was.) I pulled up Chrome and browsed to my local site.&lt;/p&gt;
-
-&lt;p&gt;&amp;quot;Holy shit... I think it worked.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;I hit F5. I hit it again. And then it starts to hit me.&lt;/p&gt;
-
-&lt;p&gt;I had finally done it. I had gotten it right on the first try. There were no errors, no silly mistakes, no running to Google or StackOverflow to search out an answer. That night I had an idea, I implemented it, and it just &lt;em&gt;worked&lt;/em&gt;. It was a magnificent feeling. It sounds like a trivial triumph, but for some reason that&amp;#39;s when I knew I could do this. It&amp;#39;s when I knew I didn&amp;#39;t want to do anything else.&lt;/p&gt;
 </content>
   </entry>
 </feed>
