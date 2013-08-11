@@ -8,13 +8,13 @@ meta-description: "Switching from Jekyll to Middleman"
 
 <center>*This post is about moving my blog from Jekyll to Middleman.*</center>
 
-About a week ago, I was in the throws of one of my recent projects. I was running into the web developer's equivalent of writers block. Is there a name for that? I decided to take a short break and try my hand a couple of other things. I wrote a [Minesweeper](http://fajitanachos.com/minesweeper) clone in JQuery (blog post forthcoming), and my local Hacker News meetup had talked about redesigning their site so I played around with a few APIs to create a rough [mockup](http://hnk.herokuapp.com).  While I was talking to one of the [HN Kansai](http://hnkansai.org) organizers he suggested I have a look at Middleman. Thank you [Sacha](http://sachagreif.com/)!
+About a week ago, I was in the throws of one of my recent projects. I was running into the web developer's equivalent of writer's block. Is there a name for that? I decided to take a short break and try my hand at a couple of other things. I wrote a [Minesweeper](http://fajitanachos.com/minesweeper) clone in JQuery (blog post forthcoming), and my local Hacker News meetup had talked about redesigning their site so I played around with a few APIs to create a rough [mockup](http://hnk.herokuapp.com).  While I was talking to one of the [HN Kansai](http://hnkansai.org) organizers, he suggested that I have a look at Middleman. Thank you [Sacha](http://sachagreif.com/)!
 
-[Middleman](http://middlemanapp.com) is a static site generator just like Jekyll. With Jekyll being the default static site generator for GitHub Pages, I wasn't sure if I could make GitHub and Middleman play nice together. Luckily, there's a nice deployment extension for Middleman, which combined with a little git branch rearranging, works just fine. So what follows is a thoroughly incomplete and off the top of my head rendition of how to turn a Jekyll site into a Middleman site, and keep it hosted on GitHub pages. Please enjoy. 
+[Middleman](http://middlemanapp.com) is a static site generator just like Jekyll. With Jekyll being the default static site generator for GitHub Pages, I wasn't sure if I could make GitHub and Middleman play nicely together. Luckily, there's a nice deployment extension for Middleman which, combined with a little git branch rearranging, works just fine. So what follows is a thoroughly incomplete and off the top of my head rendition of how to turn a Jekyll site into a Middleman site, and keep it hosted on GitHub pages. Please enjoy. 
 
 First, make a copy of your current Jekyll site and put it somewhere safe. You know, just in case... 
 
-And then set up a new project directory and install Middleman.
+Then set up a new project directory and install Middleman.
 
 ```bash
 $ mkdir FajitaNachos
@@ -30,9 +30,7 @@ $ cd FajitaNachos
 $ sublime .
 ```
 
-You should have a source/ directory, which is where we will be doing the majority of our work. Middleman takes whatever you have in your source/ directory, runs it through the generator, and spits out a static site into the build/ directory. The 'sublime' command is an alias I have set up for Sublime Text 2. I think most people use 'subl' but I prefer the full name. Open your config.rb file and have a look at the options inside the activate :blog block. Here is what mine looks like. Yours will probably differ. 
-
-
+You should have a source/ directory, which is where we will be doing the majority of our work. Middleman takes whatever you have in your source/ directory, runs it through the generator, and spits out a static site into the /build directory. The 'sublime' command is an alias I have set up for Sublime Text 2. I think most people use 'subl' but I prefer the full name. Open your config.rb file and have a look at the options inside the activate :blog block. Here is what mine looks like (Yours will probably differ.) 
 
 ```ruby
 #config.rb
@@ -73,7 +71,7 @@ blog.sources = "/posts/whatever-format-you-want-here"
 
 This tells Middleman that all of my posts reside in the /posts/ directory. Set it and forget it. 
 
-At this point, I would go ahead and copy all of your Jekyll posts into your new posts/ directory. Also, copy your _layouts into a new /layouts directory. In fact, go ahead and move everything from your Jekyll site, into your new Middleman project. Depending on what your directory names are, you may need to tweak the settings in your new config.rb. Look for these lines
+At this point, I would go ahead and copy all of your Jekyll posts into your new posts/ directory. Also, copy your _layouts into a new layouts/ directory. In fact, go ahead and move everything from your Jekyll site, into your new Middleman project. Depending on what your directory names are, you may need to tweak the settings in your new config.rb. Look for these lines
 
 ```ruby
 set :css_dir, 'css'
@@ -98,7 +96,7 @@ You will want to replace with
 <%= yield %>
 ``` 
 
-Here's an example of a nested layout, post.erb , that I use for all my posts. The first line is the important part, with the regular yield statment coming where you wanted the content to be. I declare the layout in each posts' yaml front matter, which then renders the layout.erb, with this post.erb layout inside of it, and finally the post content rendered where the yield block is below. 
+Here's an example of a nested layout, post.erb, that I use for all my posts. The first line is the important part, with the regular yield statment coming where you wanted the content to be. I declare the layout in each post's yaml front matter, which then renders the layout.erb, with this post.erb layout inside of it, and finally the post content where the yield block is below. 
 
 ```erb
 <% wrap_layout :layout do %>
@@ -215,7 +213,7 @@ You can manage the styling by adding a pygments.css file in your css/ directory 
 Drafts
 ----------
 
-I never really liked how the drafts feature worked in Jekyll. Maybe I was doing it wrong, but I had a seperate directory called _drafts/ where all my drafts resided. When I was done I would move it out of drafts and into _posts/.With Middleman, I find it much simpler to setup and maintain. In the front matter of your post, just add this line
+I never really liked how the drafts feature worked in Jekyll. Maybe I was doing it wrong, but I had a seperate directory called _drafts/ where all my drafts resided. When I was done I would move it out of drafts and into _posts/. With Middleman, I find it much simpler to setup and maintain. In the front matter of your post, just add this line
 
 ```yaml
 published: false
@@ -231,7 +229,7 @@ After you have copied all your files and removed the Jekyll specific syntax, fir
 ```bash
 $ middleman
 ```
-Now you should have local server up and running at localhost:4567.  If your image files aren't showing up, try running
+Now you should have a local server up and running at localhost:4567.  If your image files aren't showing up, try running
 
 ```bash
 $ middleman build
@@ -240,7 +238,7 @@ $ middleman build
 Generating a Site Map (Bonus)
 ---------------------
 
-I wanted to generate a site map for my blog posts, but only based on the posts titles. Here's what I came up with. In /source/sitemap.xml.erb add these lines
+I wanted to generate a site map for my blog posts, but only based on the post's title. Here's what I came up with. In source/sitemap.xml.erb add these lines
 
 ```erb
 <% pages = page_articles %>
@@ -258,7 +256,7 @@ I wanted to generate a site map for my blog posts, but only based on the posts t
 Deploying
 ---------
 
-Now we need to push this bad boy up to our GitHub Pages repo. This is assuming you have your repo at yourusername.github.io. For example, mine is fajitanachos.github.io. There's a nice little gem called [middleman-deploy](http://rubygems.org/gems/middleman-deploy) that we can use to push everything to GitHub. 
+Now, we need to push this bad boy up to our GitHub Pages repo. This is assuming you have your repo at yourusername.github.io. For example, mine is fajitanachos.github.io. There's a nice little gem called [middleman-deploy](http://rubygems.org/gems/middleman-deploy) that we can use to push everything to GitHub. 
 
 Add this to your Gemfile
 
@@ -325,19 +323,19 @@ $ git commit -m "Switching to Middleman"
 # adding and removing lots of files here
 ```
 
-Now, all of my new changes are committed on my master branch and I still have the old history. However, whenever we deploy using the middleman-deploy gem, it's going to push to master and overwrite all those commits. This is bad. One solution is to move everything out of your master branch, into a seperate branch, which I chose to call source.
+Now, all of my new changes are committed on my master branch and I still have the old history. However, whenever we deploy using the middleman-deploy gem, it's going to push to master and overwrite all those commits. This is bad. One solution is to move everything out of your master branch, into a seperate branch, which I chose to call 'source'.
 
 ```
 $ git branch source master
 ```
 
-This will move your master branch into a new source branch, and then you can check it out and push it up to GitHub.
+This will move your master branch into a new source branch, and then you can check it out and push it to GitHub.
 
 ```bash
 $ git checkout source
 $ git push origin source
 ```
- For personal and organization pages, GitHub only reads what's in the master branch. Now that our old git history is safely stored in the source branch, we can deploy our middleman site to our master branch. 
+ For personal and organization pages, GitHub only reads what's in the master branch. Now that our old git history is safely stored in the source branch, we can deploy our Middleman site to our master branch. 
 
 ```bash
 $ middleman deploy
@@ -354,25 +352,27 @@ You should see something like this
 
 ```
 
-One last thing. Go view your repo on GitHub. The first thing you should see on your master branch are commit messages that looks something like this.
+One last thing. Visit your repo on GitHub. The first thing you should see on your master branch are commit messages that look something like this.
 
 ```
 Automated commit at 2013-08-10 04:17:26 UTC by middleman-deploy 3.1.4
 ```
 
-This is normal, and ugly. Luckily, all of our old history is still intact and on the source branch now. Go into your repo settings and change the default branch to be source instead of master. That way when you visit the repo, the first thing you will see is all of your commits and previous history instead of having to change branches to see it. 
+This is normal, and ugly. Luckily, all of our old history is still intact on the source branch. Go into your repo settings and change the default branch to be source instead of master. So when you visit the repo, the first thing you will see is all of your commits and previous history instead of having to change branches to see it. 
 
 
 Conclusion
 -----------
 
-Now, you should be able to make any changes you want, in any directory of your new blog, and push it to the source branch of your repo with your proper commit messages. To deploy your blog run
+Now, you should be able to make any changes you want, in any directory of your new blog, and push it to the source branch of your repo with the proper commit messages. To deploy your blog run
 
 ```bash
 $ middleman deploy 
 ```
 
-and it will update the master branch and push it to GitHub. I know that I glossed over some things here and there, but this is what stuck with me when I was moving from Jekyll to Middleman. If you have any questions, I'll be happy to help via email. 
+and it will update the master branch and push it to GitHub. 
+
+I know that I glossed over some things here and there, but this is what stuck with me when I was moving from Jekyll to Middleman. If you have any questions, I'll be happy to help via email. 
 
 
 
