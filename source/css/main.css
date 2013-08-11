@@ -431,7 +431,6 @@ tr.first-row td {
     overflow-x: auto;
     border: 1px solid #dedede;
     padding:.5em;
-    margin: 2% 0 2% 0;
     background-color: #f6f6f6;
 
 }
@@ -439,11 +438,12 @@ tr.first-row td {
 
 .highlight, code, pre {
     font-family:"Inconsolata" , sans-serif !important;
+     margin: 1.5em 0;
 }
 .highlight pre {
     white-space: pre!important;
     word-wrap: normal;
-    margin: 0;
+   
 
 }
 
