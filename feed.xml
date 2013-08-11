@@ -20,13 +20,13 @@
     </author>
     <content type="html">&lt;p&gt;&lt;center&gt;&lt;em&gt;This post is about moving my blog from Jekyll to Middleman.&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
 
-&lt;p&gt;About a week ago, I was in the throws of one of my recent projects. I was running into the web developer&amp;#39;s equivalent of writers block. Is there a name for that? I decided to take a short break and try my hand a couple of other things. I wrote a &lt;a href="http://fajitanachos.com/minesweeper"&gt;Minesweeper&lt;/a&gt; clone in JQuery (blog post forthcoming), and my local Hacker News meetup had talked about redesigning their site so I played around with a few APIs to create a rough &lt;a href="http://hnk.herokuapp.com"&gt;mockup&lt;/a&gt;.  While I was talking to one of the &lt;a href="http://hnkansai.org"&gt;HN Kansai&lt;/a&gt; organizers he suggested I have a look at Middleman. Thank you &lt;a href="http://sachagreif.com/"&gt;Sacha&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;About a week ago, I was in the throws of one of my recent projects. I was running into the web developer&amp;#39;s equivalent of writer&amp;#39;s block. Is there a name for that? I decided to take a short break and try my hand at a couple of other things. I wrote a &lt;a href="http://fajitanachos.com/minesweeper"&gt;Minesweeper&lt;/a&gt; clone in JQuery (blog post forthcoming), and my local Hacker News meetup had talked about redesigning their site so I played around with a few APIs to create a rough &lt;a href="http://hnk.herokuapp.com"&gt;mockup&lt;/a&gt;.  While I was talking to one of the &lt;a href="http://hnkansai.org"&gt;HN Kansai&lt;/a&gt; organizers, he suggested that I have a look at Middleman. Thank you &lt;a href="http://sachagreif.com/"&gt;Sacha&lt;/a&gt;!&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="http://middlemanapp.com"&gt;Middleman&lt;/a&gt; is a static site generator just like Jekyll. With Jekyll being the default static site generator for GitHub Pages, I wasn&amp;#39;t sure if I could make GitHub and Middleman play nice together. Luckily, there&amp;#39;s a nice deployment extension for Middleman, which combined with a little git branch rearranging, works just fine. So what follows is a thoroughly incomplete and off the top of my head rendition of how to turn a Jekyll site into a Middleman site, and keep it hosted on GitHub pages. Please enjoy. &lt;/p&gt;
+&lt;p&gt;&lt;a href="http://middlemanapp.com"&gt;Middleman&lt;/a&gt; is a static site generator just like Jekyll. With Jekyll being the default static site generator for GitHub Pages, I wasn&amp;#39;t sure if I could make GitHub and Middleman play nicely together. Luckily, there&amp;#39;s a nice deployment extension for Middleman which, combined with a little git branch rearranging, works just fine. So what follows is a thoroughly incomplete and off the top of my head rendition of how to turn a Jekyll site into a Middleman site, and keep it hosted on GitHub pages. Please enjoy. &lt;/p&gt;
 
 &lt;p&gt;First, make a copy of your current Jekyll site and put it somewhere safe. You know, just in case... &lt;/p&gt;
 
-&lt;p&gt;And then set up a new project directory and install Middleman.&lt;/p&gt;
+&lt;p&gt;Then set up a new project directory and install Middleman.&lt;/p&gt;
 &lt;pre class="highlight shell"&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;mkdir FajitaNachos
 &lt;span class="gp"&gt;$ &lt;/span&gt;gem install middleman
 &lt;span class="gp"&gt;$ &lt;/span&gt;gem install middleman-blog
@@ -36,7 +36,7 @@
 &lt;pre class="highlight shell"&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;FajitaNachos
 &lt;span class="gp"&gt;$ &lt;/span&gt;sublime .
 &lt;/pre&gt;
-&lt;p&gt;You should have a source/ directory, which is where we will be doing the majority of our work. Middleman takes whatever you have in your source/ directory, runs it through the generator, and spits out a static site into the build/ directory. The &amp;#39;sublime&amp;#39; command is an alias I have set up for Sublime Text 2. I think most people use &amp;#39;subl&amp;#39; but I prefer the full name. Open your config.rb file and have a look at the options inside the activate :blog block. Here is what mine looks like. Yours will probably differ. &lt;/p&gt;
+&lt;p&gt;You should have a source/ directory, which is where we will be doing the majority of our work. Middleman takes whatever you have in your source/ directory, runs it through the generator, and spits out a static site into the /build directory. The &amp;#39;sublime&amp;#39; command is an alias I have set up for Sublime Text 2. I think most people use &amp;#39;subl&amp;#39; but I prefer the full name. Open your config.rb file and have a look at the options inside the activate :blog block. Here is what mine looks like (Yours will probably differ.) &lt;/p&gt;
 &lt;pre class="highlight ruby"&gt;&lt;span class="c1"&gt;#config.rb&lt;/span&gt;
 
 &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="ss"&gt;:blog&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
@@ -68,7 +68,7 @@
 &lt;/pre&gt;
 &lt;p&gt;This tells Middleman that all of my posts reside in the /posts/ directory. Set it and forget it. &lt;/p&gt;
 
-&lt;p&gt;At this point, I would go ahead and copy all of your Jekyll posts into your new posts/ directory. Also, copy your _layouts into a new /layouts directory. In fact, go ahead and move everything from your Jekyll site, into your new Middleman project. Depending on what your directory names are, you may need to tweak the settings in your new config.rb. Look for these lines&lt;/p&gt;
+&lt;p&gt;At this point, I would go ahead and copy all of your Jekyll posts into your new posts/ directory. Also, copy your _layouts into a new layouts/ directory. In fact, go ahead and move everything from your Jekyll site, into your new Middleman project. Depending on what your directory names are, you may need to tweak the settings in your new config.rb. Look for these lines&lt;/p&gt;
 &lt;pre class="highlight ruby"&gt;&lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="ss"&gt;:css_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;css&amp;#39;&lt;/span&gt;
 &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="ss"&gt;:js_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;js&amp;#39;&lt;/span&gt;
 &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="ss"&gt;:images_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;images&amp;#39;&lt;/span&gt;
@@ -83,7 +83,7 @@
 &lt;p&gt;You will want to replace with &lt;/p&gt;
 &lt;pre class="highlight text"&gt;&amp;lt;%= yield %&amp;gt;
 &lt;/pre&gt;
-&lt;p&gt;Here&amp;#39;s an example of a nested layout, post.erb , that I use for all my posts. The first line is the important part, with the regular yield statment coming where you wanted the content to be. I declare the layout in each posts&amp;#39; yaml front matter, which then renders the layout.erb, with this post.erb layout inside of it, and finally the post content rendered where the yield block is below. &lt;/p&gt;
+&lt;p&gt;Here&amp;#39;s an example of a nested layout, post.erb, that I use for all my posts. The first line is the important part, with the regular yield statment coming where you wanted the content to be. I declare the layout in each post&amp;#39;s yaml front matter, which then renders the layout.erb, with this post.erb layout inside of it, and finally the post content where the yield block is below. &lt;/p&gt;
 &lt;pre class="highlight erb"&gt;&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt; &lt;span class="n"&gt;wrap_layout&lt;/span&gt; &lt;span class="ss"&gt;:layout&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
   &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;post-wrap&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;id =&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;post-header&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
@@ -171,7 +171,7 @@
 
 &lt;h2&gt;Drafts&lt;/h2&gt;
 
-&lt;p&gt;I never really liked how the drafts feature worked in Jekyll. Maybe I was doing it wrong, but I had a seperate directory called _drafts/ where all my drafts resided. When I was done I would move it out of drafts and into _posts/.With Middleman, I find it much simpler to setup and maintain. In the front matter of your post, just add this line&lt;/p&gt;
+&lt;p&gt;I never really liked how the drafts feature worked in Jekyll. Maybe I was doing it wrong, but I had a seperate directory called _drafts/ where all my drafts resided. When I was done I would move it out of drafts and into _posts/. With Middleman, I find it much simpler to setup and maintain. In the front matter of your post, just add this line&lt;/p&gt;
 &lt;pre class="highlight yaml"&gt;&lt;span class="s"&gt;published&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;false&lt;/span&gt;
 &lt;/pre&gt;
 &lt;p&gt;And Middleman will ignore this post whenever it builds the site. &lt;/p&gt;
@@ -181,12 +181,12 @@
 &lt;p&gt;After you have copied all your files and removed the Jekyll specific syntax, fire up a local sever to see what is broken. If it works on the first time, you&amp;#39;re a god. &lt;/p&gt;
 &lt;pre class="highlight shell"&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;middleman
 &lt;/pre&gt;
-&lt;p&gt;Now you should have local server up and running at localhost:4567.  If your image files aren&amp;#39;t showing up, try running&lt;/p&gt;
+&lt;p&gt;Now you should have a local server up and running at localhost:4567.  If your image files aren&amp;#39;t showing up, try running&lt;/p&gt;
 &lt;pre class="highlight shell"&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;middleman build
 &lt;/pre&gt;
 &lt;h2&gt;Generating a Site Map (Bonus)&lt;/h2&gt;
 
-&lt;p&gt;I wanted to generate a site map for my blog posts, but only based on the posts titles. Here&amp;#39;s what I came up with. In /source/sitemap.xml.erb add these lines&lt;/p&gt;
+&lt;p&gt;I wanted to generate a site map for my blog posts, but only based on the post&amp;#39;s title. Here&amp;#39;s what I came up with. In source/sitemap.xml.erb add these lines&lt;/p&gt;
 &lt;pre class="highlight erb"&gt;&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt; &lt;span class="n"&gt;pages&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;page_articles&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
 &lt;span class="cp"&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&lt;/span&gt;
 &lt;span class="nt"&gt;&amp;lt;urlset&lt;/span&gt; &lt;span class="na"&gt;xmlns=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://www.sitemaps.org/schemas/sitemap/0.9&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
@@ -200,7 +200,7 @@
 &lt;/pre&gt;
 &lt;h2&gt;Deploying&lt;/h2&gt;
 
-&lt;p&gt;Now we need to push this bad boy up to our GitHub Pages repo. This is assuming you have your repo at yourusername.github.io. For example, mine is fajitanachos.github.io. There&amp;#39;s a nice little gem called &lt;a href="http://rubygems.org/gems/middleman-deploy"&gt;middleman-deploy&lt;/a&gt; that we can use to push everything to GitHub. &lt;/p&gt;
+&lt;p&gt;Now, we need to push this bad boy up to our GitHub Pages repo. This is assuming you have your repo at yourusername.github.io. For example, mine is fajitanachos.github.io. There&amp;#39;s a nice little gem called &lt;a href="http://rubygems.org/gems/middleman-deploy"&gt;middleman-deploy&lt;/a&gt; that we can use to push everything to GitHub. &lt;/p&gt;
 
 &lt;p&gt;Add this to your Gemfile&lt;/p&gt;
 &lt;pre class="highlight text"&gt;gem &amp;quot;middleman-deploy&amp;quot;
@@ -247,14 +247,14 @@ README.md
 &lt;span class="gp"&gt;$ &lt;/span&gt;git commit -m &lt;span class="s2"&gt;&amp;quot;Switching to Middleman&amp;quot;&lt;/span&gt;
 &lt;span class="c"&gt;# adding and removing lots of files here&lt;/span&gt;
 &lt;/pre&gt;
-&lt;p&gt;Now, all of my new changes are committed on my master branch and I still have the old history. However, whenever we deploy using the middleman-deploy gem, it&amp;#39;s going to push to master and overwrite all those commits. This is bad. One solution is to move everything out of your master branch, into a seperate branch, which I chose to call source.&lt;/p&gt;
+&lt;p&gt;Now, all of my new changes are committed on my master branch and I still have the old history. However, whenever we deploy using the middleman-deploy gem, it&amp;#39;s going to push to master and overwrite all those commits. This is bad. One solution is to move everything out of your master branch, into a seperate branch, which I chose to call &amp;#39;source&amp;#39;.&lt;/p&gt;
 &lt;pre class="highlight text"&gt;$ git branch source master
 &lt;/pre&gt;
-&lt;p&gt;This will move your master branch into a new source branch, and then you can check it out and push it up to GitHub.&lt;/p&gt;
+&lt;p&gt;This will move your master branch into a new source branch, and then you can check it out and push it to GitHub.&lt;/p&gt;
 &lt;pre class="highlight shell"&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;git checkout &lt;span class="nb"&gt;source&lt;/span&gt;
 &lt;span class="gp"&gt;$ &lt;/span&gt;git push origin &lt;span class="nb"&gt;source&lt;/span&gt;
 &lt;/pre&gt;
-&lt;p&gt;For personal and organization pages, GitHub only reads what&amp;#39;s in the master branch. Now that our old git history is safely stored in the source branch, we can deploy our middleman site to our master branch. &lt;/p&gt;
+&lt;p&gt;For personal and organization pages, GitHub only reads what&amp;#39;s in the master branch. Now that our old git history is safely stored in the source branch, we can deploy our Middleman site to our master branch. &lt;/p&gt;
 &lt;pre class="highlight shell"&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;middleman deploy
 &lt;/pre&gt;
 &lt;p&gt;You should see something like this &lt;/p&gt;
@@ -265,35 +265,37 @@ README.md
  &lt;span class="c"&gt;## Deploying via git to remote=&amp;quot;origin&amp;quot; and branch=&amp;quot;master&amp;quot;&lt;/span&gt;
 
 &lt;/pre&gt;
-&lt;p&gt;One last thing. Go view your repo on GitHub. The first thing you should see on your master branch are commit messages that looks something like this.&lt;/p&gt;
+&lt;p&gt;One last thing. Visit your repo on GitHub. The first thing you should see on your master branch are commit messages that look something like this.&lt;/p&gt;
 &lt;pre class="highlight text"&gt;Automated commit at 2013-08-10 04:17:26 UTC by middleman-deploy 3.1.4
 &lt;/pre&gt;
-&lt;p&gt;This is normal, and ugly. Luckily, all of our old history is still intact and on the source branch now. Go into your repo settings and change the default branch to be source instead of master. That way when you visit the repo, the first thing you will see is all of your commits and previous history instead of having to change branches to see it. &lt;/p&gt;
+&lt;p&gt;This is normal, and ugly. Luckily, all of our old history is still intact on the source branch. Go into your repo settings and change the default branch to be source instead of master. So when you visit the repo, the first thing you will see is all of your commits and previous history instead of having to change branches to see it. &lt;/p&gt;
 
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 
-&lt;p&gt;Now, you should be able to make any changes you want, in any directory of your new blog, and push it to the source branch of your repo with your proper commit messages. To deploy your blog run&lt;/p&gt;
+&lt;p&gt;Now, you should be able to make any changes you want, in any directory of your new blog, and push it to the source branch of your repo with the proper commit messages. To deploy your blog run&lt;/p&gt;
 &lt;pre class="highlight shell"&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;middleman deploy 
 &lt;/pre&gt;
-&lt;p&gt;and it will update the master branch and push it to GitHub. I know that I glossed over some things here and there, but this is what stuck with me when I was moving from Jekyll to Middleman. If you have any questions, I&amp;#39;ll be happy to help via email. &lt;/p&gt;
+&lt;p&gt;and it will update the master branch and push it to GitHub. &lt;/p&gt;
+
+&lt;p&gt;I know that I glossed over some things here and there, but this is what stuck with me when I was moving from Jekyll to Middleman. If you have any questions, I&amp;#39;ll be happy to help via email. &lt;/p&gt;
 </content>
   </entry>
   <entry>
     <title>Friday Night</title>
     <link rel="alternate" href="/Friday_night/"/>
     <id>/Friday_night/</id>
-    <published>2013-07-21T08:50:00Z</published>
-    <updated>2013-07-21T08:50:00Z</updated>
+    <published>2013-07-19T00:00:00Z</published>
+    <updated>2013-07-19T00:00:00Z</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;p&gt;Right now, I&amp;#39;m on a train, riding backwards, en route to Kyoto. It&amp;#39;s about an hour journey all in. This morning, I started working on a user authentication system using &lt;a href="https://github.com/plataformatec/devise]"&gt;Devise&lt;/a&gt;. Now, I&amp;#39;m reading through the devise documententation and trying to make everything fit together. It&amp;#39;s Friday night, and I&amp;#39;m sifting through documentation on a Rails gem...and I&amp;#39;m loving it. &lt;/p&gt;
+    <content type="html">&lt;p&gt;Right now, I&amp;#39;m on a train, riding backwards, and en route to Kyoto. This morning, I started working on a user authentication system using &lt;a href="https://github.com/plataformatec/devise]"&gt;Devise&lt;/a&gt;. Now, I&amp;#39;m reading through the Devise documententation and trying to make everything fit together. It&amp;#39;s Friday night, and I&amp;#39;m sifting through documentation on a Rails gem...and I&amp;#39;m loving it. &lt;/p&gt;
 
-&lt;p&gt;Did you know that trains in Japan are quieter than most libraries in the U.S.? I shit you not. I can see 4 people sleeping, 3 people staring at their phones, two listening to music, and another staring out the window. I haven&amp;#39;t heard a single word in the last 20 minutes, save the train conductor over the intercom announcing the stops in a soothing voice, that borders on a whisper. &lt;/p&gt;
+&lt;p&gt;Did you know that trains in Japan are quieter than most libraries in the U.S.? I shit you not. I can see 4 people sleeping, 3 people staring at their phones, 2 listening to music, and another staring out the window. I haven&amp;#39;t heard a single word in the last 20 minutes, save the train conductor over the intercom announcing the stops in a soothing voice, that borders on a whisper: &lt;/p&gt;
 
-&lt;p&gt;&amp;quot;Otsu, Otsu desu.&amp;quot;&lt;/p&gt;
+&lt;p&gt;&amp;quot;Otsu. Otsu desu.&amp;quot;&lt;/p&gt;
 
-&lt;p&gt;It&amp;#39;s times like this when it hits me. That I was meant to be a developer. When we get to Kyoto, I&amp;#39;ll go have a nice dinner with my wife. Then, tomorrow morning, I&amp;#39;ll get up early and get right back to it. I love doing this, day in and day out.&lt;/p&gt;
+&lt;p&gt;It&amp;#39;s times like this when it hits me. I was meant to be a developer. When we get to Kyoto, I&amp;#39;ll go have a nice dinner with my wife. Then, tomorrow morning, I&amp;#39;ll get up early and get right back to it. I love doing this, day in and day out.&lt;/p&gt;
 </content>
   </entry>
   <entry>
