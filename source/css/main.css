@@ -76,12 +76,12 @@ h1, h2 {
     color: #4c7fbe;
     line-height: 1em;
     font-size: 2.5em;
-    font-family: "Droid Serif", "Georgia", serif;
+    font-family: "Lora", "Georgia", serif;
     letter-spacing: -1px;
 }
 
 h3 {
-    font-family: "Droid Serif", "Georgia", serif;
+    font-family: "Lora", "Georgia", serif;
     letter-spacing: -1px;
 }
 
@@ -125,6 +125,10 @@ section {
     padding-bottom: 2%;
 }
 
+#home-intro h1 {
+   
+    font-weight:normal;
+}
 #home-image img {
     display: block;
     vertical-align: middle;
@@ -278,6 +282,7 @@ section {
     font-size: 1.5em;
     line-height: 2em;
     position:relative;
+    font-family: "Lora", "Open Sans", "Arial";
 }
 
 .post-item a:hover{
@@ -322,6 +327,7 @@ section {
     float: right;
     font-size: .7em;
     color: #777;
+    
 }
 
 #post-list {
@@ -347,7 +353,7 @@ section {
     line-height: 2em;
     color: #555;
 }
-#post-container h1, #post-content h2 {
+#post-container h1 {
     text-align: center;
     color: #444;
     margin: 0 0 5% 0;
@@ -370,7 +376,7 @@ section {
     text-align: center;
     color: #444;
     font-size: 1.5em;
-    margin: 6% 0 4% 0;
+    margin: 10% 0 4% 0;
 }
 
 #post-content table {
@@ -460,7 +466,7 @@ tr.first-row td {
 
 #site-title a {
     margin: auto;
-    font-family: "Droid Serif", sans-serif;
+    font-family: "Lora", sans-serif;
     line-height: 2em;
     color: #fff;
     font-weight: normal;
