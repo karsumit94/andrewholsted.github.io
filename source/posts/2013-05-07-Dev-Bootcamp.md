@@ -65,7 +65,7 @@ Next, Karim typed a short code snippet into the Skype chat box and asked me to t
 
 He kindly reminded me that I could click on the bubble next to his name. You know, the spot where it notifies you in bright orange when someone has entered a message. Oops.
 
-The code snippet itself wasn't difficult. It was the first time I had ever analyzed a piece of code with/for someone. I knew the answer, but I should have been more confident in expressing it. A
+The code snippet itself wasn't difficult. It was the first time I had ever analyzed a piece of code with/for someone. I knew the answer, but I should have been more confident in expressing it.
 
 At the end we talked about a few other things and he recommended that I work through a Ruby tutorial to get a feel for things.
 
@@ -107,7 +107,7 @@ I asked him if we could give Skype another shot. A last and desperate attempt. W
 
 He sent me a nice message suggesting we reschedule for another day. I apologized for wasting his time and he sent back a reassuring message that everything was ok. At that point there was nothing more I could do.
 
-As you might surmise, my internet connection came back to life 5 minutes after we decided to reschedule.Go figure. Sometimes these things just happen. We've rescheduled the interview for April 5th. I've also purchased plenty of Skype credits to call him, should things go awry again. 
+As you might surmise, my internet connection came back to life 5 minutes after we decided to reschedule. Go figure. Sometimes these things just happen. We've rescheduled the interview for April 5th. I've also purchased plenty of Skype credits to call him, should things go awry again. 
 
 I'll let you know how it turns out.
 

@@ -21,7 +21,7 @@ Number Two
 
 You should to be writing code *every single day*. 
 
-The only two days I'm not writing code are my wife's birthday and our anniversary. That's it. If you aren't in your text editor, making sweet passionate love to your keyboard day in and day out, then you're doing it wrong. Every day you will get a little better. You'll look back on things you did three months ago and cringe because you've gotten so much better. There will be small triumphs along the way, like when things [just work][1], and rest assured there will also be many failures. You'll need to fight through the frustration, tediousness, and problems that you encounter along the way. And hopefully you'll love doing it. 
+As a general rule, the only two days I know I won't be writing any code are my wife's birthday and our anniversary. That's it. If you aren't in your text editor, making sweet passionate love to your keyboard day in and day out, then you're doing it wrong. Every day you will get a little better. You'll look back on things you did three months ago and cringe because you've gotten so much better. There will be small triumphs along the way, like when things [just work][1], and rest assured there will also be many failures. You'll need to fight through the frustration, tediousness, and problems that you encounter along the way. And hopefully you'll love doing it. 
 
 Number Three
 ------------
