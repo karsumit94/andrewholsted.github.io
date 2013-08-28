@@ -20,7 +20,7 @@
     </author>
     <content type="html">&lt;p&gt;&lt;center&gt;&lt;em&gt;This post is about moving my blog from Jekyll to Middleman.&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
 
-&lt;p&gt;About a week ago, I was in the throws of one of my recent projects. I was running into the web developer&amp;#39;s equivalent of writer&amp;#39;s block. Is there a name for that? I decided to take a short break and try my hand at a couple of other things. I wrote a &lt;a href="http://fajitanachos.com/minesweeper"&gt;Minesweeper&lt;/a&gt; clone in JQuery (blog post forthcoming), and my local Hacker News meetup had talked about redesigning their site so I played around with a few APIs to create a rough &lt;a href="http://hnk.herokuapp.com"&gt;mockup&lt;/a&gt;.  While I was talking to one of the &lt;a href="http://hnkansai.org"&gt;HN Kansai&lt;/a&gt; organizers, he suggested that I have a look at Middleman. Thank you &lt;a href="http://sachagreif.com/"&gt;Sacha&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;About a week ago, I was in the throws of one of my recent projects. I was running into the web developer&amp;#39;s equivalent of writer&amp;#39;s block. Is there a name for that? I decided to take a short break and try my hand at a couple of other things. I wrote a &lt;a href="http://fajitanachos.com/minesweeper"&gt;Minesweeper&lt;/a&gt; clone in JQuery (blog post forthcoming), and my local Hacker News meetup had talked about redesigning their site so I played around with a few APIs and came up with &lt;a href="http://hnksansai.org"&gt;this&lt;/a&gt;.  While I was talking to one of the organizers, he suggested that I have a look at Middleman. Thank you &lt;a href="http://sachagreif.com/"&gt;Sacha&lt;/a&gt;!&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://middlemanapp.com"&gt;Middleman&lt;/a&gt; is a static site generator just like Jekyll. With Jekyll being the default static site generator for GitHub Pages, I wasn&amp;#39;t sure if I could make GitHub and Middleman play nicely together. Luckily, there&amp;#39;s a nice deployment extension for Middleman which, combined with a little git branch rearranging, works just fine. So what follows is a thoroughly incomplete and off the top of my head rendition of how to turn a Jekyll site into a Middleman site, and keep it hosted on GitHub pages. Please enjoy. &lt;/p&gt;
 
@@ -321,7 +321,7 @@ README.md
 
 &lt;p&gt;You should to be writing code &lt;em&gt;every single day&lt;/em&gt;. &lt;/p&gt;
 
-&lt;p&gt;The only two days I&amp;#39;m not writing code are my wife&amp;#39;s birthday and our anniversary. That&amp;#39;s it. If you aren&amp;#39;t in your text editor, making sweet passionate love to your keyboard day in and day out, then you&amp;#39;re doing it wrong. Every day you will get a little better. You&amp;#39;ll look back on things you did three months ago and cringe because you&amp;#39;ve gotten so much better. There will be small triumphs along the way, like when things &lt;a href="/It-just-worked"&gt;just work&lt;/a&gt;, and rest assured there will also be many failures. You&amp;#39;ll need to fight through the frustration, tediousness, and problems that you encounter along the way. And hopefully you&amp;#39;ll love doing it. &lt;/p&gt;
+&lt;p&gt;As a general rule, the only two days I know I won&amp;#39;t be writing any code are my wife&amp;#39;s birthday and our anniversary. That&amp;#39;s it. If you aren&amp;#39;t in your text editor, making sweet passionate love to your keyboard day in and day out, then you&amp;#39;re doing it wrong. Every day you will get a little better. You&amp;#39;ll look back on things you did three months ago and cringe because you&amp;#39;ve gotten so much better. There will be small triumphs along the way, like when things &lt;a href="/It-just-worked"&gt;just work&lt;/a&gt;, and rest assured there will also be many failures. You&amp;#39;ll need to fight through the frustration, tediousness, and problems that you encounter along the way. And hopefully you&amp;#39;ll love doing it. &lt;/p&gt;
 
 &lt;h2&gt;Number Three&lt;/h2&gt;
 
@@ -397,7 +397,7 @@ take you do costs you a beer, it gets expensive.&lt;/p&gt;
 
 &lt;p&gt;He kindly reminded me that I could click on the bubble next to his name. You know, the spot where it notifies you in bright orange when someone has entered a message. Oops.&lt;/p&gt;
 
-&lt;p&gt;The code snippet itself wasn&amp;#39;t difficult. It was the first time I had ever analyzed a piece of code with/for someone. I knew the answer, but I should have been more confident in expressing it. A&lt;/p&gt;
+&lt;p&gt;The code snippet itself wasn&amp;#39;t difficult. It was the first time I had ever analyzed a piece of code with/for someone. I knew the answer, but I should have been more confident in expressing it.&lt;/p&gt;
 
 &lt;p&gt;At the end we talked about a few other things and he recommended that I work through a Ruby tutorial to get a feel for things.&lt;/p&gt;
 
@@ -439,7 +439,7 @@ take you do costs you a beer, it gets expensive.&lt;/p&gt;
 
 &lt;p&gt;He sent me a nice message suggesting we reschedule for another day. I apologized for wasting his time and he sent back a reassuring message that everything was ok. At that point there was nothing more I could do.&lt;/p&gt;
 
-&lt;p&gt;As you might surmise, my internet connection came back to life 5 minutes after we decided to reschedule.Go figure. Sometimes these things just happen. We&amp;#39;ve rescheduled the interview for April 5th. I&amp;#39;ve also purchased plenty of Skype credits to call him, should things go awry again. &lt;/p&gt;
+&lt;p&gt;As you might surmise, my internet connection came back to life 5 minutes after we decided to reschedule. Go figure. Sometimes these things just happen. We&amp;#39;ve rescheduled the interview for April 5th. I&amp;#39;ve also purchased plenty of Skype credits to call him, should things go awry again. &lt;/p&gt;
 
 &lt;p&gt;I&amp;#39;ll let you know how it turns out.&lt;/p&gt;
 
