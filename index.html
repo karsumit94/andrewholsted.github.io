@@ -56,128 +56,160 @@
 	</section>
 
   	<section id ="projects" class = "section">
-  		<div id="projects-wrap">
-  			<h2 class ="project-header">Projects </h2>
-	  		<div id = "slider-wrap">
-	  			<ul id = "slider">
-	  				<li>
-              <div class = "project">
-                <div class = "project-image">
-                   <a href="/minesweeper">
-                        <img src="/images/Minesweeper.png" />
-                      </a>
-                </div>
-                <div class = "project-details">
-                  <div class="project-title">
-                     <h3><a href="https://github.com/FajitaNachos/minesweeper">Minesweeper</a></h3>
-                  </div>
-                    <p>
-                     This is a Minesweeper clone written in JQuery. It was my first experience writing object oriented Javascript from scratch, and I learned a lot. Click on the screen shot if you fancy a game.
-                    </p>
-                  <div class="project-tags">
-                    <span class="project-tag">JQuery</span>
-                    <span class="project-tag">HTML</span>
-                    <span class="project-tag">CSS</span>
+  <div id="projects-wrap">
+    <h2 class ="project-header">Projects </h2>
+    <div id = "slider-wrap">
+      <ul id = "slider">
 
-                  </div>
-                  <div class= "project-links">
-                    <span class = "github-icon">
-                       <a href="https://github.com/FajitaNachos/minesweeper">
-                        <img src="/images/Octocat.jpg" />
-                      </a>
-                    </span>
-                    
-                  </div>
 
-                </div>  
+        <!-- Hacker News Kansai -->
+        <li> 
+          <div class = "project">
+            <div class = "project-image">
+               <a href="http://hnkansai.org">
+                  <img src="/images/hnkansai.png" />
+                </a>
+            </div>
+            <div class = "project-details">
+              <div class="project-title">
+                 <h3><a href="http://hnkansai.org">Hacker News Kansai</a></h3>
               </div>
-            </li>
-            <li>
-				  		<div class = "project">
-				  			<div class = "project-image">
-                   <a href="/Hotfix">
-                    <img src="/images/hotfix-screenshot.jpg" />
-                   </a>
-					    	</div>	
-				  			<div class = "project-details">
-				  				<div class="project-title">
-				  					<h3><a href="/Hotfix">Hotfix</a></h3>
-				  				</div>
-				  				<p>
-						    		Hotfix is a Chrome Extension to save changes from
-						    		Chrome Developer Tools directly to GitHub. At the time, I needed something like this so I made it. I rarely use it any more, but I enjoyed playing around with the GitHub API. 
-						    	</p>
-						    	<div class= "project-tags">
-						    		<span class="project-tag">Javascript</span>
-						    		<span class="project-tag">Node.js</span>
-						    		<span class="project-tag">GitHub API</span>
-						    		<span class="project-tag">Chrome Dev Tools</span>
-						    	</div>
-						    	<div class= "project-links">
-						    		<span class = "github-icon">
-                       <a href="https://github.com/FajitaNachos/hotfix">
-                        <img src="/images/Octocat.jpg" />
-                      </a>
-					    			</span>
-						    		<span class = "chrome-store-icon">
-                      <a href="https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi">
-                        <img src="/images/chrome-store-badge2.png" />
-                      </a>
-					    			</span>
-					    			
-					    		</div>
+              <p>
+               HN Kansai is a static site created with Middleman and hosted on GitHub Pages. It incorporates the YouTube, Flickr, and Doorkeeper APIs to aggregate the relevant information for the HN Kansai meetups. 
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Middleman</span>
+                <span class="project-tag">GitHub</span>
+                <span class="project-tag">APIs</span>
+              </div>
+              <div class= "project-links">
+                <span class = "github-icon">
+                   <a href="https://github.com/FajitaNachos/minesweeper">
+                    <img src="/images/Octocat.jpg" />
+                  </a>
+                </span>
+                <span class = "hnk-icon">
+                   <a href="https://github.com/hnkansai/hnkansai.github.io">
+                    <img src="/images/hnk-icon.png" />
+                  </a>
+                </span>
+              </div>
+            </div>  
+          </div>
+        </li>
+        <!-- Minesweeper -->
+        <li> 
+          <div class = "project">
+            <div class = "project-image">
+               <a href="/minesweeper">
+                  <img src="/images/Minesweeper.png" />
+                </a>
+            </div>
+            <div class = "project-details">
+              <div class="project-title">
+                 <h3><a href="https://github.com/FajitaNachos/minesweeper">Minesweeper</a></h3>
+              </div>
+              <p>
+               This is a Minesweeper clone written in JQuery. Click on the screen shot if you fancy a game.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">JQuery</span>
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+              </div>
+              <div class= "project-links">
+                <span class = "github-icon">
+                   <a href="https://github.com/FajitaNachos/minesweeper">
+                    <img src="/images/Octocat.jpg" />
+                  </a>
+                </span>
+              </div>
+            </div>  
+          </div>
+        </li>
 
-					    	</div>	
+        <!-- Hotfix -->
+        <li>
+          <div class = "project">
+            <div class = "project-image">
+               <a href="/Hotfix">
+                <img src="/images/hotfix-screenshot.jpg" />
+               </a>
+            </div>  
+            <div class = "project-details">
+              <div class="project-title">
+                <h3><a href="/Hotfix">Hotfix</a></h3>
+              </div>
+              <p>
+                Hotfix is a Chrome Extension to save changes from
+                Chrome Developer Tools directly to GitHub. At the time, I needed something like this so I made it. I rarely use it any more, but I enjoyed playing around with the GitHub API. 
+              </p>
+              <div class= "project-tags">
+                <span class="project-tag">Javascript</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">GitHub API</span>
+                <span class="project-tag">Chrome Dev Tools</span>
+              </div>
+              <div class= "project-links">
+                <span class = "github-icon">
+                   <a href="https://github.com/FajitaNachos/hotfix">
+                    <img src="/images/Octocat.jpg" />
+                  </a>
+                </span>
+                <span class = "chrome-store-icon">
+                  <a href="https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi">
+                    <img src="/images/chrome-store-badge2.png" />
+                  </a>
+                </span>
+              </div>
+            </div>   
+          </div>
+        </li>
 
-				  		    
-					    </div>
-					</li>
-					<li>
-			    		<div class = "project">
-			    			<div class = "project-image">
-                   <a href="/Quick-Preview">
-                      <img src="/images/quick-preview-screenshot.jpg" />
-                    </a>
-					    	</div>
-			    			<div class = "project-details">
-					    		<div class="project-title">
-					    			<h3><a href="/Quick-Preview">Quick Preview</a></h3>
-					    		</div>
-					    			<p>
-					    			 Quick Preview is a WordPress plugin to save and preview a post using Cmd+S. It was my first real project, and I'll always have a little soft spot for it. 
-					    			</p>
-					    		<div class="project-tags">
-					    			<span class="project-tag">PHP</span>
-					    			<span class="project-tag">Javascript</span>
-					    			<span class="project-tag">WordPress</span>
+        <!-- Quick Preview -->
+        <li>
+          <div class = "project">
+            <div class = "project-image">
+               <a href="/Quick-Preview">
+                  <img src="/images/quick-preview-screenshot.jpg" />
+                </a>
+            </div>
+            <div class = "project-details">
+              <div class="project-title">
+                <h3><a href="/Quick-Preview">Quick Preview</a></h3>
+              </div>
+                <p>
+                 Quick Preview is a WordPress plugin to save and preview a post using Cmd+S. It was my first real project, and I'll always have a little soft spot for it. 
+                </p>
+              <div class="project-tags">
+                <span class="project-tag">PHP</span>
+                <span class="project-tag">Javascript</span>
+                <span class="project-tag">WordPress</span>
+              </div>
+              <div class= "project-links">
+                <span class = "github-icon">
+                   <a href="https://github.com/FajitaNachos/quick-preview">
+                    <img src="/images/Octocat.jpg" />
+                  </a>
+                </span>
+                <span class = "wordpress-icon">
+                  <a href="http://wordpress.org/extend/plugins/quick-preview/">
+                    <img src="/images/wordpress.png" />
+                  </a>
+                </span>
+              </div>
+            </div>  
+          </div>
+        </li>
+      </ul>
+    </div>  <!-- end slider wrap -->
+  </div>  <!-- end projects wrap -->
 
-					    		</div>
-					    		<div class= "project-links">
-					    			<span class = "github-icon">
-                       <a href="https://github.com/FajitaNachos/quick-preview">
-                        <img src="/images/Octocat.jpg" />
-                      </a>
-					    			</span>
-					    			<span class = "wordpress-icon">
-                      <a href="http://wordpress.org/extend/plugins/quick-preview/">
-                        <img src="/images/wordpress.png" />
-                      </a>
-					    			</span>
-					    			
-					    		</div>
-
-						    </div>  
-				   		</div>
-				   	</li>
-				</ul>
-			</div>
-
-		</div>
-		<div id="slider-controls">
-    		<a href="#" id="slider-prev"> <img src="/images/prev.png" /></a>
-   		 	<a href="#" id="slider-next"><img src="/images/next.png" /></a>
-		</div>
-	</section>
+  <div id="slider-controls">
+      <a href="#" id="slider-prev"> <img src="/images/prev.png" /></a>
+      <a href="#" id="slider-next"><img src="/images/next.png" /></a>
+  </div>
+</section>
 
 	<section id ="posts" class = "section">
 		<div id="posts-wrap">
