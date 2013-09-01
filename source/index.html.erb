@@ -25,7 +25,7 @@ title: "Home"
 					In July of 2011, I moved to Japan. In July of 2012, I discovered my passion for building things. Since then I've been teaching English during the day and writing code every night.
 				</p>	
 				<p>
-					Recently, my typical stack has been Javascript/JQuery on the front and Ruby/Rails on the back. I think static site generators are nifty, Git is magnificent, and Sublime Text 2 is awesome. I like to try new things. I like consuming APIs. My goal is to be a humble, well-rounded, and well-versed developer. If you're looking to hire someone like me, I'd love to hear from you.
+					Recently, my typical stack has been Javascript/JQuery on the front and Ruby/Rails on the back. I think static site generators are nifty, Git is magnificent, and Sublime Text 2 is awesome. I like to try new things. I like consuming APIs. My goal is to be a humble, well-rounded, and well-versed developer. If you're looking to hire someone , I'd love to hear from you.
 			</div>
 		</div>	
 	</section>
@@ -63,10 +63,13 @@ http://fajitanachos.tumblr.com">Tumblr</a></span>
 
 	<nav id ="home-nav">
 		<ul>
-		  	<li><span class = "down-arrow"></span><a href = "#home" id= "home-link" class = "nav-link">Home</a></li>
-		  	<li><span class = "down-arrow"></span><a href = "#about" id= "about-link" class = "nav-link">About</a></li>
+      <li class = "social"><% link_to 'https://github.com/FajitaNachos/' do %> <%= image_tag 'github.png' %> <% end %>
+      </li>
+	  	<li><span class = "down-arrow"></span><a href = "#home" id= "home-link" class = "nav-link">Home</a></li>
+	  	<li><span class = "down-arrow"></span><a href = "#about" id= "about-link" class = "nav-link">About</a></li>
 			<li><span class = "down-arrow"></span><a href = "#projects" id = "projects-link" class = "nav-link" >Projects</a></li>
 			<li><span class = "down-arrow"></span><a href = "#posts" id = "posts-link" class = "nav-link">Posts</a></li>
 			<li><span class = "down-arrow"></span><a href = "#contact" id= "contact-link" class = "nav-link">Contact</a></li>
-		</ul>
+      <li class = "social"><% link_to 'https://twitter.com/FajitaNachos/' do %> <%= image_tag 'twitter.png' %> <% end %></li>
+    </ul>
 	</nav>
