@@ -310,12 +310,12 @@ section {
 
 /* For movement */
 .post-item a:before {
-    content: "{";
+    content: "⟨";
     
 }
 
 .post-item a:after {
-    content: "}";
+    content: "⟩";
     
 }
 
@@ -378,16 +378,13 @@ section {
 
 #post-content table {
     width: 100%;
-    border: 1px solid #aaa;
-    box-shadow: 3px 3px 14px #aaa;
-    -webkit-box-shadow: 3px 3px 14px #aaa;
-    -moz-box-shadow: 3px 3px 14px #aaa;
+    border: 1px solid #dedede;
     background-color: #fff;
     margin: 5% auto;
 }
 
 #post-content td {
-    padding: 0em 1em;
+    padding: .5em 1em;
 }
 
 .fc-table-header {
@@ -433,7 +430,7 @@ tr.first-row td {
     width: auto;
     overflow-x: auto;
     border: 1px solid #dedede;
-    padding:.5em;
+    padding:1em;
     background-color: #f6f6f6;
 
 }
