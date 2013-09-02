@@ -1,0 +1,154 @@
+<section id ="projects" class = "section">
+  <div id="projects-wrap">
+    <h2 class ="project-header">Projects </h2>
+    <div id = "slider-wrap">
+      <ul id = "slider">
+
+        <!-- Hacker News Kansai -->
+        <li> 
+          <div class = "project">
+            <div class = "project-image">
+               <% link_to 'http://hnkansai.org' do %>
+                  <%= image_tag 'hnkansai.png' %>
+                <% end %>
+            </div>
+            <div class = "project-details">
+              <div class="project-title">
+                 <h3><%= link_to 'Hacker News Kansai', 'http://hnkansai.org' %></h3>
+              </div>
+              <p>
+               HN Kansai is a static site created with Middleman and hosted on GitHub Pages. It incorporates the YouTube, Flickr, and Doorkeeper APIs to aggregate the relevant information for the HN Kansai meetups. 
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Middleman</span>
+                <span class="project-tag">GitHub</span>
+                <span class="project-tag">APIs</span>
+              </div>
+              <div class= "project-links">
+                <span class = "github-icon">
+                   <% link_to 'https://github.com/hnkansai/hnkansai.github.io' do %>
+                    <%= image_tag 'Octocat.jpg' %>
+                  <% end %>
+                </span>
+                <span class = "hnk-icon">
+                   <% link_to 'http://hnkansai.org' do %>
+                    <%= image_tag '/images/hnk-icon.png' %>
+                  <% end %>
+                </span>
+              </div>
+            </div>  
+          </div>
+        </li>
+        <!-- Minesweeper -->
+        <li> 
+          <div class = "project">
+            <div class = "project-image">
+               <% link_to '/minesweeper' do %>
+                  <%= image_tag 'Minesweeper.png' %>
+                <% end %>
+            </div>
+            <div class = "project-details">
+              <div class="project-title">
+                 <h3><%= link_to 'Minesweeper', 'https://github.com/FajitaNachos/minesweeper' %></h3>
+              </div>
+              <p>
+               This is a Minesweeper clone written in JQuery. Click on the screen shot if you fancy a game.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">JQuery</span>
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+              </div>
+              <div class= "project-links">
+                <span class = "github-icon">
+                   <% link_to 'https://github.com/FajitaNachos/minesweeper' do %>
+                    <%= image_tag 'Octocat.jpg' %>
+                  <% end %>
+                </span>
+              </div>
+            </div>  
+          </div>
+        </li>
+
+        <!-- Hotfix -->
+        <li>
+          <div class = "project">
+            <div class = "project-image">
+               <% link_to '/Hotfix' do %>
+                <%= image_tag 'hotfix-screenshot.jpg' %>
+               <% end %>
+            </div>  
+            <div class = "project-details">
+              <div class="project-title">
+                <h3><a href="/Hotfix">Hotfix</a></h3>
+              </div>
+              <p>
+                Hotfix is a Chrome Extension to save changes from
+                Chrome Developer Tools directly to GitHub. At the time, I needed something like this so I made it. I rarely use it any more, but I enjoyed playing around with the GitHub API. 
+              </p>
+              <div class= "project-tags">
+                <span class="project-tag">Javascript</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">GitHub API</span>
+                <span class="project-tag">Chrome Dev Tools</span>
+              </div>
+              <div class= "project-links">
+                <span class = "github-icon">
+                   <% link_to 'https://github.com/FajitaNachos/hotfix' do %>
+                    <%= image_tag 'Octocat.jpg' %>
+                  <% end %>
+                </span>
+                <span class = "chrome-store-icon">
+                  <% link_to 'https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi' do %>
+                    <%= image_tag 'chrome-store-badge2.png' %>
+                  <% end %>
+                </span>
+              </div>
+            </div>   
+          </div>
+        </li>
+
+        <!-- Quick Preview -->
+        <li>
+          <div class = "project">
+            <div class = "project-image">
+               <% link_to '/Quick-Preview' do %>
+                  <%= image_tag 'quick-preview-screenshot.jpg' %>
+                <% end %>
+            </div>
+            <div class = "project-details">
+              <div class="project-title">
+                <h3><%= link_to 'Quick Preview', '/Quick-Preview' %></h3>
+              </div>
+                <p>
+                 Quick Preview is a WordPress plugin to save and preview a post using Cmd+S. It was my first real project, and I'll always have a little soft spot for it. 
+                </p>
+              <div class="project-tags">
+                <span class="project-tag">PHP</span>
+                <span class="project-tag">Javascript</span>
+                <span class="project-tag">WordPress</span>
+              </div>
+              <div class= "project-links">
+                <span class = "github-icon">
+                   <% link_to 'https://github.com/FajitaNachos/quick-preview' do %>
+                    <%= image_tag 'Octocat.jpg' %>
+                  <% end %>
+                </span>
+                <span class = "wordpress-icon">
+                  <% link_to 'http://wordpress.org/extend/plugins/quick-preview/' do %>
+                    <%= image_tag 'wordpress.png' %>
+                  <% end %>
+                </span>
+              </div>
+            </div>  
+          </div>
+        </li>
+      </ul>
+    </div>  <!-- end slider wrap -->
+  </div>  <!-- end projects wrap -->
+
+  <div id="slider-controls">
+      <a href="#" id="slider-prev"> <%= image_tag 'prev.png' %></a>
+      <a href="#" id="slider-next"><%= image_tag 'next.png' %></a>
+  </div>
+</section>
