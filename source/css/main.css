@@ -310,12 +310,12 @@ section {
 
 /* For movement */
 .post-item a:before {
-    content: "{";
+    content: "⟨";
     
 }
 
 .post-item a:after {
-    content: "}";
+    content: "⟩";
     
 }
 
