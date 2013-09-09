@@ -3,7 +3,6 @@ layout: "post"
 title: "Dev Bootcamp, Reconsidered"
 date: 2013-08-31 09:52 UTC
 tags: "Dev Bootcamp"
-published: false
 meta-description: "Why I'm not doing Dev Bootcamp"
 ---
 
