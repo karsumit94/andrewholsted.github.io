@@ -85,6 +85,12 @@ h3 {
     letter-spacing: -1px;
 }
 
+#post-container h3 {
+    font-weight:normal;
+    font-size:1.25em;
+    padding-top:1em;
+}
+
 section {
     height: 100%;
     border-bottom: 1px solid #ddd;
@@ -303,20 +309,18 @@ section {
 }
 
 .post-item a:hover:before, .post-item a:hover:after {
-    color: #555; /* Or whatever colour you want. */
+    color: #777; /* Or whatever colour you want. */
     opacity:.7;
 
 }
 
 /* For movement */
 .post-item a:before {
-    content: "⟨";
-    
+    content: "{";   
 }
 
 .post-item a:after {
-    content: "⟩";
-    
+    content: "}";   
 }
 
 
