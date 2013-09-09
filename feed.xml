@@ -5,10 +5,78 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-08-10T09:04:00Z</updated>
+  <updated>2013-08-31T09:52:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Dev Bootcamp, Reconsidered</title>
+    <link rel="alternate" href="/Dev-bootcamp-reconsidered/"/>
+    <id>/Dev-bootcamp-reconsidered/</id>
+    <published>2013-08-31T09:52:00Z</published>
+    <updated>2013-08-31T09:52:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;In January of 2013, I applied to Dev Bootcamp. To make a &lt;a href="http://fajitanachos.com/Dev-Bootcamp"&gt;long story&lt;/a&gt; short, I&amp;#39;ve been accepted into the October 7th cohort. It&amp;#39;s a great opportunity for me to become a full-time developer, but two weeks ago I decided not to attend.&lt;/p&gt;
+
+&lt;h2&gt;Why Dev Bootcamp?&lt;/h2&gt;
+
+&lt;p&gt;When I first applied to Dev Bootcamp, I had &lt;a href="https://github.com/FajitaNachos/Quick-Preview"&gt;one project&lt;/a&gt; under my belt, and this blog was only a few months old. I didn&amp;#39;t know very much, but I knew I liked what I was doing. I would write some code, break something, Google it, learn about it. Rinse and repeat. My initial thoughts about Dev Bootcamp were something along the lines of this: &lt;/p&gt;
+
+&lt;p&gt;&amp;quot;I&amp;#39;ll go in as a beginner, come out with some chops, and then maybe I can get a job.&amp;quot; &lt;/p&gt;
+
+&lt;p&gt;Dev Bootcamp started the programming bootcamp movement. It&amp;#39;s the most reputable, well-established program out there and I applied there for one reason: to get a job.&lt;/p&gt;
+
+&lt;h2&gt;Why not Dev Bootcamp?&lt;/h2&gt;
+
+&lt;p&gt;I&amp;#39;ve come a long way from the day I first applied, and I&amp;#39;ll be the first to admit that I still have a lot to learn. Despite that, I&amp;#39;m leaps and bounds ahead of where I was when I started. I&amp;#39;ve been doing this, day in and day out, for the last 14 months. Before that, I had made a couple of one-off websites. I think the optimal time for me to go through the program was probably 9 months ago. I&amp;#39;m sure I would still learn a lot, but the risk/reward has shifted in favor of me going forward on my own. &lt;/p&gt;
+
+&lt;h2&gt;What are my options, Doc?&lt;/h2&gt;
+
+&lt;p&gt;I&amp;#39;ve already paid the 11k. $1,000 of which is a non-refundable deposit. I&amp;#39;m budgeting $3,000 a month for living expenses (for two people). I&amp;#39;ve never lived in San Francisco, but for two people I think that&amp;#39;s fair.&lt;/p&gt;
+
+&lt;h3&gt;Option 1&lt;/h3&gt;
+
+&lt;p&gt;Dev Bootcamp is a 9 week program (with an optional 3 weeks at the end). I can realistically expect it to take anywhere from 3 to 12 weeks to find a job after the program is over. Living expenses + tuition add up to $17,000 on the low end and $26,000 on the higher side of things. The latter part of that scenario isn&amp;#39;t pretty. &lt;/p&gt;
+
+&lt;h3&gt;Option 2&lt;/h3&gt;
+
+&lt;p&gt;I don&amp;#39;t go through Dev Bootcamp, and I find a job on my own. I&amp;#39;ll get $10,000 back from Dev Bootcamp, which I&amp;#39;ll use to pay for two months worth of living expenses in San Francisco. The total cost is a much more reasonable $6,000, plus the nine weeks of time. I think I&amp;#39;ve learned enough over the last 14 months to get a job as an entry level developer. If I&amp;#39;m wrong, I&amp;#39;ll be out 6k and I&amp;#39;ll know I gave it my best shot. Then I&amp;#39;ll pack my bags, head for the mountains, and become a ski bum (who codes nights and weekends). &lt;/p&gt;
+
+&lt;p&gt;Just kidding...kinda. &lt;/p&gt;
+
+&lt;h2&gt;Three Things I Know and Two I Don&amp;#39;t&lt;/h2&gt;
+
+&lt;h3&gt;Things I know going forward:&lt;/h3&gt;
+
+&lt;p&gt;I love to learn, and I&amp;#39;m constantly striving to become a better developer. Day in. Day out. &lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve been writing code every day for over a year. I can count on two hands how many days have gone by where I haven&amp;#39;t written a single line of code. &lt;/p&gt;
+
+&lt;p&gt;I need a job.&lt;/p&gt;
+
+&lt;h3&gt;Things I don&amp;#39;t know:&lt;/h3&gt;
+
+&lt;p&gt;If anyone wants to hire me. &lt;/p&gt;
+
+&lt;p&gt;Lots more stuff. &lt;/p&gt;
+
+&lt;h2&gt;A Word on Bootcamps in General&lt;/h2&gt;
+
+&lt;p&gt;To my knowledge, Dev Bootcamp was the first bootcamp-style immersive program. A few students from their first cohort ended up starting their own schools. Now, there&amp;#39;s a programming bootcamp coming to every major city near you. They&amp;#39;re popping up everywhere. &lt;/p&gt;
+
+&lt;p&gt;There&amp;#39;s a whole movement for people learning to code. I think people should learn to code, if only so they have a better understanding of how things work. I avidly believe that coding should be taught in schools, starting in elementary. But, just because it&amp;#39;s taught in schools doesn&amp;#39;t mean we all need to become programmers. Math is taught in school but I don&amp;#39;t want to be a mathematician. I can write, but that doesn&amp;#39;t mean I want to be a writer. Someone can learn to code, but that doesn&amp;#39;t mean they want/need/have to be a programmer. &lt;/p&gt;
+
+&lt;p&gt;This next part is pure speculation: I think the percentage of people graduating from these programs and getting jobs is probably dropping. Dev Bootcamp put up some amazing numbers last year, but they haven&amp;#39;t released any since then. I honestly hope they&amp;#39;ve just switched to only reporting yearly job placement rates, and 85% of their students are still scoring jobs. I want them to succeed. I&amp;#39;m less concerned about Dev Bootcamp than I am about some of the schools that came after them. I can&amp;#39;t help but think a lot of these other programs are just looking to ride the wave, take in the tuition, and crank out students who may or may not be adequately prepared. &lt;/p&gt;
+
+&lt;h2&gt;What&amp;#39;s next?&lt;/h2&gt;
+
+&lt;p&gt;I don&amp;#39;t know. We&amp;#39;ve rented an apartment in San Francisco for the month of October. If we like it there, we&amp;#39;ll stay longer. If we don&amp;#39;t, then the options are limitless. I couldn&amp;#39;t say that before.&lt;/p&gt;
+
+&lt;p&gt;See you in San Francisco. &lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Goodbye Jekyll</title>
     <link rel="alternate" href="/Goodbye-jekyll/"/>
@@ -496,155 +564,6 @@ internet connection, and see the changes reflected immediately. You should give 
     &lt;a href="https://github.com/FajitaNachos/hotfix"&gt;&lt;span class="github-link"&gt;
     GitHub Repository&lt;/span&gt;&lt;/a&gt;
 &lt;/div&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Authenticating with the GitHub API</title>
-    <link rel="alternate" href="/Authenticating-with-the-GitHub-API/"/>
-    <id>/Authenticating-with-the-GitHub-API/</id>
-    <published>2013-02-28T00:00:00Z</published>
-    <updated>2013-02-28T00:00:00Z</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;I&amp;#39;ve been working on a chrome extension for the last few weeks that utilizes the
-GitHub API. It&amp;#39;s my first time working with an API and I&amp;#39;ve enjoyed it thus far. 
-Everything is written in Javascript with a little Node.js on the server. Here&amp;#39;s 
-the process.&lt;/p&gt;
-
-&lt;h2&gt;Setup an application on GitHub&lt;/h2&gt;
-
-&lt;p&gt;The first thing you need to do is login to your GitHub account. Once logged in, 
-click on the wrench icon (account settings) at the top and then click on 
-Applications on the left. Click on Register New Application.&lt;/p&gt;
-
-&lt;p&gt;&lt;img title="GitHub Applications" alt="GitHub-Setup" src="/images/github-app-setup.jpg" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now give the application a name, main URL, and callback URL. The 
-callback URL is where GitHub will redirect your users to after they successfully 
-login. It has to be on the same domain as your main URL. It also needs to be a 
-valid http:// URL. GitHub won&amp;#39;t accept &amp;#39;localhost&amp;#39;, &amp;#39;your mom&amp;#39;, etc..&lt;/p&gt;
-
-&lt;p&gt;&lt;img title="New GitHub Application" alt="New-GitHub-Application" src="/images/github-app-new.jpg" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Seeing as how I am writing a browser extension, I REALLY didn&amp;#39;t want to have to 
-set up a server just for the extension. However, doing the entire Oauth process 
-on the client side would expose my GitHub client secret, and that&amp;#39;s never a good 
-thing. So in the end, I bit the bullet and set up a simple node.js server.  I 
-decided to go with &lt;a title="Nodejitsu" href="https://www.nodejitsu.com/"&gt;Nodejitsu&lt;/a&gt; instead of using my existing server. I&amp;#39;ll get 
-into some of the code down below, but you can use any server you have access too. 
-Also, there&amp;#39;s no repercussions to setting up an application on GitHub. It doesn&amp;#39;t 
-cost anything, and you can delete it at any time.&lt;/p&gt;
-
-&lt;h2&gt;Redirect your users to GitHub and get an Access Code&lt;/h2&gt;
-
-&lt;p&gt;When you are ready to authenticate a user you&amp;#39;ll need to send them to GitHub to 
-request an access code for you application.&lt;/p&gt;
-
-&lt;p&gt;{% highlight javascript %}
-    window.open(&amp;#39;https://github.com/login/oauth/authorize?client_id=your-client-id&amp;#39;);
-{% endhighlight %}&lt;/p&gt;
-
-&lt;p&gt;You can find your client ID on the in your GitHub account settings page under 
-Applications. Click on your application name and the client id will be in the 
-top right. There are several other parameters you can (and should) append to the 
-URL. Here are the available parameters;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;client_id&lt;/strong&gt;  &lt;em&gt;Required&lt;/em&gt; - The client ID you received from GitHub when you registered the application.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;redirect_uri&lt;/strong&gt; &lt;em&gt;Optional&lt;/em&gt;  - URL in your app where users will be sent after authorization.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;scope&lt;/strong&gt;  &lt;em&gt;Optional&lt;/em&gt;  - Comma separated list of &lt;a href="http://developer.github.com/v3/oauth/#scopes"&gt;scopes&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;state&lt;/strong&gt;  &lt;em&gt;Optional&lt;/em&gt;  - An unguessable random string. It is used to protect against cross-site request forgery attacks.&lt;/p&gt;
-
-&lt;p&gt;You can add any of these parameters to the URL by adding an &amp;amp; between them. For example&lt;/p&gt;
-
-&lt;p&gt;{% highlight javascript %}
-    window.open(&amp;#39;https://github.com/login/oauth/authorize?client_id=your-client-id&amp;amp;scopes=scopes&amp;amp;state=unguessable-string&amp;#39;);
-{% endhighlight %}&lt;/p&gt;
-
-&lt;p&gt;Once redirected to GitHub the user will be prompted to login. After they do, 
-GitHub will redirect back to the Callback URL you set up with an access code in the url.&lt;/p&gt;
-
-&lt;h2&gt;Parse the access code from the URL and exchange it for an auth token&lt;/h2&gt;
-
-&lt;p&gt;Once GitHub redirects back to your Callback URL with an access code, you need to exchange it for an auth token.&lt;/p&gt;
-
-&lt;p&gt;Get the access code from the URL
-```javascript
-// Get the authorization code from the url that was returned by GitHub&lt;/p&gt;
-
-&lt;p&gt;var authCode = getAuthCode(window.location.href);&lt;/p&gt;
-
-&lt;p&gt;// Extract the auth code from the original URL&lt;/p&gt;
-
-&lt;p&gt;function getAuthCode(url){
-    var error = url.match(/[&amp;amp;\?]error=([^&amp;amp;]+)/);
-    if (error) {
-        throw &amp;#39;Error getting authorization code: &amp;#39; + error&lt;a title="GitHub Applications" href="/images/github-app-setup.jpg"&gt;1&lt;/a&gt;;
-    }
-    return url.match(/[&amp;amp;\?]code=([\w\/-]+)/)&lt;a title="GitHub Applications" href="/images/github-app-setup.jpg"&gt;1&lt;/a&gt;;
-}&lt;/p&gt;
-&lt;pre class="highlight text"&gt;
-And exchange this for an auth token by sending a POST request to
-
-```javascript
-https://github.com/login/oauth/access_token?client_id=your-client-id&amp;amp;client_secret=your-client-secret&amp;amp;code=your-access-code
-&lt;/pre&gt;
-&lt;p&gt;Your client secret can be found in the same place as your client id from above. 
-You should never share this secret with anyone. It&amp;#39;s called a client &lt;em&gt;secret&lt;/em&gt; 
-for a reason.&lt;/p&gt;
-
-&lt;p&gt;Regarding the POST request, I&amp;#39;m using &lt;a title="Gatekeeper.js" href="https://github.com/prose/gatekeeper"&gt;Gatekeeper&lt;/a&gt; to handle the 
-authentication with GitHub on my nodejitsu server. Here is a small snippet of 
-relevant code from Gatekeeper. If you want to implement it yourself, grab it 
-from GitHub and let me know if you have any questions. The only change I made 
-was replacing a deprecated Express call and adding a few small features like 
-404 handling.&lt;/p&gt;
-&lt;pre class="highlight javascript"&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;authenticate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;code&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;cb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;qs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;stringify&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
-        &lt;span class="na"&gt;client_id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;oauth_client_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;//your GitHub client_id
-&lt;/span&gt;        &lt;span class="na"&gt;client_secret&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;oauth_client_secret&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="c1"&gt;//and secret
-&lt;/span&gt;       &lt;span class="na"&gt;code&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;code&lt;/span&gt;   &lt;span class="c1"&gt;//the access code we parsed earlier
-&lt;/span&gt;    &lt;span class="p"&gt;});&lt;/span&gt;
-
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;reqOptions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="na"&gt;host&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;github.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="na"&gt;port&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;443&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="na"&gt;path&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/login/oauth/access_token&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="na"&gt;method&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;POST&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="na"&gt;headers&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;content-length&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="p"&gt;};&lt;/span&gt;
-
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;body&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;req&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;https&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;request&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;reqOptions&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setEncoding&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;utf8&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;data&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;chunk&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;body&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="nx"&gt;chunk&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
-        &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;end&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="nx"&gt;cb&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;qs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;access_token&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="p"&gt;});&lt;/span&gt;
-    &lt;span class="p"&gt;});&lt;/span&gt;
-
-    &lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;end&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;error&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;cb&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;message&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;
-&lt;p&gt;This is just a small snippet to illustrate what is going on. Once you send the 
-POST request, GitHub will return a response that looks like this&lt;/p&gt;
-&lt;pre class="highlight javascript"&gt;&lt;span class="nx"&gt;access_token&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;e72e16c7e42f292c6912e7710c838347ae178b4a&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nx"&gt;token_type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;bearer&lt;/span&gt;
-&lt;/pre&gt;
-&lt;p&gt;From here you just need to parse the auth token and save it somewhere. 
-Going forward, when you want to make an API call, you need to retrieve the 
-auth token from wherever you saved it and send it along with your request.&lt;/p&gt;
-
-&lt;p&gt;Check the &lt;a title="GitHub Documentation" href="href=&amp;quot;http://developer.github.com/v3/"&gt;GitHub documentation&lt;/a&gt; for more details.&lt;/p&gt;
-
-&lt;p&gt;Also, if you&amp;#39;re looking to work with the GitHub API via Javascript, I highly 
-recommend &lt;a title="GitHub.js" href="https://github.com/michael/github"&gt;GitHub.js&lt;/a&gt; and &lt;a title="Gatekeeper.js" href="https://github.com/prose/gatekeeper"&gt;Gatekeeper&lt;/a&gt;. Both have helped me immensely in 
-getting this extension off the ground. I&amp;#39;m still working on a few minor bugs 
-but I&amp;#39;m hoping to release it in the chrome store in a couple more weeks.&lt;/p&gt;
 </content>
   </entry>
 </feed>
