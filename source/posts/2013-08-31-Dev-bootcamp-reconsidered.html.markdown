@@ -11,7 +11,7 @@ In January of 2013, I applied to Dev Bootcamp. To make a [long story](http://faj
 Why Dev Bootcamp?
 -----------------
 
-When I first applied to Dev Bootcamp, I had [one project](https://github.com/FajitaNachos/Quick-Preview) under my belt, and this blog was only a few months old. I didn't know very much, but I knew I liked what I was doing. I would write some code, break something, Google it, learn about it. Rinse and repeat. My initial thoughts about Dev Bootcamp were something along the lines of this: 
+When I first applied to Dev Bootcamp, I had [one project](https://github.com/FajitaNachos/Quick-Preview) under my belt, and this blog was only a few months old. I didn't know very much, but I knew I liked what I was doing. I would write some code, break something, Google it, and learn about it. Rinse and repeat. My initial thoughts about Dev Bootcamp were something along the lines of this: 
 
 "I'll go in as a beginner, come out with some chops, and then maybe I can get a job." 
 
