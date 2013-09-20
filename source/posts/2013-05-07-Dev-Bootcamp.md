@@ -132,5 +132,11 @@ No worries though, we're San Francisco bound! I paid my deposit and was promptly
 Now, about that $12k...
 
 
+Update - September 2013
+-----------
+
+I've decided not to attend Dev Bootcamp. I don't know whether I made the right decision or not. We'll find out soon enough though. You can read about it [here](http://fajitanachos.com/Dev-bootcamp-reconsidered/)
+
+
 [2]: http://www.devbootcamp.com "Dev Bootcamp"
 
