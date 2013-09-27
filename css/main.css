@@ -99,6 +99,11 @@ section {
     text-align: center;
 }
 
+#projects-wrap {
+    position:relative;
+    z-index:10;
+}
+
 #home:before, #about:before, #projects:before, #posts:before, #contact:before {
     content: '';
     display: inline-block;
