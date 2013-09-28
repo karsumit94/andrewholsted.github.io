@@ -515,6 +515,7 @@ tr.first-row td {
     bottom: 0;
     width: 100%;
     background-color: #2f4a70;
+    z-index:20;
 }
 
 #home-nav ul {
