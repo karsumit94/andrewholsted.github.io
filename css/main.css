@@ -443,6 +443,10 @@ tr.first-row td {
 
 }
 
+.center {
+    text-align:center;
+}
+
 
 .highlight, code, pre {
     font-family:"Inconsolata" , sans-serif !important;
