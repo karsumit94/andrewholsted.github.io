@@ -5,7 +5,9 @@ meta-description: "Dev Bootcamp application and interview"
 tags: "Dev Bootcamp"
 ---
 
-<center>*This was previously 3 posts that have been combined into 1.*</center>
+<center>*This was previously 4 posts that have been combined into 1.*</center>
+<!--- Yeah the center tag sucks, I know. Using css text-align:center didn't work because of the
+  way the markdown gererator stuffs this into a p tag. It's quick fix for now. -->
 
 The Application - January 18, 2013
 -----------------------------------
@@ -131,11 +133,50 @@ No worries though, we're San Francisco bound! I paid my deposit and was promptly
 
 Now, about that $12k...
 
-
 Update - September 2013
 -----------
 
-I've decided not to attend Dev Bootcamp. I don't know whether I made the right decision or not. We'll find out soon enough though. You can read about it [here](http://fajitanachos.com/Dev-bootcamp-reconsidered/)
+I've decided not to attend Dev Bootcamp. When I first applied, I had [one project](https://github.com/FajitaNachos/Quick-Preview) under my belt, and this blog was only a few months old. I didn't know very much, but I knew I liked what I was doing. I would write some code, break something, Google it, and learn about it. Rinse and repeat. My initial thoughts about Dev Bootcamp were something along the lines of this: 
+
+"I'll go in as a beginner, come out with some chops, and then maybe I can get a job." 
+
+Dev Bootcamp started the programming bootcamp movement. It's the most reputable, well-established program out there and I applied there for one reason: to get a job.
+
+I've come a long way from the day I first applied, and I'll be the first to admit that I still have a lot to learn. Despite that, I'm leaps and bounds ahead of where I was when I started. I've been doing this, day in and day out, for the last 14 months. Before that, I had also made a couple of one-off websites. I think the optimal time for me to go through the program was probably 9 months ago. I'm sure I would still learn a lot, but the risk/reward has shifted in favor of me going forward on my own. 
+
+
+### Things I know going forward:
+
+I love to learn, and I'm constantly striving to become a better developer. 
+
+I've been writing code every day for over a year. I can count on two hands how many days have gone by where I haven't written a single line of code. 
+
+I need a job.
+
+
+### Things I don't know:
+
+If anyone wants to hire me. 
+
+Lots more stuff. 
+
+
+A Word on Bootcamps in General
+---------------
+To my knowledge, Dev Bootcamp was the first bootcamp-style immersive program. A few students from their first cohort ended up starting their own schools. Now, there's a programming bootcamp coming to every major city near you. They're popping up everywhere. 
+
+There's a whole movement for people learning to code. I think people should learn to code, if only so they have a better understanding of how things work. I avidly believe that coding should be taught in schools, starting in elementary. But, just because it's taught in schools doesn't mean we all need to become programmers. Math is taught in school but I don't want to be a mathematician. I can write, but that doesn't mean I want to be a writer. Someone can learn to code, but that doesn't mean they want/need/have to be a programmer. 
+
+This next part is pure speculation: I think the percentage of people graduating from these programs and getting jobs is probably dropping. Dev Bootcamp put up some amazing numbers last year, but they haven't released any since then. I honestly hope they've just switched to only reporting yearly job placement rates, and 85% of their students are still scoring jobs. I want them to succeed. I'm less concerned about Dev Bootcamp than I am about some of the schools that came after them. I can't help but think a lot of these other programs are just looking to ride the wave, take in the tuition, and crank out students who may or may not be adequately prepared. 
+
+I do think that anyone can teach themselves how to code. It won't be easy, it will take longer than going through some type of programming bootcamp, especially if you have a full time job. But as long as you are really dedicated to it, and you have a passion for it, you can do it on your own. 
+
+What's next?
+-------------
+ 
+I don't know. We've rented an apartment in San Francisco for the month of October. If we like it there, we'll stay longer. If we don't, then the options are limitless. I couldn't say that before.
+
+See you in San Francisco. 
 
 
 [2]: http://www.devbootcamp.com "Dev Bootcamp"
