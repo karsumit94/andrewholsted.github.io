@@ -370,7 +370,12 @@ section {
     font-weight: normal;
 }
 
-#post-content img {
+#youtube {
+    text-align:center;
+    margin:5% 0;
+}
+
+#post-content img{
     height: auto;
     max-width: 90%;
     display: block;
