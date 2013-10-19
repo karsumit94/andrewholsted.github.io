@@ -99,10 +99,6 @@ section {
     text-align: center;
 }
 
-#projects-wrap {
-    position:relative;
-}
-
 #home:before, #about:before, #projects:before, #posts:before, #contact:before {
     content: '';
     display: inline-block;
@@ -116,6 +112,12 @@ section {
     display: inline-block;
     vertical-align: middle;
     width: 99%;
+}
+
+#projects-wrap {
+    position:relative;
+    width:90%;
+    z-index:2;
 }
 
 #home-intro, #home-image {
@@ -232,6 +234,7 @@ section {
     position: absolute;
     top: 50%;
     width: 100%;
+    z-index:1;
 }
 
 #slider-prev {
