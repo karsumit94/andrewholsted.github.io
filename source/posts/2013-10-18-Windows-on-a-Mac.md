@@ -16,9 +16,9 @@ My options included:
 1. Buying a PC
 2. Running Windows on my Mac
 
-I went with option 2. Luckily, it was quite easy to get setup. Shall we?
+I went with option 2. Luckily, it was quite easy to setup. Shall we?
 
-Quick checklist - Do you currently have a USB flash drive with > 4Ggb of space, a Windows 7 or 8 .iso image, and a valid Windows product key? If not, then please acquire said items on the interwebs first. We will be here when you get back.
+Quick checklist - Do you currently have a USB flash drive with > 4GB of space, a Windows 7 or 8 .iso image, and a valid Windows product key? If not, then please acquire said items on the interwebs first. We will be here when you get back.
 
 Now, I will assume you have a flash drive, a Windows .iso image, and a valid product key. Good job. 
 
