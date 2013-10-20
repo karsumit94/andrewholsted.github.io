@@ -37,7 +37,7 @@
 
 &lt;p&gt;Now, I will assume you have a flash drive, a Windows .iso image, and a valid product key. Good job. &lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;I should mention that you don&amp;#39;t have to install Windows via Bootcamp if you are only going to use a virtual machine. If you want the option of booting directly to Windows, then follow along.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I should mention that you don&amp;#39;t have to install Windows via &lt;a href="http://www.apple.com/support/bootcamp/"&gt;Bootcamp&lt;/a&gt; if you are only going to use a virtual machine. If you want the option of booting directly to Windows, then follow along.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;On OSX, open the Bootcamp Assistant. A quick search in Alfred or Finder should get you there. Follow the prompts, and install Windows on a Bootcamp partition. &lt;/p&gt;
 
@@ -45,7 +45,7 @@
 
 &lt;p&gt;I have a 128gb SSD. It&amp;#39;s not the largest, but it&amp;#39;s what I could afford at the time. I gave the Windows partition 40 gigs. Some people recommend more, but I think it will be fine for my needs. After completing a basic Windows 7 install, and installing Visual Studio Express 2012, there&amp;#39;s still 20GB left on the Windows partition. Meaty. &lt;/p&gt;
 
-&lt;p&gt;After the installation finishes, you&amp;#39;ll be able to boot straight into Windows or OSX, whenever you please. However, you will need to reboot every time you want to switch operating systems. That&amp;#39;s a pain in the ass. From my quick and non-extensive Googling, I found Parallels which will let you run Windows from your Bootcamp partition without rebooting. Perfect. The only problem I have with Parallels is that the icon in the dock looks terrible.&lt;/p&gt;
+&lt;p&gt;After the installation finishes, you&amp;#39;ll be able to boot straight into Windows or OSX, whenever you please. However, you will need to reboot every time you want to switch operating systems. That&amp;#39;s a pain in the ass. From my quick and non-extensive Googling, I found &lt;a href="http://www.parallels.com/"&gt;Parallels&lt;/a&gt; which will let you run Windows from your Bootcamp partition without rebooting. Perfect. The only problem I have with Parallels is that the icon in the dock looks terrible.&lt;/p&gt;
 
 &lt;p&gt;Parallels may or may not start running in Coherence mode from the get go. The goal of Coherence mode is to try and integrate your Windows virtual machine as natively as possible with Mac OSX. Personally, I wasn&amp;#39;t a fan of it. I prefer to keep my Windows and OSX applications a little more separate, but I still don&amp;#39;t want to have to reboot every time. Now, I open Parallels in a separate maximized window, and I can easily slide back and forth between them. The video at the top is what my current setup looks like, and I&amp;#39;m really enjoying it. &lt;/p&gt;
 </content>
