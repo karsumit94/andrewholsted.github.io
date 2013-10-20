@@ -5,10 +5,51 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-08-10T09:04:00Z</updated>
+  <updated>2013-10-18T09:04:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Windows on a Mac</title>
+    <link rel="alternate" href="/Windows-on-a-Mac/"/>
+    <id>/Windows-on-a-Mac/</id>
+    <published>2013-10-18T09:04:00Z</published>
+    <updated>2013-10-18T09:04:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;div id="youtube"&gt;
+&lt;iframe width="640" height="480" src="//www.youtube.com/embed/5OaeleO6-w0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Last week, I got a job as a C#/.Net Developer. This week, I started learning C#/.Net. I&amp;#39;m kidding, I started last week. One thing you should know about Windows development, is that it does indeed require Windows. &lt;/p&gt;
+
+&lt;p&gt;My options included:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Buying a PC&lt;/li&gt;
+&lt;li&gt;Running Windows on my Mac&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I went with option 2. Luckily, it was quite easy to get setup. Shall we?&lt;/p&gt;
+
+&lt;p&gt;Quick checklist - Do you currently have a USB flash drive with &amp;gt; 4Ggb of space, a Windows 7 or 8 .iso image, and a valid Windows product key? If not, then please acquire said items on the interwebs first. We will be here when you get back.&lt;/p&gt;
+
+&lt;p&gt;Now, I will assume you have a flash drive, a Windows .iso image, and a valid product key. Good job. &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I should mention that you don&amp;#39;t have to install Windows via Bootcamp if you are only going to use a virtual machine. If you want the option of booting directly to Windows, then follow along.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;On OSX, open the Bootcamp Assistant. A quick search in Alfred or Finder should get you there. Follow the prompts, and install Windows on a Bootcamp partition. &lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s the &lt;a href="http://manuals.info.apple.com/MANUALS/1000/MA1583/en_US/boot_camp_install-setup_10.7.pdf"&gt;setup and installation guide&lt;/a&gt; from Apple. Couldn&amp;#39;t hurt to look through it. And here&amp;#39;s a &lt;a href="http://blog.laptopmag.com/how-to-install-windows-7-on-a-macbook-pro-with-retina-display"&gt;tutorial&lt;/a&gt; with some pretty pictures. &lt;/p&gt;
+
+&lt;p&gt;I have a 128gb SSD. It&amp;#39;s not the largest, but it&amp;#39;s what I could afford at the time. I gave the Windows partition 40 gigs. Some people recommend more, but I think it will be fine for my needs. After completing a basic Windows 7 install, and installing Visual Studio Express 2012, there&amp;#39;s still 20gb left on the Windows partition. Meaty. &lt;/p&gt;
+
+&lt;p&gt;After the installation finishes, you&amp;#39;ll be able to boot straight into Windows or OSX, whenever you please. However, you will need to reboot every time you want to switch operating systems. That&amp;#39;s a pain in the ass. From my quick and non-extensive Googling, I found Parallels which will let you run Windows from your Bootcamp partition without rebooting. Pefect. The only problem I have with Parallels is that the icon in the dock looks terrible.&lt;/p&gt;
+
+&lt;p&gt;Parallels may or may not start running in Coherence mode from the get go. The goal of Coherence mode is to try and integrate your Windows virtual machine as natively as possible with Mac OSX. Personally, I wasn&amp;#39;t a fan of it. I prefer to keep my Windows and OSX applications a little more separate, but I still don&amp;#39;t want to have to reboot every time. Now, I open Parallels in a separate maximized window, and I can easily slide back and forth between them. The video at the top is what my current setup looks like, and I&amp;#39;m really enjoying it. &lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Goodbye Jekyll</title>
     <link rel="alternate" href="/Goodbye-jekyll/"/>
@@ -503,35 +544,6 @@ but I&amp;#39;m hoping to release it in the chrome store in a couple more weeks.
 &lt;p&gt;I hit F5. I hit it again. And then it starts to hit me.&lt;/p&gt;
 
 &lt;p&gt;I had finally done it. I had gotten it right on the first try. There were no errors, no silly mistakes, no running to Google or StackOverflow to search out an answer. That night I had an idea, I implemented it, and it just &lt;em&gt;worked&lt;/em&gt;. It was a magnificent feeling. It sounds like a trivial triumph, but for some reason that&amp;#39;s when I knew I could do this. It&amp;#39;s when I knew I didn&amp;#39;t want to do anything else.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Quick Preview</title>
-    <link rel="alternate" href="/Quick-Preview/"/>
-    <id>/Quick-Preview/</id>
-    <published>2012-10-26T00:00:00Z</published>
-    <updated>2012-10-26T00:00:00Z</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;Last week I was looking around for suggestions on how rookie devs can contribute to open source projects. I stumbled across a post that suggested, if you&amp;#39;re using WordPress, writing WordPress plugin in lieu of contributig to an existing project. At that time I was using WordPress and it sounded like fun, so I did.  &lt;/p&gt;
-
-&lt;p&gt;I started thinking about things I wanted to see in my own install of WordPress.The first thing that came to mind was how I tried to hit Cmd-S every time I wanted to save a post. I use Cmd-S to save things everywhere else, but in WordPress, it opened the save file dialog instead of saving the post. Bingo. I had my idea.&lt;/p&gt;
-
-&lt;p&gt;Next, I did a quick search of the WordPress directory to see if something like that already existed.&lt;/p&gt;
-
-&lt;p&gt;Of course it did. Aptly named &lt;a title="Ctrl-S WordPress Plugin" href="http://wordpress.org/extend/plugins/ctrl-s/"&gt;Ctrl-S&lt;/a&gt;. Damn.&lt;/p&gt;
-
-&lt;p&gt;At that point, I had two choices. I could search for another idea, or I could find a way to make my plugin a little different. I felt like it was a perfect starter project. It was simple, it wouldn&amp;#39;t take too long to build, and I would be able to get a feel for the process of creating a plugin. I decided to stick with it and change it up a bit by adding a preview of the post after saving.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#39;s a couple issues I ran into during the course of creating it.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Whenever you click the save preview button on WordPress, it refreshes the page. When I simulated the click event, the page would refresh before I could open the preview. I couldn&amp;#39;t use a setTimeout() function either because the timeout would be reset when the page was refreshed. What I ended up doing was setting a cookie and then checking for the cookie each time the page is visited. If the cookie is set, then I open the preview and unset the cookie. If it&amp;#39;s not, then it&amp;#39;s just business as usual.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;WordPress uses Tiny MCE. TinyMCE has it&amp;#39;s own keydown function which means the keydown function I set in my plugin wasn&amp;#39;t firing when the editor took focus. It took a little bit of time to track down why my keydown event wasn&amp;#39;t firing and how to correct it. Essentially, you have to add the keydown event in the WordPress initialization of tinyMCE.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;a title="Quick Preview WordPress Plugin" href="http://wordpress.org/extend/plugins/quick-preview/"&gt;Quick-Preview&lt;/a&gt; has been active in the directory for a couple of weeks now. There are 95 downloads as of today which isn&amp;#39;t too bad considering I haven&amp;#39;t told anyone about it. There&amp;#39;s one user on the support forum who is having trouble with the plugin not showing a preview at all. I&amp;#39;ve tried my best to duplicate the problem, but everything works fine for me on multiple computers in Chrome, FireFox, and IE. If anyone reading this wants to test it out, please let me know either here or on the support forum if you have problems. I&amp;#39;d really like to resolve that issue.&lt;/p&gt;
 </content>
   </entry>
 </feed>
