@@ -228,17 +228,20 @@ section {
     float: left;
 }
 
-#slider-controls {
+#slider-prev, #slider-next{
+    display:block;
     position: absolute;
+    cursor:pointer;
     top: 50%;
-    width: 100%;
+    opacity:.3;
 }
 
 #slider-prev {
-    float: left;
-    padding-left: 1%;
-    opacity: .3;
-    cursor: pointer;
+    left:0;
+}
+
+#slider-next{
+    right:0;
 }
 
 #slider-prev:hover, #slider-next:hover {
@@ -247,13 +250,6 @@ section {
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
-}
-
-#slider-next {
-    float: right;
-    padding-right: 1%;
-    opacity: .3;
-    cursor: pointer;
 }
 
 #posts, #about {
