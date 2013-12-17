@@ -237,13 +237,19 @@ section {
 }
 
 #slider-prev {
-    margin-left:.5%;
+    position:absolute;
+    cursor:pointer;
+    top:50%;
     left:0;
+    margin-left:.5%;
 }
 
 #slider-next{
-    margin-right: .5%;
+    position:absolute;
+    cursor:pointer;
+    top:50%;
     right:0;
+    margin-right: .5%;
 }
 
 #slider-prev:hover, #slider-next:hover {
