@@ -226,7 +226,8 @@ section {
 
 #slider li {
     float: left;
-}
+};
+
 
 #slider-prev, #slider-next{
     display:block;
@@ -237,10 +238,12 @@ section {
 }
 
 #slider-prev {
+    margin-left:.5%;
     left:0;
 }
 
 #slider-next{
+    margin-right: .5%;
     right:0;
 }
 
