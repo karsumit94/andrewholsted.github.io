@@ -350,7 +350,9 @@ README.md
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;p&gt;One day at work I noticed I messed up the layout of this site with some changes 
+    <content type="html">&lt;p&gt;&lt;span class ="notice"&gt;Note: I&amp;#39;ve stop maintaing this extension, and removed it from the Chrome store, to focus on other projects. It was fun while it lasted though. &lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;One day at work I noticed I messed up the layout of this site with some changes 
 I had made earlier that morning. Things looked fine on my laptop, but due to
 different screen resolutions and an older browser, it looked pretty bad on my work computer. I wasn&amp;#39;t going to be home for another 6 hours and doing any kind of local
 dev work on that computer was out of the question. I needed a simple way 
