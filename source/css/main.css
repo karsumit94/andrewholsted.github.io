@@ -467,6 +467,10 @@ tr.first-row td {
    
 
 }
+.notice{
+    color: #aaa;
+    font-style: italic;
+}
 
 #post-header {
     width: 100%;
