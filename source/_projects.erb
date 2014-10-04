@@ -4,6 +4,29 @@
     <div id = "slider-wrap">
       <ul id = "slider">
 
+        <!-- Staybl-->
+        <li> 
+          <div class = "project">
+            <div class = "project-image">
+               <% link_to 'http://www.staybl.com' do %>
+                  <%= image_tag 'staybl.png' %>
+                <% end %>
+            </div>
+            <div class = "project-details">
+              <div class="project-title">
+                 <h3><%= link_to 'Staybl', 'http://www.staybl.com' %></h3>
+              </div>
+              <p>
+               Staybl helps you find the best area to stay in any city. A Ruby on Rails app hosted on Heroku that utilizes the Google Maps and Yelp APIs.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Rails</span>
+                <span class="project-tag">PostgreSQL</span>
+                <span class="project-tag">APIs</span>
+              </div>
+            </div>  
+          </div>
+        </li>
         <!-- Hacker News Kansai -->
         <li> 
           <div class = "project">
