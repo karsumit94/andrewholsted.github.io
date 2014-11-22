@@ -241,7 +241,7 @@
 &lt;/pre&gt;
 &lt;h2&gt;Deploying&lt;/h2&gt;
 
-&lt;p&gt;Now, we need to push this bad boy up to our GitHub Pages repo. This is assuming you have your repo at yourusername.github.io. For example, mine is fajitanachos.github.io. There&amp;#39;s a nice little gem called &lt;a href="http://rubygems.org/gems/middleman-deploy"&gt;middleman-deploy&lt;/a&gt; that we can use to push everything to GitHub. &lt;/p&gt;
+&lt;p&gt;Now, we need to push this bad boy up to our GitHub Pages repo. This is assuming you have your repo at yourusername.github.io. There&amp;#39;s a nice little gem called &lt;a href="http://rubygems.org/gems/middleman-deploy"&gt;middleman-deploy&lt;/a&gt; that we can use to push everything to GitHub. &lt;/p&gt;
 
 &lt;p&gt;Add this to your Gemfile&lt;/p&gt;
 &lt;pre class="highlight text"&gt;gem &amp;quot;middleman-deploy&amp;quot;
@@ -374,7 +374,7 @@ internet connection, and see the changes reflected immediately. You should give 
 
 &lt;div class= "buttons-wrap"&gt;
     &lt;a href="https://chrome.google.com/webstore/detail/hotfix/bfmckmhcljhakgkngnfjhmmffaabdafi"&gt;&lt;span class="cws-link"&gt;Chrome Web Store&lt;/span&gt;&lt;/a&gt;
-    &lt;a href="https://github.com/FajitaNachos/hotfix"&gt;&lt;span class="github-link"&gt;
+    &lt;a href="https://github.com/AndrewHolsted/hotfix"&gt;&lt;span class="github-link"&gt;
     GitHub Repository&lt;/span&gt;&lt;/a&gt;
 &lt;/div&gt;
 </content>
