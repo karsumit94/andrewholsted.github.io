@@ -173,11 +173,9 @@
 
 <p>I think everything else is pretty self explanatory. </p>
 
-<p>Including fullcalendar is just like loading any other external js file.
-<code>html
-    &lt;script type=&quot;text/javascript&quot; src=&quot;/path_to_your_fullcalendar_folder/fullcalendar.js&quot;&gt; &lt;/script&gt;
-</code></p>
-
+<p>Including fullcalendar is just like loading any other external js file.</p>
+<pre class="highlight html">    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;/path_to_your_fullcalendar_folder/fullcalendar.js&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;/script&gt;</span>
+</pre>
 <p>You have several options as to where you pull your event data from. I chose to pass a URL to a php file where I fetch the events and return them (via JSON).</p>
 <pre class="highlight javascript"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> 
     <span class="kd">var</span> <span class="nx">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>

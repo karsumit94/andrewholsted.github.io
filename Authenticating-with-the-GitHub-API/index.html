@@ -73,11 +73,8 @@ cost anything, and you can delete it at any time.</p>
 
 <p>When you are ready to authenticate a user you&#39;ll need to send them to GitHub to 
 request an access code for you application.</p>
-
-<p>{% highlight javascript %}
-    window.open(&#39;https://github.com/login/oauth/authorize?client_id=your-client-id&#39;);
-{% endhighlight %}</p>
-
+<pre class="highlight javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/login/oauth/authorize?client_id=your-client-id&#39;</span><span class="p">);</span>
+</pre>
 <p>You can find your client ID on the in your GitHub account settings page under 
 Applications. Click on your application name and the client id will be in the 
 top right. There are several other parameters you can (and should) append to the 
@@ -92,11 +89,8 @@ URL. Here are the available parameters;</p>
 <p><strong>state</strong>  <em>Optional</em>  - An unguessable random string. It is used to protect against cross-site request forgery attacks.</p>
 
 <p>You can add any of these parameters to the URL by adding an &amp; between them. For example</p>
-
-<p>{% highlight javascript %}
-    window.open(&#39;https://github.com/login/oauth/authorize?client_id=your-client-id&amp;scopes=scopes&amp;state=unguessable-string&#39;);
-{% endhighlight %}</p>
-
+<pre class="highlight javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/login/oauth/authorize?client_id=your-client-id&amp;scopes=scopes&amp;state=unguessable-string&#39;</span><span class="p">);</span>
+</pre>
 <p>Once redirected to GitHub the user will be prompted to login. After they do, 
 GitHub will redirect back to the Callback URL you set up with an access code in the url.</p>
 
@@ -104,27 +98,25 @@ GitHub will redirect back to the Callback URL you set up with an access code in 
 
 <p>Once GitHub redirects back to your Callback URL with an access code, you need to exchange it for an auth token.</p>
 
-<p>Get the access code from the URL
-```javascript
-// Get the authorization code from the url that was returned by GitHub</p>
+<p>Get the access code from the URL</p>
+<pre class="highlight javascript"><span class="c1">// Get the authorization code from the url that was returned by GitHub
+</span>
+<span class="kd">var</span> <span class="nx">authCode</span> <span class="o">=</span> <span class="nx">getAuthCode</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">);</span>
 
-<p>var authCode = getAuthCode(window.location.href);</p>
+<span class="c1">// Extract the auth code from the original URL
+</span>
+<span class="kd">function</span> <span class="nx">getAuthCode</span><span class="p">(</span><span class="nx">url</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">error</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/[&amp;\?]error=([^&amp;]+)/</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="s1">&#39;Error getting authorization code: &#39;</span> <span class="o">+</span> <span class="nx">error</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">url</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/[&amp;\?]code=([\w\/\-]+)/</span><span class="p">)[</span><span class="mi">1</span><span class="p">];</span>
+<span class="p">}</span>
 
-<p>// Extract the auth code from the original URL</p>
-
-<p>function getAuthCode(url){
-    var error = url.match(/[&amp;\?]error=([^&amp;]+)/);
-    if (error) {
-        throw &#39;Error getting authorization code: &#39; + error<a title="GitHub Applications" href="/images/github-app-setup.jpg">1</a>;
-    }
-    return url.match(/[&amp;\?]code=([\w\/-]+)/)<a title="GitHub Applications" href="/images/github-app-setup.jpg">1</a>;
-}</p>
-<pre class="highlight text">
-And exchange this for an auth token by sending a POST request to
-
-```javascript
-https://github.com/login/oauth/access_token?client_id=your-client-id&amp;client_secret=your-client-secret&amp;code=your-access-code
 </pre>
+<p>And exchange this for an auth token by sending a POST request to</p>
+<pre class="highlight javascript"><span class="nx">https</span><span class="err">:</span><span class="c1">//github.com/login/oauth/access_token?client_id=your-client-id&amp;client_secret=your-client-secret&amp;code=your-access-code
+</span></pre>
 <p>Your client secret can be found in the same place as your client id from above. 
 You should never share this secret with anyone. It&#39;s called a client <em>secret</em> 
 for a reason.</p>

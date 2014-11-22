@@ -204,9 +204,7 @@
 &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="ss"&gt;:markdown&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;fenced_code_blocks: &lt;/span&gt;&lt;span class="kp"&gt;true&lt;/span&gt;
 &lt;/pre&gt;
 &lt;p&gt;That&amp;#39;s it. Now you can use fenced code blocks like this&lt;/p&gt;
-&lt;pre class="highlight text"&gt;```ruby
-   #your code here
-```
+&lt;pre class="highlight ruby"&gt;   &lt;span class="c1"&gt;#your code here&lt;/span&gt;
 &lt;/pre&gt;
 &lt;p&gt;You can manage the styling by adding a pygments.css file in your css/ directory and including it in your pages. &lt;/p&gt;
 
@@ -421,11 +419,8 @@ cost anything, and you can delete it at any time.&lt;/p&gt;
 
 &lt;p&gt;When you are ready to authenticate a user you&amp;#39;ll need to send them to GitHub to 
 request an access code for you application.&lt;/p&gt;
-
-&lt;p&gt;{% highlight javascript %}
-    window.open(&amp;#39;https://github.com/login/oauth/authorize?client_id=your-client-id&amp;#39;);
-{% endhighlight %}&lt;/p&gt;
-
+&lt;pre class="highlight javascript"&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://github.com/login/oauth/authorize?client_id=your-client-id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;
 &lt;p&gt;You can find your client ID on the in your GitHub account settings page under 
 Applications. Click on your application name and the client id will be in the 
 top right. There are several other parameters you can (and should) append to the 
@@ -440,11 +435,8 @@ URL. Here are the available parameters;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;state&lt;/strong&gt;  &lt;em&gt;Optional&lt;/em&gt;  - An unguessable random string. It is used to protect against cross-site request forgery attacks.&lt;/p&gt;
 
 &lt;p&gt;You can add any of these parameters to the URL by adding an &amp;amp; between them. For example&lt;/p&gt;
-
-&lt;p&gt;{% highlight javascript %}
-    window.open(&amp;#39;https://github.com/login/oauth/authorize?client_id=your-client-id&amp;amp;scopes=scopes&amp;amp;state=unguessable-string&amp;#39;);
-{% endhighlight %}&lt;/p&gt;
-
+&lt;pre class="highlight javascript"&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://github.com/login/oauth/authorize?client_id=your-client-id&amp;amp;scopes=scopes&amp;amp;state=unguessable-string&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;
 &lt;p&gt;Once redirected to GitHub the user will be prompted to login. After they do, 
 GitHub will redirect back to the Callback URL you set up with an access code in the url.&lt;/p&gt;
 
@@ -452,27 +444,25 @@ GitHub will redirect back to the Callback URL you set up with an access code in 
 
 &lt;p&gt;Once GitHub redirects back to your Callback URL with an access code, you need to exchange it for an auth token.&lt;/p&gt;
 
-&lt;p&gt;Get the access code from the URL
-```javascript
-// Get the authorization code from the url that was returned by GitHub&lt;/p&gt;
+&lt;p&gt;Get the access code from the URL&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;span class="c1"&gt;// Get the authorization code from the url that was returned by GitHub
+&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;authCode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;getAuthCode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;href&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-&lt;p&gt;var authCode = getAuthCode(window.location.href);&lt;/p&gt;
+&lt;span class="c1"&gt;// Extract the auth code from the original URL
+&lt;/span&gt;
+&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;getAuthCode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;url&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;error&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;url&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;match&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sr"&gt;/[&amp;amp;\?]error=([^&amp;amp;]+)/&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;error&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;throw&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Error getting authorization code: &amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;error&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;url&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;match&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sr"&gt;/[&amp;amp;\?]code=([\w\/\-]+)/&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
 
-&lt;p&gt;// Extract the auth code from the original URL&lt;/p&gt;
-
-&lt;p&gt;function getAuthCode(url){
-    var error = url.match(/[&amp;amp;\?]error=([^&amp;amp;]+)/);
-    if (error) {
-        throw &amp;#39;Error getting authorization code: &amp;#39; + error&lt;a title="GitHub Applications" href="/images/github-app-setup.jpg"&gt;1&lt;/a&gt;;
-    }
-    return url.match(/[&amp;amp;\?]code=([\w\/-]+)/)&lt;a title="GitHub Applications" href="/images/github-app-setup.jpg"&gt;1&lt;/a&gt;;
-}&lt;/p&gt;
-&lt;pre class="highlight text"&gt;
-And exchange this for an auth token by sending a POST request to
-
-```javascript
-https://github.com/login/oauth/access_token?client_id=your-client-id&amp;amp;client_secret=your-client-secret&amp;amp;code=your-access-code
 &lt;/pre&gt;
+&lt;p&gt;And exchange this for an auth token by sending a POST request to&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;span class="nx"&gt;https&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//github.com/login/oauth/access_token?client_id=your-client-id&amp;amp;client_secret=your-client-secret&amp;amp;code=your-access-code
+&lt;/span&gt;&lt;/pre&gt;
 &lt;p&gt;Your client secret can be found in the same place as your client id from above. 
 You should never share this secret with anyone. It&amp;#39;s called a client &lt;em&gt;secret&lt;/em&gt; 
 for a reason.&lt;/p&gt;
