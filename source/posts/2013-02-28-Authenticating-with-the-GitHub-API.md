@@ -41,9 +41,9 @@ Redirect your users to GitHub and get an Access Code
 When you are ready to authenticate a user you'll need to send them to GitHub to 
 request an access code for you application.
 
-{% highlight javascript %}
-    window.open('https://github.com/login/oauth/authorize?client_id=your-client-id');
-{% endhighlight %}
+```javascript
+window.open('https://github.com/login/oauth/authorize?client_id=your-client-id');
+```
 
 You can find your client ID on the in your GitHub account settings page under 
 Applications. Click on your application name and the client id will be in the 
@@ -60,9 +60,9 @@ URL. Here are the available parameters;
 
 You can add any of these parameters to the URL by adding an & between them. For example
 
-{% highlight javascript %}
-    window.open('https://github.com/login/oauth/authorize?client_id=your-client-id&scopes=scopes&state=unguessable-string');
-{% endhighlight %}
+```javascript
+window.open('https://github.com/login/oauth/authorize?client_id=your-client-id&scopes=scopes&state=unguessable-string');
+```
 
 Once redirected to GitHub the user will be prompted to login. After they do, 
 GitHub will redirect back to the Callback URL you set up with an access code in the url.
@@ -73,6 +73,7 @@ Parse the access code from the URL and exchange it for an auth token
 Once GitHub redirects back to your Callback URL with an access code, you need to exchange it for an auth token.
 
 Get the access code from the URL
+
 ```javascript
 // Get the authorization code from the url that was returned by GitHub
 

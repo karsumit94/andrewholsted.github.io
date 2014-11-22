@@ -187,6 +187,7 @@ What's a web development blog without syntax highlighting? It's not hard to set 
 gem "middleman-syntax"
 gem "redcarpet"
 ```
+
 And run 
 
 ```bash
@@ -205,9 +206,10 @@ set :markdown, fenced_code_blocks: true
 
 That's it. Now you can use fenced code blocks like this
 
-    ```ruby
-       #your code here
-    ```
+```ruby
+   #your code here
+```
+
 You can manage the styling by adding a pygments.css file in your css/ directory and including it in your pages. 
 
 Drafts
@@ -256,7 +258,7 @@ I wanted to generate a site map for my blog posts, but only based on the post's 
 Deploying
 ---------
 
-Now, we need to push this bad boy up to our GitHub Pages repo. This is assuming you have your repo at yourusername.github.io. For example, mine is fajitanachos.github.io. There's a nice little gem called [middleman-deploy](http://rubygems.org/gems/middleman-deploy) that we can use to push everything to GitHub. 
+Now, we need to push this bad boy up to our GitHub Pages repo. This is assuming you have your repo at yourusername.github.io. There's a nice little gem called [middleman-deploy](http://rubygems.org/gems/middleman-deploy) that we can use to push everything to GitHub. 
 
 Add this to your Gemfile
 

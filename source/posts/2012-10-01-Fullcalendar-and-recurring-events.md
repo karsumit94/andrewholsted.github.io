@@ -139,6 +139,7 @@ The events table
 I think everything else is pretty self explanatory. 
 
 Including fullcalendar is just like loading any other external js file.
+
 ```html
     <script type="text/javascript" src="/path_to_your_fullcalendar_folder/fullcalendar.js"> </script>
 ```
