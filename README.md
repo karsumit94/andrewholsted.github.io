@@ -8,4 +8,4 @@ Recently, I've come across Middleman. And I have to say, I like it even more tha
 Copyright
 ========
 
-The /posts directory and its contents are Copyright 2013 FajitaNachos. Feel free to use the CSS/Javascript as you wish. If you do, a link back here would be appreciated.
+The /posts directory and its contents are Copyright 2014 FajitaNachos. Feel free to use the CSS/Javascript as you wish. If you do, a link back here would be appreciated.
